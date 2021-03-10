@@ -6,23 +6,6 @@ import { NextPage } from 'next'
 const Home: NextPage = () => {
   return (
     <>
-      {/* <header className="w-9/12 m-auto">
-        <div className="flex flex-col items-center ">
-          <div className="w-7/12">
-            <h1 className=" text-6xl font-bold mt-32 leading-tight">Hello, I&apos;m Pranav👋</h1>
-            <p className="text-xl mt-5 ">
-              I am a software developer based in Ottawa, ON focused on building beautiful interfaces and accessible
-              applications.
-            </p>
-            <button
-              type="button"
-              className="tracking-wider font-medium text-sm ring-inset mt-7 p-3 px-6 rounded bg-gray-700 hover:bg-gray-800 transition"
-            >
-              RESUME
-            </button>
-          </div>
-        </div>
-      </header> */}
       <div className="text-black px-5">
         <p className="px-5 rounded py-1 bg-gray-300 block sm:hidden">Mobile</p>
         <p className="px-5 rounded py-1 bg-red-300 hidden sm:block md:hidden">Sm</p>
@@ -31,7 +14,7 @@ const Home: NextPage = () => {
         <p className="px-5 rounded py-1 bg-yellow-300 hidden sm:hidden md:hidden lg:hidden xl:block 2xl:hidden">xl</p>
         <p className="px-5 rounded py-1 bg-purple-300 hidden sm:hidden md:hidden lg:hidden xl:hidden 2xl:block">2xl</p>
       </div>
-      <header className=" w-11/12 sm:w-4/6 px-6 sm:px-0 py-24 mx-auto md:w-4/6 lg:w-2/4">
+      {/* <header className=" w-11/12 sm:w-4/6 px-6 sm:px-0 py-24 mx-auto md:w-4/6 lg:w-2/4">
         <div className="flex flex-col space-y-12 divide-y divide-gray-200">
           <div>
             <h1 className="mb-2 text-4xl font-extrabold leading-snug  md:leading-tight tracking-normal sm:text-5xl md:text-6xl">
@@ -49,11 +32,28 @@ const Home: NextPage = () => {
             </button>
           </div>
         </div>
-      </header>
+      </header> */}
 
-      <section className="w-11/12 px-4 py-24 mx-auto md:w-3/4 lg:w-2/4">
-        <div className="mb-12 text-left md:text-center">
-          <h2 className="mb-2 text-3xl font-extrabold leading-tight ">Skcript Blog</h2>
+      <section className="w-11/12 px-4 md:px-0 py-24 mx-auto md:w-3/4 lg:w-2/4">
+        <div className="flex flex-col space-y-12 divide-y divide-gray-200 mb-28">
+          <div>
+            <h1 className="mb-2 text-4xl font-extrabold leading-snug  md:leading-tight tracking-normal sm:text-5xl md:text-6xl">
+              Hi, I&apos;m Pranav👋
+            </h1>
+            <p className="mt-6 sm:w-9/12 md:w-10/12 lg:w-full text-base md:text-xl font-normal ">
+              I am a software developer based in Ottawa, ON focused on building beautiful interfaces and accessible
+              applications.
+            </p>
+            <button
+              type="button"
+              className="tracking-wider font-bold text-sm ring-inset my-7 p-3 px-6 rounded text-black bg-yellow-300 hover:bg-yellow-400 transition"
+            >
+              RESUME
+            </button>
+          </div>
+        </div>
+        <div className="mb-12 text-left">
+          <h2 className="mb-2 text-3xl sm:text-4xl font-extrabold leading-tight ">Latest Articles</h2>
           <p className="text-lg ">
             Everything comes directly from the desk of the respective engineers, creators and managers at Skcript.
           </p>
@@ -116,47 +116,58 @@ const Home: NextPage = () => {
           </a>
         </div> */}
       </section>
-      <footer>
-        <div className="flex items-center mb-6 space-x-2">
-          <a href="#">
+      <footer className="flex flex-col sm:flex-row sm:w-11/12 md:w-3/4 lg:w-2/4 m-auto sm:justify-between items-center w-full">
+        <div className="flex mb-4 space-x-2">
+          <a href="#" className="p-1.5 rounded text-gray-400 hover:text-gray-100 hover:bg-gray-800">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              className="flex-none w-5 h-5"
+              width="16"
+              height="16"
               fill="currentColor"
+              className="flex-none w-5 h-5"
+              viewBox="0 0 16 16"
             >
-              <path d="M13.397,20.997v-8.196h2.765l0.411-3.209h-3.176V7.548c0-0.926,0.258-1.56,1.587-1.56h1.684V3.127	C15.849,3.039,15.025,2.997,14.201,3c-2.444,0-4.122,1.492-4.122,4.231v2.355H7.332v3.209h2.753v8.202H13.397z" />
+              <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
             </svg>
           </a>
-          <a href="#">
+          <a href="#" className="p-1.5 rounded text-gray-400 hover:text-gray-100 hover:bg-gray-800">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              className="flex-none w-5 h-5"
+              width="16"
+              height="16"
               fill="currentColor"
+              className="flex-none w-5 h-5"
+              viewBox="0 0 16 16"
             >
-              <path d="M19.633,7.997c0.013,0.175,0.013,0.349,0.013,0.523c0,5.325-4.053,11.461-11.46,11.461c-2.282,0-4.402-0.661-6.186-1.809	c0.324,0.037,0.636,0.05,0.973,0.05c1.883,0,3.616-0.636,5.001-1.721c-1.771-0.037-3.255-1.197-3.767-2.793	c0.249,0.037,0.499,0.062,0.761,0.062c0.361,0,0.724-0.05,1.061-0.137c-1.847-0.374-3.23-1.995-3.23-3.953v-0.05	c0.537,0.299,1.16,0.486,1.82,0.511C3.534,9.419,2.823,8.184,2.823,6.787c0-0.748,0.199-1.434,0.548-2.032	c1.983,2.443,4.964,4.04,8.306,4.215c-0.062-0.3-0.1-0.611-0.1-0.923c0-2.22,1.796-4.028,4.028-4.028	c1.16,0,2.207,0.486,2.943,1.272c0.91-0.175,1.782-0.512,2.556-0.973c-0.299,0.935-0.936,1.721-1.771,2.22	c0.811-0.088,1.597-0.312,2.319-0.624C21.104,6.712,20.419,7.423,19.633,7.997z" />
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
             </svg>
           </a>
-          <a href="#">
+          <a href="#" className="p-1.5 rounded text-gray-400 hover:text-gray-100 hover:bg-gray-800">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              className="flex-none w-5 h-5"
+              width="16"
+              height="16"
               fill="currentColor"
+              className="flex-none w-5 h-5"
+              viewBox="0 0 16 16"
             >
-              <circle cx="4.983" cy="5.009" r="2.188" />
-              <path d="M9.237 8.855v12.139h3.769v-6.003c0-1.584.298-3.118 2.262-3.118 1.937 0 1.961 1.811 1.961 3.218v5.904H21v-6.657c0-3.27-.704-5.783-4.526-5.783-1.835 0-3.065 1.007-3.568 1.96h-.051v-1.66H9.237zM3.095 8.855H6.87V20.994H3.095z" />
+              <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
             </svg>
           </a>
-          <p className="text-gray-600">Share this article</p>
+          <a href="#" className="p-1.5 rounded text-gray-400 hover:text-gray-100 hover:bg-gray-800">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              className="flex-none w-5 h-5"
+              viewBox="0 0 16 16"
+            >
+              <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+            </svg>
+          </a>
         </div>
+        <p className="text-sm mb-6 text-gray-400">Pranav Birajdar &copy; 2021</p>
       </footer>
     </>
   )
