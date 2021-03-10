@@ -25,7 +25,7 @@ const Home: NextPage = () => {
             </p>
             <button
               type="button"
-              className="font-semibold tracking-wider text-sm my-7 p-2.5 px-5 rounded ring-2 ring-purple-700 ring-opacity-50 bg-gray-900 hover:bg-opacity-25 shadow transition"
+              className="font-semibold tracking-wider text-sm my-7 p-2.5 px-5 rounded ring-2 ring-gray-400 ring-opacity-50 bg-gray-900 hover:bg-opacity-25 shadow transition"
             >
               Resume
             </button>
@@ -40,7 +40,7 @@ const Home: NextPage = () => {
         <div className="flex flex-col space-y-6 divide-y divide-gray-500">
           <div>
             <a href="#">
-              <h3 className="mb-3 hover:text-purple-400 transition text-xl pt-8 font-bold tracking-normal md:text-2xl">
+              <h3 className="mb-3 hover:text-gray-300 transition text-xl mt-8 font-bold tracking-normal md:text-2xl">
                 Process Documents Using Artificial Intelligence For RPA Bots
               </h3>
               <p className="text-base font-normal text-gray-300">
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
           </div>
           <div>
             <a href="#">
-              <h3 className="mb-3 text-xl hover:text-purple-400 transition pt-8 font-bold tracking-normal md:text-2xl">
+              <h3 className="mb-3 text-xl hover:text-gray-300 transition mt-8 font-bold tracking-normal md:text-2xl">
                 Implement Dark Mode in Your Android App
               </h3>
               <p className="text-base font-normal text-gray-300">
@@ -62,7 +62,7 @@ const Home: NextPage = () => {
           </div>
           <div>
             <a href="#">
-              <h3 className="mb-3 text-xl hover:text-purple-400 transition pt-8 font-bold tracking-normal md:text-2xl">
+              <h3 className="mb-3 text-xl hover:text-gray-300 transition mt-8 font-bold tracking-normal md:text-2xl">
                 Why is Mental Health one of the Important Issues to Address?
               </h3>
               <p className="text-base font-normal text-gray-300">
@@ -83,7 +83,7 @@ const Home: NextPage = () => {
         <div className="text-left mt-16">
           <h2 className="text-3xl sm:text-4xl font-bold ">Recent Projects</h2>
         </div>
-        <div className="flex flex-col space-y-6 divide-y divide-gray-500 ring-1 ring-gray-700 rounded mt-4">
+        <div className="flex flex-col space-y-6 divide-y divide-gray-500 ring-1 ring-gray-700 rounded mt-8">
           <div className="bg-gray-900 bg-opacity-25 hover:bg-black p-4">
             <a href="#" className="flex">
               <div>IMAGE</div>
@@ -94,6 +94,11 @@ const Home: NextPage = () => {
                   routines.
                   {/* Users can also add, update or delete any previous logged workouts. */}
                 </p>
+                <ul className="flex justify-end text-xs mt-3">
+                  <li className="ml-3">Next js</li>
+                  <li className="ml-3">Firebase</li>
+                  <li className="ml-3">Tailwind</li>
+                </ul>
               </div>
             </a>
           </div>
@@ -105,10 +110,15 @@ const Home: NextPage = () => {
               <div className="ml-4">
                 <h3 className="mb-2 text-xl font-bold tracking-normal">COVID-19 Dashboard for Canada</h3>
                 <p className="text-base font-normal text-gray-300">
-                  A simple, accessible workout app that allows a user to create, track, and update their daily workout
-                  routines.
+                  A dashboard providing up-to-date information on the COVID-19 outbreak and the vaccination efforts in
+                  Canada.
                   {/* Users can also add, update or delete any previous logged workouts. */}
                 </p>
+                <ul className="flex justify-end text-xs mt-3">
+                  <li className="ml-3">React</li>
+                  <li className="ml-3">Chart js</li>
+                  <li className="ml-3">COVID-19 API</li>
+                </ul>
               </div>
             </a>
           </div>
