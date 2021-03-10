@@ -34,8 +34,8 @@ const Home: NextPage = () => {
         </div>
       </header> */}
 
-      <section className="w-11/12 px-4 md:px-0 py-24 mx-auto md:w-3/4 lg:w-2/4">
-        <div className="flex flex-col space-y-12 divide-y divide-gray-200 mb-28">
+      <section className="w-11/12 px-4 md:px-0 my-36 mx-auto md:w-3/4 lg:w-2/4">
+        <div className="flex flex-col space-y-12 divide-y divide-gray-200 mb-32">
           <div>
             <h1 className="mb-2 text-4xl font-extrabold leading-snug  md:leading-tight tracking-normal sm:text-5xl md:text-6xl">
               Hi, I&apos;m Pranav👋
@@ -52,24 +52,23 @@ const Home: NextPage = () => {
             </button>
           </div>
         </div>
-        <div className="mb-12 text-left">
-          <h2 className="mb-2 text-3xl sm:text-4xl font-extrabold leading-tight ">Latest Articles</h2>
-          <p className="text-lg ">
-            Everything comes directly from the desk of the respective engineers, creators and managers at Skcript.
-          </p>
+        <div className="text-left">
+          <h2 className="text-3xl sm:text-4xight ">Latest Articles</h2>
+          {/* <p className="text-lg ">
+            I write about solving problems with code, desiging things people use, teaching, and learning.
+          </p> */}
         </div>
-        <div className="flex flex-col space-y-12 divide-y divide-gray-200">
+        <div className="flex flex-col space-y-6 divide-y divide-gray-500">
           <div>
             <p className="pt-12 mb-3 text-sm font-normal ">April 16, 2020</p>
-            <h2 className="mb-2 text-xl font-extrabold leading-snug tracking-tight  md:text-3xl">
-              <a href="#" className=" hover:text-purple-700">
+            <h3 className="mb-2 text-xl font-bold tracking-normal md:text-2xl">
+              <a href="#" className=" hover:text-yellow-400 transition">
                 Process Documents Using Artificial Intelligence For RPA Bots
               </a>
-            </h2>
+            </h3>
             <p className="mb-4 text-base font-normal ">
-              Earlier RPA bots used to have some limitations like it would take structured data for processing from
-              excel, database, on these data. But with advancements in technology like OCR (Optical Character
-              Recognition) and Machine Learning, RPA bots are capable of extracting these data …
+              processing from excel, database, on these data. But with advancements in technology like OCR (Optical
+              Character Recognition) and Machine Learnof extracting these data
             </p>
             <a href="#" className="btn btn-light btn-sm">
               Continue Reading
@@ -77,14 +76,13 @@ const Home: NextPage = () => {
           </div>
           <div>
             <p className="pt-12 mb-3 text-sm font-normal ">April 16, 2020</p>
-            <h2 className="mb-2 text-xl font-extrabold leading-snug tracking-tight  md:text-3xl">
-              <a href="#" className=" hover:text-purple-700">
+            <h3 className="mb-2 text-xl font-bold tracking-normal md:text-2xl">
+              <a href="#" className=" hover:text-yellow-400 transition">
                 Implement Dark Mode in Your Android App
               </a>
-            </h2>
+            </h3>
             <p className="mb-4 text-base font-normal ">
-              Are you curious to implement the Dark Mode in Android Application? Here’s the perfect guideline to attain
-              the Dark Mode in Android Application. Don’t waste your time; just implement and enjoy Dark Mode.
+              guideline to attain the Dark Mode in Android Appliime; just implement and enjoy Dark Mode.
             </p>
             <a href="#" className="btn btn-light btn-sm">
               Continue Reading
@@ -92,15 +90,14 @@ const Home: NextPage = () => {
           </div>
           <div>
             <p className="pt-12 mb-3 text-sm font-normal ">April 16, 2020</p>
-            <h2 className="mb-2 text-xl font-extrabold leading-snug tracking-tight  md:text-3xl">
-              <a href="#" className=" hover:text-purple-700">
+            <h3 className="mb-2 text-xl font-bold tracking-normal md:text-2xl">
+              <a href="#" className=" hover:text-yellow-400 transition">
                 Why is Mental Health one of the Important Issues to Address?
               </a>
-            </h2>
+            </h3>
             <p className="mb-4 text-base font-normal ">
-              Mental health was one of the under spoken topics before this lockdown. After sitting at home for about six
-              months I realized that this is one of the important issues to address not only in the work sector but also
-              in daily living.
+              t home for about six months I realized that this is one of the important issues to address not only in the
+              work sector but also in daily living.
             </p>
             <a href="#" className="btn btn-light btn-sm">
               Continue Reading
