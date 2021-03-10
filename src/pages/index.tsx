@@ -25,7 +25,7 @@ const Home: NextPage = () => {
             </p>
             <button
               type="button"
-              className="font-semibold tracking-wide text-sm my-7 p-2 px-4 rounded text-white bg-purple-800 hover:bg-purple-900 hover:text-gray-50 transition"
+              className="font-semibold tracking-wider text-sm my-7 p-2.5 px-5 rounded ring-2 ring-purple-700 ring-opacity-50 bg-gray-900 hover:bg-opacity-25 shadow transition"
             >
               Resume
             </button>
@@ -40,7 +40,7 @@ const Home: NextPage = () => {
         <div className="flex flex-col space-y-6 divide-y divide-gray-500">
           <div>
             <a href="#">
-              <h3 className="mb-3 hover:text-purple-500 transition text-xl pt-8 font-bold tracking-normal md:text-2xl">
+              <h3 className="mb-3 hover:text-purple-400 transition text-xl pt-8 font-bold tracking-normal md:text-2xl">
                 Process Documents Using Artificial Intelligence For RPA Bots
               </h3>
               <p className="text-base font-normal text-gray-300">
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
           </div>
           <div>
             <a href="#">
-              <h3 className="mb-3 text-xl hover:text-purple-500 transition pt-8 font-bold tracking-normal md:text-2xl">
+              <h3 className="mb-3 text-xl hover:text-purple-400 transition pt-8 font-bold tracking-normal md:text-2xl">
                 Implement Dark Mode in Your Android App
               </h3>
               <p className="text-base font-normal text-gray-300">
@@ -62,7 +62,7 @@ const Home: NextPage = () => {
           </div>
           <div>
             <a href="#">
-              <h3 className="mb-3 text-xl hover:text-purple-500 transition pt-8 font-bold tracking-normal md:text-2xl">
+              <h3 className="mb-3 text-xl hover:text-purple-400 transition pt-8 font-bold tracking-normal md:text-2xl">
                 Why is Mental Health one of the Important Issues to Address?
               </h3>
               <p className="text-base font-normal text-gray-300">
@@ -83,15 +83,31 @@ const Home: NextPage = () => {
         <div className="text-left mt-16">
           <h2 className="text-3xl sm:text-4xl font-bold ">Recent Projects</h2>
         </div>
-        <div className="flex flex-col space-y-6 divide-y divide-gray-500 mt-4">
-          <div className="bg-gray-900 rounded">
+        <div className="flex flex-col space-y-6 divide-y divide-gray-500 ring-1 ring-gray-700 rounded mt-4">
+          <div className="bg-gray-900 bg-opacity-25 hover:bg-black p-4">
             <a href="#" className="flex">
               <div>IMAGE</div>
-              <div>
-                <h3 className="m-3 text-xl font-bold tracking-normal">Lift Workout App</h3>
+              <div className="ml-4">
+                <h3 className="mb-2 text-xl font-bold tracking-normal">Lift Workout App</h3>
                 <p className="text-base font-normal text-gray-300">
-                  A simple, accessible workout app that allows a user to create daily strength workout routines. Users
-                  can also add, update or delete any previous logged workouts.
+                  A simple, accessible workout app that allows a user to create, track, and update their daily workout
+                  routines.
+                  {/* Users can also add, update or delete any previous logged workouts. */}
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div className="flex flex-col space-y-6 divide-y divide-gray-500 ring-1 ring-gray-700 rounded mt-4">
+          <div className="bg-gray-900 bg-opacity-25 hover:bg-black p-4">
+            <a href="#" className="flex">
+              <div>IMAGE</div>
+              <div className="ml-4">
+                <h3 className="mb-2 text-xl font-bold tracking-normal">COVID-19 Dashboard for Canada</h3>
+                <p className="text-base font-normal text-gray-300">
+                  A simple, accessible workout app that allows a user to create, track, and update their daily workout
+                  routines.
+                  {/* Users can also add, update or delete any previous logged workouts. */}
                 </p>
               </div>
             </a>
@@ -150,7 +166,7 @@ const Home: NextPage = () => {
             </svg>
           </a>
         </div>
-        <p className="text-sm mb-6 text-gray-400">Pranav Birajdar &copy; 2021</p>
+        <p className="text-sm mb-6 sm:mb-4 text-gray-400 sm:self-end">Pranav Birajdar &copy; 2021</p>
       </footer>
     </>
   )
