@@ -2,12 +2,11 @@ import React from 'react'
 import { NextPage } from 'next'
 
 const Home: NextPage = () => {
-  const { SITE_NAME } = process.env
-
   return (
-    <h1 data-testid="helloH1" className="text-xl text-indigo-900">
-      Hello from <u>{SITE_NAME}</u>.
-    </h1>
+    <div>
+      <h1 className="text-center text-2xl te">hi</h1>
+      <p className="text-base text-center">Hellow brother</p>
+    </div>
   )
 }
 
