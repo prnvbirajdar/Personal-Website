@@ -94,10 +94,10 @@ const Home: NextPage = () => {
                   routines.
                   {/* Users can also add, update or delete any previous logged workouts. */}
                 </p>
-                <ul className="flex justify-end text-xs mt-3">
-                  <li className="ml-3">Next js</li>
-                  <li className="ml-3">Firebase</li>
-                  <li className="ml-3">Tailwind</li>
+                <ul className="flex md:justify-end text-xs mt-3">
+                  <li className="md:ml-3 mr-3">Next js</li>
+                  <li className="md:ml-3 mr-3">Firebase</li>
+                  <li className="md:ml-3 mr-3">Tailwind</li>
                 </ul>
               </div>
             </a>
@@ -114,10 +114,10 @@ const Home: NextPage = () => {
                   Canada.
                   {/* Users can also add, update or delete any previous logged workouts. */}
                 </p>
-                <ul className="flex justify-end text-xs mt-3">
-                  <li className="ml-3">React</li>
-                  <li className="ml-3">Chart js</li>
-                  <li className="ml-3">COVID-19 API</li>
+                <ul className="flex md:justify-end text-xs mt-3">
+                  <li className="md:ml-3 mr-3">React</li>
+                  <li className="md:ml-3 mr-3">Chart js</li>
+                  <li className="md:ml-3 mr-3">COVID-19 API</li>
                 </ul>
               </div>
             </a>
@@ -130,16 +130,16 @@ const Home: NextPage = () => {
           <h2 className="mb-2 text-3xl font-extrabold tracking-tight md:text-4xl md:mb-6 md:leading-tight">
             Get In Touch!
           </h2>
-          <p className="mb-6 text-base font-semibold text-gray-300">
+          <p className="mb-6 w-3/4 lg:w-4/6 m-auto text-center font-semibold text-gray-300">
             Whether you have an idea for a project or just want to say hi, feel free to shoot me an email!
           </p>
 
           <div className="mb-0 space-x-0 md:space-x-2">
             <a
-              className="inline-flex items-center justify-center w-full mb-2 btn btn-light btn-lg sm:w-auto sm:mb-0"
+              className="inline-flex font-semibold tracking-wider text-sm items-center justify-center w-full mb-2 p-2.5 px-5 rounded ring-2 ring-gray-400 ring-opacity-50 bg-gray-900 bg-opacity-0 hover:bg-opacity-100 hover:text-white shadow transition sm:w-auto sm:mb-0"
               href="#"
             >
-              Book a Demo
+              Say Hello!
               <svg className="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                 <path
                   fillRule="evenodd"
