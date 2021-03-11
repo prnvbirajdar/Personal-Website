@@ -34,7 +34,7 @@ const About: NextPage = () => {
               {/* <div className="text-gray-500 dark:text-gray-400">Stanford University</div> */}
               <Icons />
             </div>
-            <div className="pt-4 pb-8 lg:col-span-2 text-base font-normal sm:w-9/12 md:w-10/12 mx-auto lg:mx-2 xl:mx-0">
+            <div className="pt-4 pb-8 lg:col-span-2 text-base font-normal sm:w-9/12 md:w-10/12 mx-auto  lg:mx-0">
               <p className="mb-4">
                 Hello! I&apos;m Pranav, a software developer and personal trainer based in Ottawa, CA🍁.
               </p>
@@ -52,13 +52,14 @@ const About: NextPage = () => {
                 new recipe in the kitchen.
               </p>
               <p className="mb-4">Here are a few technologies I&apos;ve been working with recently:</p>
-              <ul className="list-inside">
+              <ul className="list-inside lg:flex">
                 <div>
                   <li className="mb-0.25">React</li>
+                  <li className="mb-0.25">TypeScript</li>
                   <li className="mb-0.25">JavaScript (ES6+)</li>
                 </div>
 
-                <div>
+                <div className="lg:ml-16">
                   <li className="mb-0.25">Semantic HTML</li>
                   <li className="mb-0.25">(S)CSS</li>
                 </div>
