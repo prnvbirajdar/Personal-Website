@@ -3,6 +3,8 @@ import React, { Fragment } from 'react'
 import { AppProps } from 'next/app'
 import '@src/css/tailwind.css'
 import Head from 'next/head'
+import CallToAction from '@src/components/CallToAction'
+import Footer from '@src/components/Footer'
 
 const App = ({ Component, pageProps }: AppProps) => (
   <>
@@ -13,6 +15,10 @@ const App = ({ Component, pageProps }: AppProps) => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <Component {...pageProps} />
+    <section className="w-full mt-8 bg-gradient-to-b from-black to-gray-900">
+      <CallToAction />
+      <Footer />
+    </section>
   </>
 )
 

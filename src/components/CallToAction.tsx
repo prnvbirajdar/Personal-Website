@@ -13,7 +13,7 @@ const CallToAction = () => {
 
       <div className="mb-0 space-x-0 md:space-x-2">
         <a
-          className="inline-flex font-semibold tracking-wider text-sm items-center justify-center w-full mb-2 p-2.5 px-5 rounded ring-2 ring-gray-400 ring-opacity-50 bg-gray-900 bg-opacity-0 hover:bg-opacity-100 hover:text-white shadow transition sm:w-auto sm:mb-0"
+          className="inline-flex font-semibold tracking-wider text-sm items-center justify-center mb-2 p-2.5 px-5 rounded ring-2 ring-gray-400 ring-opacity-50 bg-gray-900 bg-opacity-0 hover:bg-opacity-100 hover:text-white shadow transition sm:w-auto sm:mb-0"
           href="#"
         >
           Say Hello!

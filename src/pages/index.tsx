@@ -2,11 +2,9 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
 import { NextPage } from 'next'
-import Footer from '@src/components/Footer'
-import CallToAction from '@src/components/CallToAction'
-import RecentProjects from '@src/components/RecentProjects'
-import LatestArticles from '@src/components/LatestArticles'
-import Header from '@src/components/Header'
+import RecentProjects from '@src/components/Landing/RecentProjects'
+import LatestArticles from '@src/components/Landing/LatestArticles'
+import Header from '@src/components/Landing/Header'
 
 const Home: NextPage = () => {
   return (
@@ -35,8 +33,8 @@ const Home: NextPage = () => {
       </section>
 
       <section className="w-full mt-8 bg-gradient-to-b from-black to-gray-900">
-        <CallToAction />
-        <Footer />
+        {/* <CallToAction />
+        <Footer /> */}
       </section>
     </>
   )
