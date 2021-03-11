@@ -15,15 +15,15 @@ const About: NextPage = () => {
         <p className="px-5 rounded py-1 bg-yellow-300 hidden sm:hidden md:hidden lg:hidden xl:block 2xl:hidden">xl</p>
         <p className="px-5 rounded py-1 bg-purple-300 hidden sm:hidden md:hidden lg:hidden xl:hidden 2xl:block">2xl</p>
       </div>
-      <section className="w-11/12 px-4 md:px-0 mt-16 md:mt-24 lg:mt-36 mx-auto  md:w-3/4 lg:w-7/12 text-gray-300">
+      <section className="w-11/12 px-4 md:px-0 mt-16 md:mt-24 lg:mt-28 mx-auto md:w-3/4 lg:w-10/12 text-gray-300">
         <div>
           <div className=" space-y-2 md:space-y-5">
-            <h1 className="pb-3 text-3xl font-extrabold leading-9 tracking-tight text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+            <h1 className="pb-3 lg:mb-5 text-3xl font-extrabold leading-9 tracking-tight text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
               About Me
             </h1>
           </div>
-          <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
-            <div className="flex flex-col items-center pt-8 space-x-2">
+          <div className="items-start space-y-2 lg:grid lg:grid-cols-3 lg:space-y-0">
+            <div className="flex flex-col xl:pl-10 items-center pt-6 xl:pt-5">
               <img
                 src="https://avatars.githubusercontent.com/u/15911693?s=400&u=2b0df1b5fed0e01367e86e01a3f39868360f2663&v=4"
                 alt="avatar"
@@ -34,7 +34,7 @@ const About: NextPage = () => {
               {/* <div className="text-gray-500 dark:text-gray-400">Stanford University</div> */}
               <Icons />
             </div>
-            <div className="pt-4 pb-8 xl:col-span-2 text-base font-normal sm:w-9/12 md:w-10/12 mx-auto">
+            <div className="pt-4 pb-8 lg:col-span-2 text-base font-normal sm:w-9/12 md:w-10/12 mx-auto lg:mx-2 xl:mx-0">
               <p className="mb-4">
                 Hello! I&apos;m Pranav, a software developer and personal trainer based in Ottawa, CA🍁.
               </p>
@@ -47,10 +47,10 @@ const About: NextPage = () => {
                 I aspire toward a career that will allow me to build beautiful applications through carefully crafted
                 code and user-centric design that result in engaging experiences.
               </p>
-              {/* <p className="mb-4">
+              <p className="mb-4">
                 When I’m not in front of a computer screen, I am probably working out, riding my bike, or trying out a
                 new recipe in the kitchen.
-              </p> */}
+              </p>
               <p className="mb-4">Here are a few technologies I&apos;ve been working with recently:</p>
               <ul className="list-inside">
                 <div>
