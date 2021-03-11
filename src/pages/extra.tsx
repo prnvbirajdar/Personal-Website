@@ -87,6 +87,27 @@ const About: NextPage = () => {
               </ul>
             </div>
           </div>
+
+          <div className="mt-16 space-y-2 md:space-y-5">
+            <h1 className=" lg:mb-5 text-3xl font-extrabold leading-9 tracking-tight text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+              Lift Workout App
+            </h1>
+            <div className=" sm:w-9/12 md:w-10/12 lg:w-9/12 text-base md:text-lg font-normal ">
+              <p>
+                A simple, accessible workout app that allows a user to create, track, and update their daily workout
+                routines.
+              </p>
+              <p>Tools Used: Next JS, Tailwind CSS, Firebase</p>
+              <p>Features:</p>
+              <ul>
+                <li>Sign in with Google or Facebook to create a profile and starting tracking your workouts.</li>
+                <li>Allows users to select exercises based on the body part they wish to workout on.</li>
+                <li>Add sets, repititions and weight used for every exercises.</li>
+                <li>Add, update, and track your physical stats like weight and height.</li>
+                <li>Users can also go back and view, add, update or delete past workouts.</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
     </>

@@ -2,7 +2,6 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
 import { NextPage } from 'next'
-import Icons from '@src/components/Icons/Icons'
 
 const About: NextPage = () => {
   return (
@@ -18,57 +17,72 @@ const About: NextPage = () => {
       <section className="w-11/12 px-4 md:px-0 mt-16 md:mt-24 lg:mt-28 mx-auto md:w-3/4 lg:w-10/12 text-gray-300">
         <div>
           <div className=" space-y-2 md:space-y-5">
-            <h1 className=" lg:mb-5 text-3xl font-extrabold leading-9 tracking-tight text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+            <h1 className="mb-3 lg:mb-5 text-4xl font-extrabold leading-9 tracking-tight text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
               Projects
             </h1>
             <p className=" sm:w-9/12 md:w-10/12 lg:w-9/12 text-base md:text-lg font-normal ">
-              These are some of my personal projects. With each new project, my goal it to either learn something new,
-              or increase the size and the scope of the technologies I have previosly used. This section is a way for me
-              to chronicle these lessons and ideas.
+              {/* With each new project, my goal it to either learn something new, or increase the size and the scope of the
+              technologies I have previosly used. */}
+              {/* These are some of my personal projects. This is a way for me to chronicle my growth as a developer. */}
+              My personal projects are a way for me to chronicle my growth as a developer.
             </p>
           </div>
           <div className="items-start space-y-2 lg:grid lg:grid-cols-3 lg:space-y-0">
-            <div className="flex flex-col xl:pl-10 items-center pt-6 xl:pt-5">
-              <img
-                src="https://avatars.githubusercontent.com/u/15911693?s=400&u=2b0df1b5fed0e01367e86e01a3f39868360f2663&v=4"
-                alt="avatar"
-                className="w-48 h-48 rounded-xl"
-              />
-              <h3 className="pt-4 text-2xl md:text-3xl font-bold leading-8 tracking-tight">Pranav Birajdar</h3>
-              <div className="md:text-lg text-gray-400 dark:text-gray-400 mb-2 md:mt-1">Software Developer</div>
-              {/* <div className="text-gray-500 dark:text-gray-400">Stanford University</div> */}
-              <Icons />
+            <div className=" mt-8 space-y-2 md:space-y-5">
+              <h1 className=" lg:mb-5 text-3xl font-extrabold leading-9 tracking-tight text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+                Lift Workout App
+              </h1>
+              <div className=" sm:w-9/12 md:w-10/12 lg:w-9/12 text-sm md:text-lg font-normal ">
+                <p>
+                  A simple, accessible workout app that allows a user to create, track, and update their daily workout
+                  routines.
+                </p>
+                <ul className="flex md:justify-end text-xs mt-3">
+                  <li className="md:ml-3 mr-3">Next js</li>
+                  <li className="md:ml-3 mr-3">Firebase</li>
+                  <li className="md:ml-3 mr-3">Tailwind</li>
+                </ul>
+                {/*   <p>Features:</p>
+                <ul>
+                  <li>Sign in with Google or Facebook to create a profile and starting tracking your workouts.</li>
+                  <li>Allows users to select exercises based on the body part they wish to workout on.</li>
+                  <li>Add sets, repititions and weight used for every exercises.</li>
+                  <li>Add, update, and track your physical stats like weight and height.</li>
+                  <li>Users can also go back and view, add, update or delete past workouts.</li>
+                </ul> */}
+              </div>
             </div>
-            <div className="pt-4 pb-8 lg:col-span-2 text-base font-normal sm:w-9/12 md:w-10/12 mx-auto  lg:mx-0">
-              <p className="mb-4">
-                Hello! I&apos;m Pranav, a software developer and personal trainer based in Ottawa, CA🍁.
-              </p>
-              <p className="mb-4">
-                I’m a first year student at Algonquin College studying Computer Engineering Technology. I have
-                experience designing and developing applications for the web, from simple landing pages to progressive
-                web applications.
-              </p>
-              <p className="mb-4">
-                I aspire toward a career that will allow me to build beautiful applications through carefully crafted
-                code and user-centric design that result in engaging experiences.
-              </p>
-              <p className="mb-4">
-                When I’m not in front of a computer screen, I am probably working out, riding my bike, or trying out a
-                new recipe in the kitchen.
-              </p>
-              <p className="mb-4">Here are a few technologies I&apos;ve been working with recently:</p>
-              <ul className="list-inside lg:flex">
-                <div>
-                  <li className="mb-0.25">React</li>
-                  <li className="mb-0.25">TypeScript</li>
-                  <li className="mb-0.25">JavaScript (ES6+)</li>
-                </div>
 
-                <div className="lg:ml-16">
-                  <li className="mb-0.25">Semantic HTML</li>
-                  <li className="mb-0.25">(S)CSS</li>
-                </div>
-              </ul>
+            <div className=" space-y-2 md:space-y-5">
+              <h1 className=" lg:mb-5 text-3xl font-extrabold leading-9 tracking-tight text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+                COVID-19 Tracker
+              </h1>
+              <div className="sm:w-9/12 md:w-10/12 lg:w-9/12 text-sm md:text-lg font-normal ">
+                <p>
+                  This dashboard provides up-to-date information about the COVID-19 outbreak and the vaccination efforts
+                  in Canada.
+                </p>
+                {/* <p>Tools used: React Semantic UI Leaflet Chart JS Webpack Axios</p> */}
+                <ul className="flex md:justify-end text-xs mt-3">
+                  <li className="md:ml-3 mr-3">React</li>
+                  <li className="md:ml-3 mr-3">Chart js</li>
+                  <li className="md:ml-3 mr-3">COVID-19 API</li>
+                </ul>
+
+                {/* <p>Features:</p>
+                <ul>
+                  <li>
+                    Vaccination tracker helps track the number of vaccine administered in every health region for every
+                    province and territories.
+                  </li>
+                  <li>Daily updated stats on the deaths, recoveries and cases for Canada and every province.</li>
+                  <li>
+                    The interactive bubble map gives a comparative data about the level of spread in different
+                    provinces.
+                  </li>
+                  <li>Regional bar graph compares the COVID-19 outbreak for the five regions.</li>
+                </ul> */}
+              </div>
             </div>
           </div>
         </div>
