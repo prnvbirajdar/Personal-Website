@@ -68,7 +68,6 @@ const About: NextPage = () => {
                   This dashboard provides up-to-date information about the COVID-19 outbreak and the vaccination efforts
                   in Canada.
                 </p>
-                {/* <p>Tools used: React Semantic UI Leaflet Chart JS Webpack Axios</p> */}
                 <ul className="flex justify-end md:justify-end text-xs mt-3 font-semibold pb-2">
                   <li className="md:ml-3 mr-3">
                     <i>React</i>
@@ -97,7 +96,55 @@ const About: NextPage = () => {
               </div>
             </div>
 
-            <div className=" space-y-2 md:space-y-5">
+            <div className="w-full max-w-lg h-56  rounded-lg shadow-2xl overflow-y-visible relative">
+              <img
+                className="absolute inset-0 h-full w-full object-cover sm:object-contain rounded-lg"
+                src="/keep-dark.webp"
+                alt=""
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-75" />
+              <div className="px-6 py-3 relative text-gray-50">
+                <h1 className="mt-2 lg:mb-5 text-xl font-extrabold leading-9 tracking-tight hover:text-gray-700 dark:hover:text-gray-300 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+                  Reels Movie Db
+                </h1>
+                <div className=" sm:w-9/12 md:w-10/12 lg:w-9/12 text-sm md:text-lg font-normal">
+                  <p className="pr-8 mt-2">
+                    A simplified Netflix clone with a personal twist. It helps you find your favortie movies and watch
+                    trailers.
+                  </p>
+                  <ul className="flex md:justify-end text-xs mt-3 font-semibold">
+                    <li className="md:ml-3 mr-3">React</li>
+                    <li className="md:ml-3 mr-3">Firebase</li>
+                    <li className="md:ml-3 mr-3">Tailwind</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="w-full max-w-lg h-64 rounded-lg shadow-2xl overflow-y-visible relative">
+              <img className="absolute inset-0 h-full w-full object-cover rounded-lg" src="/keep-dark.webp" alt="" />
+              <div className="absolute inset-0 bg-gray-900 bg-opacity-75" />
+              <div className="flex h-full items-center justify-center relative text-gray-100">
+                <div>
+                  <h1 className="text-gray-100 lg:mb-5 text-3xl font-extrabold leading-9 tracking-tight dark:hover:text-gray-300 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+                    Keep Clone
+                  </h1>
+                  <div className="sm:w-9/12 md:w-10/12 lg:w-9/12 text-sm md:text-lg font-normal">
+                    <p>
+                      A minimalistic Google Keep clone. My goal with this project was to learn Next.js, Tailwind CSS,
+                      and Firebase and this glorified todo list helped me achieve exactly that.
+                    </p>
+                    <ul className="flex md:justify-end text-xs mt-3 font-semibold">
+                      <li className="md:ml-3 mr-3">Next.js</li>
+                      <li className="md:ml-3 mr-3">Firebase</li>
+                      <li className="md:ml-3 mr-3">Tailwind</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* <div className=" space-y-2 md:space-y-5">
               <h1 className="mt-6 lg:mb-5 text-3xl font-extrabold leading-9 tracking-tight hover:text-gray-700 dark:hover:text-gray-300  sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
                 Reels Movie Db
               </h1>
@@ -111,7 +158,7 @@ const About: NextPage = () => {
                   <li className="md:ml-3 mr-3">React-Router</li>
                   <li className="md:ml-3 mr-3">TMDb API</li>
                 </ul>
-                {/* <p>Features:</p>
+                <p>Features:</p>
                 <ul>
                   <li>Search through 30,000 movies from the TMDb API.</li>
                   <li>Browse through the weekly updated trending and upcoming movies.</li>
@@ -123,10 +170,10 @@ const About: NextPage = () => {
                     The individual movie page also allows user to watch a Youtube trailer in a modal and browse through
                     a list of similar movies.
                   </li>
-                </ul> */}
+                </ul> 
               </div>
-            </div>
-
+            </div> */}
+            {/* 
             <div className=" space-y-2 md:space-y-5">
               <h1 className="mt-6 lg:mb-5 text-3xl font-extrabold leading-9 tracking-tight hover:text-gray-700 dark:hover:text-gray-300  sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
                 Keep Clone
@@ -141,16 +188,17 @@ const About: NextPage = () => {
                   <li className="md:ml-3 mr-3">Firebase</li>
                   <li className="md:ml-3 mr-3">Tailwind</li>
                 </ul>
-                {/* <p>Features:</p>
-              <ul>
-                <li>Static website importing dynamic assests from Firebase.</li>
-                <li>Users can create, update, and delete notes. All changes are immediately pushed to the database.</li>
-                <li>Enable/disable dark mode. Saves your preference for next time.</li>
-                <li>Adapts to all screen sizes, from mobile screens upto 4k displays.</li>
-              </ul>
-            </div> */}
+                <p>Features:</p>
+                <ul>
+                  <li>Static website importing dynamic assests from Firebase.</li>
+                  <li>
+                    Users can create, update, and delete notes. All changes are immediately pushed to the database.
+                  </li>
+                  <li>Enable/disable dark mode. Saves your preference for next time.</li>
+                  <li>Adapts to all screen sizes, from mobile screens upto 4k displays.</li>
+                </ul>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
