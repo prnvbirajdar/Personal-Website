@@ -29,7 +29,7 @@ const About: NextPage = () => {
           </div>
           <div className="items-start space-y-2 lg:grid lg:grid-cols-3 lg:space-y-0">
             <div className=" mt-8 space-y-2 md:space-y-5">
-              <h1 className=" lg:mb-5 text-3xl font-extrabold leading-9 tracking-tight text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+              <h1 className=" lg:mb-5 text-3xl font-extrabold leading-9 tracking-tight hover:text-gray-700 dark:hover:text-gray-300 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
                 Lift Workout App
               </h1>
               <div className=" sm:w-9/12 md:w-10/12 lg:w-9/12 text-sm md:text-lg font-normal ">
@@ -54,7 +54,7 @@ const About: NextPage = () => {
             </div>
 
             <div className=" space-y-2 md:space-y-5">
-              <h1 className=" lg:mb-5 text-3xl font-extrabold leading-9 tracking-tight text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+              <h1 className=" lg:mb-5 text-3xl font-extrabold leading-9 tracking-tight hover:text-gray-700 dark:hover:text-gray-300  sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
                 COVID-19 Tracker
               </h1>
               <div className="sm:w-9/12 md:w-10/12 lg:w-9/12 text-sm md:text-lg font-normal ">
