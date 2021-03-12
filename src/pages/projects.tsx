@@ -75,59 +75,30 @@ const About: NextPage = () => {
               </div>
             </div>
 
-            <div className="w-full max-w-lg h-64 rounded-lg shadow-2xl overflow-y-visible relative">
-              <img className="absolute inset-0 h-full w-full object-cover rounded-lg" src="/keep-dark.webp" alt="" />
-              <div className="absolute inset-0 bg-gray-900 bg-opacity-75" />
-              <div className="flex h-full items-center justify-center relative text-gray-100">
-                <div>
-                  <h1 className="text-gray-100 lg:mb-5 text-3xl font-extrabold leading-9 tracking-tight dark:hover:text-gray-300 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
-                    Keep Clone
-                  </h1>
-                  <div className="sm:w-9/12 md:w-10/12 lg:w-9/12 text-sm md:text-lg font-normal">
-                    <p>
-                      A minimalistic Google Keep clone. My goal with this project was to learn Next.js, Tailwind CSS,
-                      and Firebase and this glorified todo list helped me achieve exactly that.
-                    </p>
-                    <ul className="flex md:justify-end text-xs mt-3 font-semibold pb-2">
-                      <li className="md:ml-3 mr-3">
-                        <i> Next.js</i>
-                      </li>
-                      <li className="md:ml-3 mr-3">
-                        <i>Firebase</i>
-                      </li>
-                      <li className="md:ml-3 mr-3">
-                        <i>Tailwind</i>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="md:cursor-pointer flex w-full md:mx-auto md:w-4/6 border border-gray-800 hover:border-gray-600 md:h-96 h-auto rounded-lg shadow-2xl relative">
+            <div className="md:cursor-pointer flex w-full md:mx-auto lg:ml-0 lg:w-9/12 border border-gray-800 hover:border-gray-600 md:h-96 h-60 rounded-lg shadow-2xl relative">
               <div>
-                <img className="absolute inset-0 h-full w-full object-cover rounded-lg" src="/keep-dark.webp" alt="" />
-                <div className="absolute inset-0 bg-black bg-opacity-75 rounded-lg md:bg-opacity-60 md:bg-gradient-to-r from-black  " />
+                <img className="absolute inset-0 h-full w-full object-cover rounded-lg" src="/reels2.png" alt="" />
+                <div className="absolute inset-0 bg-black bg-opacity-40 rounded-lg md:bg-opacity-50 bg-gradient-to-r from-black  " />
               </div>
 
-              <div className="cursor-pointer px-6 py-3 relative  md:w-8/12   sm:my-auto text-gray-50 rounded-lg sm:border md:border-0 border-gray-600 hover:border-gray-400">
-                <h1 className="mt-2 lg:mb-5 text-xl font-extrabold leading-snug tracking-tight dark:hover:text-gray-300 sm:text-3xl sm:leading-10 md:leading-14">
+              <div className="cursor-pointer px-6 py-3 relative  md:w-8/12  my-auto text-gray-50 rounded-lg border sm:border-0 border-gray-600 hover:border-gray-400">
+                <h1 className="mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight dark:hover:text-gray-300  sm:leading-10 md:leading-14">
                   Reels Movie Db
                 </h1>
                 <div className=" sm:w-9/12 md:w-full text-sm md:text-lg ">
-                  <p className=" mt-2 leading-snug sm:text-base">
+                  <p className=" mt-2 md:mt-0  leading-snug md:text-base">
                     A simplified Netflix clone with a personal twist. It helps you find your favortie movies and watch
                     trailers.
                   </p>
                   <ul className="flex text-xs mt-3 font-semibold">
                     <li className=" mr-3">
-                      <i> Next.js</i>
+                      <i>React</i>
                     </li>
                     <li className=" mr-3">
-                      <i>Firebase</i>
+                      <i>SCSS</i>
                     </li>
                     <li className=" mr-3">
-                      <i>Tailwind</i>
+                      <i>TMDb API</i>
                     </li>
                   </ul>
                   <div className="pt-2 mt-1 flex">
@@ -142,24 +113,24 @@ const About: NextPage = () => {
               </div>
             </div>
 
-            <div className="flex w-full max-w-lg h-auto  rounded-lg shadow-2xl overflow-y-visible relative">
+            <div className="md:cursor-pointer flex w-full md:mx-auto lg:mr-0 lg:w-9/12 border border-gray-800 hover:border-gray-600 md:h-96 h-60 rounded-lg shadow-2xl relative">
               <div>
                 <img className="absolute inset-0 h-full w-full object-cover rounded-lg" src="/keep-dark.webp" alt="" />
-                <div className="absolute inset-0 bg-black bg-opacity-75 " />
+                <div className="absolute inset-0 bg-black bg-opacity-75 rounded-lg md:bg-opacity-60 md:bg-gradient-to-r from-black  " />
               </div>
 
-              <div className="cursor-pointer px-6 py-3 relative text-gray-50 rounded-lg border border-gray-600 hover:border-gray-400">
-                <h1 className="mt-2 lg:mb-5 text-xl font-extrabold leading-snug tracking-tight dark:hover:text-gray-300 sm:text-3xl sm:leading-10 md:leading-14">
-                  Reels Movie Db
+              <div className="cursor-pointer px-6 py-3 relative  md:w-8/12  my-auto text-gray-50 rounded-lg border sm:border-0 border-gray-600 hover:border-gray-400">
+                <h1 className="mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight dark:hover:text-gray-300 sm:leading-10 md:leading-14">
+                  Keep Clone
                 </h1>
-                <div className=" sm:w-9/12 md:w-10/12 lg:w-9/12 text-sm md:text-lg ">
-                  <p className="pr-8 mt-2 leading-snug sm:text-base">
-                    A simplified Netflix clone with a personal twist. It helps you find your favortie movies and watch
-                    trailers.
+                <div className=" sm:w-9/12 md:w-full text-sm md:text-lg ">
+                  <p className=" mt-2 md:mt-0  leading-snug md:text-base">
+                    A minimalistic Google Keep clone. My goal with this project was to learn Next.js, Tailwind CSS, and
+                    Firebase and this glorified todo list helped me achieve exactly that.
                   </p>
                   <ul className="flex text-xs mt-3 font-semibold">
                     <li className=" mr-3">
-                      <i> Next.js</i>
+                      <i>Next.js</i>
                     </li>
                     <li className=" mr-3">
                       <i>Firebase</i>
