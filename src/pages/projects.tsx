@@ -31,11 +31,15 @@ const About: NextPage = () => {
           <div className="space-y-6 ">
             <div className="mt-6 md:cursor-pointer flex w-full md:mx-auto lg:ml-0 lg:w-9/12 border border-gray-800 hover:border-gray-600 md:h-96 h-60 rounded-lg shadow-2xl relative">
               <div>
-                <img className="absolute inset-0 h-full w-full object-cover rounded-lg" src="/lift.png" alt="" />
+                <img
+                  className="absolute inset-0 h-full w-full object-cover rounded-lg"
+                  src="/lift.png"
+                  alt="lift workout app"
+                />
                 <div className="absolute inset-0 bg-black bg-opacity-40 rounded-lg md:bg-opacity-60 bg-gradient-to-r from-black  " />
               </div>
 
-              <div className="cursor-pointer px-6 py-3 relative  md:w-8/12  my-auto text-gray-50 rounded-lg border sm:border-0 border-gray-600 hover:border-gray-400">
+              <div className="cursor-pointer px-6 py-3 relative  md:w-8/12  my-auto text-gray-50 rounded-lg ">
                 <h1 className="mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight dark:hover:text-gray-300  sm:leading-10 md:leading-14">
                   Lift Workout App
                 </h1>
@@ -70,11 +74,15 @@ const About: NextPage = () => {
 
             <div className="md:cursor-pointer flex w-full md:mx-auto lg:mr-0 lg:w-9/12 border border-gray-800 hover:border-gray-600 md:h-96 h-60 rounded-lg shadow-2xl relative">
               <div>
-                <img className="absolute inset-0 h-full w-full object-cover rounded-lg" src="/covid.png" alt="" />
-                <div className="absolute inset-0 bg-black bg-opacity-75 rounded-lg md:bg-gradient-to-r from-black  " />
+                <img
+                  className="absolute inset-0 h-full w-full object-cover rounded-lg"
+                  src="/covid.png"
+                  alt="covid-19 tracker"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-75 rounded-lg bg-gradient-to-r from-black  " />
               </div>
 
-              <div className="cursor-pointer px-6 py-3 relative  md:w-8/12  my-auto text-gray-50 rounded-lg border sm:border-0 border-gray-600 hover:border-gray-400">
+              <div className="cursor-pointer px-6 py-3 relative  md:w-8/12  my-auto text-gray-50 rounded-lg ">
                 <h1 className="mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight dark:hover:text-gray-300 sm:leading-10 md:leading-14">
                   COVID-19 Tracker
                 </h1>
@@ -108,18 +116,22 @@ const About: NextPage = () => {
 
             <div className="md:cursor-pointer flex w-full md:mx-auto lg:ml-0 lg:w-9/12 border border-gray-800 hover:border-gray-600 md:h-96 h-60 rounded-lg shadow-2xl relative">
               <div>
-                <img className="absolute inset-0 h-full w-full object-cover rounded-lg" src="/reels2.png" alt="" />
+                <img
+                  className="absolute inset-0 h-full w-full object-cover rounded-lg"
+                  src="/reels2.png"
+                  alt="reels movie db"
+                />
                 <div className="absolute inset-0 bg-black bg-opacity-40 rounded-lg md:bg-opacity-50 bg-gradient-to-r from-black  " />
               </div>
 
-              <div className="cursor-pointer px-6 py-3 relative  md:w-8/12  my-auto text-gray-50 rounded-lg border sm:border-0 border-gray-600 hover:border-gray-400">
+              <div className="cursor-pointer px-6 py-3 relative  md:w-8/12  my-auto text-gray-50 rounded-lg ">
                 <h1 className="mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight dark:hover:text-gray-300  sm:leading-10 md:leading-14">
                   Reels Movie Db
                 </h1>
                 <div className=" sm:w-9/12 md:w-full text-sm md:text-lg ">
                   <p className="mt-2 leading-snug md:text-base">
-                    A simplified Netflix clone with a personal twist. It helps you find your favortie movies and watch
-                    trailers.
+                    A simplified Netflix clone that helps you browse through 600,000 movies and find the details of your
+                    favortie ones.
                   </p>
                   <ul className="flex text-xs mt-3 font-semibold lg:mt-4">
                     <li className=" mr-3">
@@ -147,18 +159,22 @@ const About: NextPage = () => {
 
             <div className="md:cursor-pointer flex w-full md:mx-auto lg:mr-0 lg:w-9/12 border border-gray-800 hover:border-gray-600 md:h-96 h-60 rounded-lg shadow-2xl relative">
               <div>
-                <img className="absolute inset-0 h-full w-full object-cover rounded-lg" src="/keep-dark.webp" alt="" />
+                <img
+                  className="absolute inset-0 h-full w-full object-cover rounded-lg"
+                  src="/keep-dark.webp"
+                  alt="keep clone"
+                />
                 <div className="absolute inset-0 bg-black bg-opacity-75 rounded-lg md:bg-opacity-60 md:bg-gradient-to-r from-black  " />
               </div>
 
-              <div className="cursor-pointer px-6 py-3 relative  md:w-8/12  my-auto text-gray-50 rounded-lg border sm:border-0 border-gray-600 hover:border-gray-400">
+              <div className="cursor-pointer px-6 py-3 relative  md:w-8/12  my-auto text-gray-50 rounded-lg ">
                 <h1 className="mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight dark:hover:text-gray-300 sm:leading-10 md:leading-14">
                   Keep Clone
                 </h1>
                 <div className=" sm:w-9/12 md:w-full text-sm md:text-lg ">
                   <p className=" mt-2 md:mt-0  leading-snug md:text-base">
-                    A minimalistic Google Keep clone. My goal with this project was to learn Next.js, Tailwind CSS, and
-                    Firebase and this glorified todo list helped me achieve exactly that.
+                    A responsive Google Keep clone that allows users to create, delete and save their notes. Dark mode
+                    enabled!
                   </p>
                   <ul className="lg:mt-4 flex text-xs mt-3 font-semibold">
                     <li className=" mr-3">
