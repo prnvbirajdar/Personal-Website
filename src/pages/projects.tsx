@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
 import { NextPage } from 'next'
-import { Github } from '../components/Icons/Icons'
+import { Github, OpenLink2 } from '../components/Icons/Icons'
 
 const About: NextPage = () => {
   return (
@@ -28,7 +28,7 @@ const About: NextPage = () => {
               My personal projects are a way for me to chronicle my growth as a developer.
             </p>
           </div>
-          <div className=" items-start space-y-2 lg:grid lg:grid-cols-3 lg:space-y-0">
+          <div className="space-y-6 ">
             <div className="mt-6 mb-6 space-y-2 md:space-y-5 bg-gray-900 bg-opacity-50 rounded px-6 py-3">
               <h1 className=" lg:mb-5 text-xl font-extrabold leading-9 tracking-tight hover:text-gray-700 dark:hover:text-gray-300 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
                 Lift Workout App
@@ -49,14 +49,6 @@ const About: NextPage = () => {
                     <i>Tailwind</i>
                   </li>
                 </ul>
-                {/*   <p>Features:</p>
-                <ul>
-                  <li>Sign in with Google or Facebook to create a profile and starting tracking your workouts.</li>
-                  <li>Allows users to select exercises based on the body part they wish to workout on.</li>
-                  <li>Add sets, repititions and weight used for every exercises.</li>
-                  <li>Add, update, and track your physical stats like weight and height.</li>
-                  <li>Users can also go back and view, add, update or delete past workouts.</li>
-                </ul> */}
               </div>
             </div>
 
@@ -69,7 +61,7 @@ const About: NextPage = () => {
                   This dashboard provides up-to-date information about the COVID-19 outbreak and the vaccination efforts
                   in Canada.
                 </p>
-                <ul className="flex justify-end md:justify-end text-xs mt-3 font-semibold pb-2">
+                <ul className="flex justify-end text-xs mt-3 font-semibold pb-2">
                   <li className="md:ml-3 mr-3">
                     <i>React</i>
                   </li>
@@ -80,54 +72,6 @@ const About: NextPage = () => {
                     <i>COVID-19 API</i>
                   </li>
                 </ul>
-
-                {/* <p>Features:</p>
-                <ul>
-                  <li>
-                    Vaccination tracker helps track the number of vaccine administered in every health region for every
-                    province and territories.
-                  </li>
-                  <li>Daily updated stats on the deaths, recoveries and cases for Canada and every province.</li>
-                  <li>
-                    The interactive bubble map gives a comparative data about the level of spread in different
-                    provinces.
-                  </li>
-                  <li>Regional bar graph compares the COVID-19 outbreak for the five regions.</li>
-                </ul> */}
-              </div>
-            </div>
-
-            <div className="w-full max-w-lg h-auto  rounded-lg shadow-2xl overflow-y-visible relative">
-              <img
-                className="absolute inset-0 h-full w-full object-cover sm:object-contain rounded-lg"
-                src="/keep-dark.webp"
-                alt=""
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-75 " />
-              <div className="cursor-pointer px-6 py-3 relative text-gray-50 rounded-lg border border-gray-600 hover:border-gray-400">
-                <h1 className="mt-2 lg:mb-5 text-xl font-extrabold leading-9 tracking-tight dark:hover:text-gray-300 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
-                  Reels Movie Db
-                </h1>
-                <div className=" sm:w-9/12 md:w-10/12 lg:w-9/12 text-sm md:text-lg font-normal">
-                  <p className="pr-8 mt-2">
-                    A simplified Netflix clone with a personal twist. It helps you find your favortie movies and watch
-                    trailers.
-                  </p>
-                  <ul className="flex md:justify-end text-xs mt-3 font-semibold">
-                    <li className="md:ml-3 mr-3">
-                      <i> Next.js</i>
-                    </li>
-                    <li className="md:ml-3 mr-3">
-                      <i>Firebase</i>
-                    </li>
-                    <li className="md:ml-3 mr-3">
-                      <i>Tailwind</i>
-                    </li>
-                  </ul>
-                  <div className="pt-2 mt-1 inline-block">
-                    <Github />
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -155,6 +99,82 @@ const About: NextPage = () => {
                         <i>Tailwind</i>
                       </li>
                     </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex w-full md:h-96 h-auto rounded-lg shadow-2xl relative">
+              <div>
+                <img className="absolute inset-0 h-full w-full object-cover rounded-lg" src="/keep-dark.webp" alt="" />
+                <div className="absolute inset-0 bg-black bg-opacity-75 md:bg-opacity-60 md:bg-gradient-to-r from-black  " />
+              </div>
+
+              <div className="cursor-pointer px-6 py-3 relative   md:w-8/12   sm:my-auto text-gray-50 rounded-lg sm:border md:border-0 border-gray-600 hover:border-gray-400">
+                <h1 className="mt-2 lg:mb-5 text-xl font-extrabold leading-snug tracking-tight dark:hover:text-gray-300 sm:text-3xl sm:leading-10 md:leading-14">
+                  Reels Movie Db
+                </h1>
+                <div className=" sm:w-9/12 md:w-full text-sm md:text-lg ">
+                  <p className=" mt-2 leading-snug sm:text-base">
+                    A simplified Netflix clone with a personal twist. It helps you find your favortie movies and watch
+                    trailers.
+                  </p>
+                  <ul className="flex text-xs mt-3 font-semibold">
+                    <li className=" mr-3">
+                      <i> Next.js</i>
+                    </li>
+                    <li className=" mr-3">
+                      <i>Firebase</i>
+                    </li>
+                    <li className=" mr-3">
+                      <i>Tailwind</i>
+                    </li>
+                  </ul>
+                  <div className="pt-2 mt-1 flex">
+                    <div className="mr-5">
+                      <Github />
+                    </div>
+                    <div className="mr-5">
+                      <OpenLink2 />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex w-full max-w-lg h-auto  rounded-lg shadow-2xl overflow-y-visible relative">
+              <div>
+                <img className="absolute inset-0 h-full w-full object-cover rounded-lg" src="/keep-dark.webp" alt="" />
+                <div className="absolute inset-0 bg-black bg-opacity-75 " />
+              </div>
+
+              <div className="cursor-pointer px-6 py-3 relative text-gray-50 rounded-lg border border-gray-600 hover:border-gray-400">
+                <h1 className="mt-2 lg:mb-5 text-xl font-extrabold leading-snug tracking-tight dark:hover:text-gray-300 sm:text-3xl sm:leading-10 md:leading-14">
+                  Reels Movie Db
+                </h1>
+                <div className=" sm:w-9/12 md:w-10/12 lg:w-9/12 text-sm md:text-lg ">
+                  <p className="pr-8 mt-2 leading-snug sm:text-base">
+                    A simplified Netflix clone with a personal twist. It helps you find your favortie movies and watch
+                    trailers.
+                  </p>
+                  <ul className="flex text-xs mt-3 font-semibold">
+                    <li className=" mr-3">
+                      <i> Next.js</i>
+                    </li>
+                    <li className=" mr-3">
+                      <i>Firebase</i>
+                    </li>
+                    <li className=" mr-3">
+                      <i>Tailwind</i>
+                    </li>
+                  </ul>
+                  <div className="pt-2 mt-1 flex">
+                    <div className="mr-5">
+                      <Github />
+                    </div>
+                    <div className="mr-5">
+                      <OpenLink2 />
+                    </div>
                   </div>
                 </div>
               </div>

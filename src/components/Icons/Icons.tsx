@@ -121,6 +121,54 @@ const Github = () => {
   )
 }
 
-export { Moon, Sun, Github }
+const OpenLink = () => {
+  return (
+    <a href="#" className="rounded text-gray-500 hover:text-gray-700  dark:text-gray-400 dark:hover:text-gray-100 ">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="flex-none w-5 h-5"
+        width="16"
+        height="16"
+        fill="currentColor"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fillRule="evenodd"
+          d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
+        />
+        <path
+          fillRule="evenodd"
+          d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
+        />
+      </svg>
+    </a>
+  )
+}
+
+const OpenLink2 = () => {
+  return (
+    <a href="#" className="rounded text-gray-500 hover:text-gray-700  dark:text-gray-400 dark:hover:text-gray-100 ">
+      <svg
+        className="flex-none w-5 h-5"
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fillRule="evenodd"
+          d="M6.364 13.5a.5.5 0 0 0 .5.5H13.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 13.5 1h-10A1.5 1.5 0 0 0 2 2.5v6.636a.5.5 0 1 0 1 0V2.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H6.864a.5.5 0 0 0-.5.5z"
+        />
+        <path
+          fillRule="evenodd"
+          d="M11 5.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793l-8.147 8.146a.5.5 0 0 0 .708.708L10 6.707V10.5a.5.5 0 0 0 1 0v-5z"
+        />
+      </svg>
+    </a>
+  )
+}
+
+export { Moon, Sun, Github, OpenLink, OpenLink2 }
 
 export default Icons
