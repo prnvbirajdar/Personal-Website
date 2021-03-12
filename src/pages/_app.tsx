@@ -15,9 +15,9 @@ const App = ({ Component, pageProps }: AppProps) => (
       <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <ThemeProvider attribute="class">
+    <ThemeProvider>
       <Component {...pageProps} />
-      <section className="w-full mt-8 bg-gradient-to-b from-black to-gray-900">
+      <section className="w-full mt-8 dark:bg-gradient-to-b from-black to-gray-900">
         <CallToAction />
         <Footer />
       </section>

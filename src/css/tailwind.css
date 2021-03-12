@@ -5,5 +5,5 @@
 html,
 body {
   height: 100vh;
-  @apply text-gray-50 bg-black;
+  @apply dark:text-gray-50 dark:bg-black bg-gray-50 text-gray-900;
 }

@@ -4,9 +4,9 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <header className="flex flex-col space-y-12 divide-y divide-gray-200 mb-32">
+    <header className="flex flex-col space-y-12 divide-y divide-gray-200 mb-32 ">
       <div>
-        <h1 className="text-2xl font-extrabold leading-9 tracking-tight  text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl lg:text-6xl md:leading-14">
+        <h1 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl lg:text-6xl md:leading-14">
           Hi, I&apos;m Pranav👋
         </h1>
         <p className="mt-6 sm:w-9/12 md:w-10/12 lg:w-full text-base md:text-lg font-normal ">

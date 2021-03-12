@@ -3,17 +3,17 @@ import React from 'react'
 
 const CallToAction = () => {
   return (
-    <div className="w-11/12 px-4 py-20 mx-auto text-center md:w-3/4 lg:w-2/4">
+    <div className="w-11/12 px-4 py-20 mx-auto text-center md:w-3/4 lg:w-2/4 text-gray-900 ">
       <h2 className="mb-2 text-3xl font-extrabold tracking-tight md:text-4xl md:mb-6 md:leading-tight">
         Get In Touch!
       </h2>
-      <p className="mb-6 w-3/4 lg:w-4/6 m-auto text-center font-semibold text-gray-300">
+      <p className="mb-6 w-3/4 lg:w-4/6 m-auto text-center font-semibold ">
         Whether you have an idea for a project or just want to say hi, feel free to shoot me an email!
       </p>
 
       <div className="mb-0 space-x-0 md:space-x-2">
         <a
-          className="inline-flex font-semibold tracking-wider text-sm items-center justify-center mb-2 p-2.5 px-5 rounded ring-2 ring-gray-400 ring-opacity-50 bg-gray-900 bg-opacity-0 hover:bg-opacity-100 hover:text-white shadow transition sm:w-auto sm:mb-0"
+          className="inline-flex font-semibold tracking-wider text-sm items-center justify-center mb-2 p-2.5 px-5 rounded ring-2 ring-gray-400 ring-opacity-50 dark:bg-gray-900 bg-opacity-0 hover:bg-opacity-100 hover:text-white shadow transition sm:w-auto sm:mb-0"
           href="#"
         >
           Say Hello!
