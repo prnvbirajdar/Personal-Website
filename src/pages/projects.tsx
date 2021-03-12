@@ -28,19 +28,25 @@ const About: NextPage = () => {
             </p>
           </div>
           <div className=" items-start space-y-2 lg:grid lg:grid-cols-3 lg:space-y-0">
-            <div className="mt-6 mb-6 space-y-2 md:space-y-5 bg-gray-900 rounded px-6 py-3">
-              <h1 className=" lg:mb-5 text-2xl font-extrabold leading-9 tracking-tight hover:text-gray-700 dark:hover:text-gray-300 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+            <div className="mt-6 mb-6 space-y-2 md:space-y-5 bg-gray-900 bg-opacity-50 rounded px-6 py-3">
+              <h1 className=" lg:mb-5 text-xl font-extrabold leading-9 tracking-tight hover:text-gray-700 dark:hover:text-gray-300 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
                 Lift Workout App
               </h1>
-              <div className=" sm:w-9/12 md:w-10/12 lg:w-9/12 text-sm md:text-lg font-normal ">
-                <p>
+              <div className="sm:w-9/12 md:w-10/12 lg:w-9/12 text-sm md:text-lg font-normal ">
+                <p className="pr-8">
                   A simple, accessible workout app that allows a user to create, track, and update their daily workout
                   routines.
                 </p>
                 <ul className="flex md:justify-end text-xs mt-3 font-semibold pb-2">
-                  <li className="md:ml-3 mr-3">Next.js</li>
-                  <li className="md:ml-3 mr-3">Firebase</li>
-                  <li className="md:ml-3 mr-3">Tailwind</li>
+                  <li className="md:ml-3 mr-3">
+                    <i> Next.js</i>
+                  </li>
+                  <li className="md:ml-3 mr-3">
+                    <i>Firebase</i>
+                  </li>
+                  <li className="md:ml-3 mr-3">
+                    <i>Tailwind</i>
+                  </li>
                 </ul>
                 {/*   <p>Features:</p>
                 <ul>
@@ -49,24 +55,30 @@ const About: NextPage = () => {
                   <li>Add sets, repititions and weight used for every exercises.</li>
                   <li>Add, update, and track your physical stats like weight and height.</li>
                   <li>Users can also go back and view, add, update or delete past workouts.</li>
-                </ul> 
+                </ul> */}
               </div>
             </div>
 
-            <div className="mt-6  space-y-2 md:space-y-5 bg-gray-900 rounded px-6 py-3">
-              <h1 className="text-right lg:mb-5 text-2xl font-extrabold leading-9 tracking-tight hover:text-gray-700 dark:hover:text-gray-300  sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+            <div className="mt-6  space-y-2 md:space-y-5 bg-gray-900 bg-opacity-50 rounded px-6 py-3">
+              <h1 className="text-right lg:mb-5 text-xl font-extrabold leading-9 tracking-tight hover:text-gray-700 dark:hover:text-gray-300  sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
                 COVID-19 Tracker
               </h1>
-              <div className="text-right sm:w-9/12 md:w-10/12 lg:w-9/12 text-sm md:text-lg font-normal ">
-                <p>
+              <div className=" text-right sm:w-9/12 md:w-10/12 lg:w-9/12 text-sm md:text-lg font-normal ">
+                <p className="pl-8">
                   This dashboard provides up-to-date information about the COVID-19 outbreak and the vaccination efforts
                   in Canada.
                 </p>
                 {/* <p>Tools used: React Semantic UI Leaflet Chart JS Webpack Axios</p> */}
                 <ul className="flex justify-end md:justify-end text-xs mt-3 font-semibold pb-2">
-                  <li className="md:ml-3 mr-3">React</li>
-                  <li className="md:ml-3 mr-3">Chart.js</li>
-                  <li className="md:ml-3 mr-3">COVID-19 API</li>
+                  <li className="md:ml-3 mr-3">
+                    <i>React</i>
+                  </li>
+                  <li className="md:ml-3 mr-3">
+                    <i>Chart.js</i>
+                  </li>
+                  <li className="md:ml-3">
+                    <i>COVID-19 API</i>
+                  </li>
                 </ul>
 
                 {/* <p>Features:</p>
@@ -87,7 +99,7 @@ const About: NextPage = () => {
 
             <div className=" space-y-2 md:space-y-5">
               <h1 className="mt-6 lg:mb-5 text-3xl font-extrabold leading-9 tracking-tight hover:text-gray-700 dark:hover:text-gray-300  sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
-                Reels Movie Database
+                Reels Movie Db
               </h1>
               <div className="sm:w-9/12 md:w-10/12 lg:w-9/12 text-sm md:text-lg font-normal ">
                 <p>
@@ -117,7 +129,7 @@ const About: NextPage = () => {
 
             <div className=" space-y-2 md:space-y-5">
               <h1 className="mt-6 lg:mb-5 text-3xl font-extrabold leading-9 tracking-tight hover:text-gray-700 dark:hover:text-gray-300  sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
-                Google Keep Clone
+                Keep Clone
               </h1>
               <div className="sm:w-9/12 md:w-10/12 lg:w-9/12 text-sm md:text-lg font-normal ">
                 <p>

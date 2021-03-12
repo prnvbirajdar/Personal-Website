@@ -27,7 +27,7 @@ const About: NextPage = () => {
               </p>
               <p>Tools used: React Semantic UI Leaflet Chart JS Webpack Axios</p>
 
-              <p>Features:</p>
+              {/* <p>Features:</p>
               <ul>
                 <li>
                   Vaccination tracker helps track the number of vaccine administered in every health region for every
@@ -38,7 +38,7 @@ const About: NextPage = () => {
                   The interactive bubble map gives a comparative data about the level of spread in different provinces.
                 </li>
                 <li>Regional bar graph compares the COVID-19 outbreak for the five regions.</li>
-              </ul>
+              </ul> */}
             </div>
           </div>
 
@@ -52,7 +52,7 @@ const About: NextPage = () => {
                 trailers.
               </p>
               <p>Tools Used: React React-Router Webpack Axios</p>
-              <p>Features:</p>
+              {/* <p>Features:</p>
               <ul>
                 <li>Search through 30,000 movies from the TMDb API.</li>
                 <li>Browse through the weekly updated trending and upcoming movies.</li>
@@ -64,7 +64,7 @@ const About: NextPage = () => {
                   The individual movie page also allows user to watch a Youtube trailer in a modal and browse through a
                   list of similar movies.
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </div>
 
@@ -78,13 +78,13 @@ const About: NextPage = () => {
                 Firebase and this glorified todo list helped me achieve exactly that.
               </p>
               <p>Tools Used: Next JS, Tailwind CSS, Firebase</p>
-              <p>Features:</p>
+              {/* <p>Features:</p>
               <ul>
                 <li>Static website importing dynamic assests from Firebase.</li>
                 <li>Users can create, update, and delete notes. All changes are immediately pushed to the database.</li>
                 <li>Enable/disable dark mode. Saves your preference for next time.</li>
                 <li>Adapts to all screen sizes, from mobile screens upto 4k displays.</li>
-              </ul>
+              </ul> */}
             </div>
           </div>
 
@@ -98,14 +98,14 @@ const About: NextPage = () => {
                 routines.
               </p>
               <p>Tools Used: Next JS, Tailwind CSS, Firebase</p>
-              <p>Features:</p>
+              {/* <p>Features:</p>
               <ul>
                 <li>Sign in with Google or Facebook to create a profile and starting tracking your workouts.</li>
                 <li>Allows users to select exercises based on the body part they wish to workout on.</li>
                 <li>Add sets, repititions and weight used for every exercises.</li>
                 <li>Add, update, and track your physical stats like weight and height.</li>
                 <li>Users can also go back and view, add, update or delete past workouts.</li>
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>
