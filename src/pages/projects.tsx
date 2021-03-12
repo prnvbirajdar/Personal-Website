@@ -71,9 +71,9 @@ const About: NextPage = () => {
                   >
                     <Github />
                   </a>
-                  <div className="mr-5">
+                  <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer">
                     <OpenLink2 />
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -119,9 +119,9 @@ const About: NextPage = () => {
                   >
                     <Github />
                   </a>
-                  <div className="mr-5">
+                  <a href="https://covid19ca.netlify.app/" target="_blank" rel="noopener noreferrer">
                     <OpenLink2 />
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -167,9 +167,9 @@ const About: NextPage = () => {
                   >
                     <Github />
                   </a>
-                  <div className="mr-5">
+                  <a href="https://reels.netlify.app/" target="_blank" rel="noopener noreferrer">
                     <OpenLink2 />
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -215,9 +215,9 @@ const About: NextPage = () => {
                   >
                     <Github />
                   </a>
-                  <div className="mr-5">
+                  <a href="https://google-keep-next.vercel.app/" target="_blank" rel="noopener noreferrer">
                     <OpenLink2 />
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
