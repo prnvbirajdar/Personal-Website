@@ -21,7 +21,7 @@ const RecentProjects = () => {
                 {/* Users can also add, update or delete any previous logged workouts. */}
               </p>
               <ul className="flex md:justify-end text-xs mt-3 font-semibold">
-                <li className="md:ml-3 mr-3">Next js</li>
+                <li className="md:ml-3 mr-3">Next.js</li>
                 <li className="md:ml-3 mr-3">Firebase</li>
                 <li className="md:ml-3 mr-3">Tailwind</li>
               </ul>
@@ -44,7 +44,7 @@ const RecentProjects = () => {
               </p>
               <ul className="flex md:justify-end text-xs mt-3 font-semibold">
                 <li className="md:ml-3 mr-3">React</li>
-                <li className="md:ml-3 mr-3">Chart js</li>
+                <li className="md:ml-3 mr-3">Chart.js</li>
                 <li className="md:ml-3 mr-3">COVID-19 API</li>
               </ul>
             </div>

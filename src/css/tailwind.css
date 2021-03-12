@@ -4,6 +4,6 @@
 
 html,
 body {
-  height: 100vh;
-  @apply dark:text-gray-50 dark:bg-black bg-gray-50 text-gray-900;
+  min-height: 100vh;
+  @apply bg-gray-50 text-gray-900 dark:bg-black dark:text-gray-50;
 }

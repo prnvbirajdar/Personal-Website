@@ -27,9 +27,9 @@ const About: NextPage = () => {
               My personal projects are a way for me to chronicle my growth as a developer.
             </p>
           </div>
-          <div className="items-start space-y-2 lg:grid lg:grid-cols-3 lg:space-y-0">
-            <div className=" mt-8 space-y-2 md:space-y-5">
-              <h1 className=" lg:mb-5 text-3xl font-extrabold leading-9 tracking-tight hover:text-gray-700 dark:hover:text-gray-300 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+          <div className=" items-start space-y-2 lg:grid lg:grid-cols-3 lg:space-y-0">
+            <div className="mt-6 mb-6 space-y-2 md:space-y-5 bg-gray-900 rounded px-6 py-3">
+              <h1 className=" lg:mb-5 text-2xl font-extrabold leading-9 tracking-tight hover:text-gray-700 dark:hover:text-gray-300 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
                 Lift Workout App
               </h1>
               <div className=" sm:w-9/12 md:w-10/12 lg:w-9/12 text-sm md:text-lg font-normal ">
@@ -37,8 +37,8 @@ const About: NextPage = () => {
                   A simple, accessible workout app that allows a user to create, track, and update their daily workout
                   routines.
                 </p>
-                <ul className="flex md:justify-end text-xs mt-3">
-                  <li className="md:ml-3 mr-3">Next js</li>
+                <ul className="flex md:justify-end text-xs mt-3 font-semibold pb-2">
+                  <li className="md:ml-3 mr-3">Next.js</li>
                   <li className="md:ml-3 mr-3">Firebase</li>
                   <li className="md:ml-3 mr-3">Tailwind</li>
                 </ul>
@@ -49,23 +49,23 @@ const About: NextPage = () => {
                   <li>Add sets, repititions and weight used for every exercises.</li>
                   <li>Add, update, and track your physical stats like weight and height.</li>
                   <li>Users can also go back and view, add, update or delete past workouts.</li>
-                </ul> */}
+                </ul> 
               </div>
             </div>
 
-            <div className=" space-y-2 md:space-y-5">
-              <h1 className=" lg:mb-5 text-3xl font-extrabold leading-9 tracking-tight hover:text-gray-700 dark:hover:text-gray-300  sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+            <div className="mt-6  space-y-2 md:space-y-5 bg-gray-900 rounded px-6 py-3">
+              <h1 className="text-right lg:mb-5 text-2xl font-extrabold leading-9 tracking-tight hover:text-gray-700 dark:hover:text-gray-300  sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
                 COVID-19 Tracker
               </h1>
-              <div className="sm:w-9/12 md:w-10/12 lg:w-9/12 text-sm md:text-lg font-normal ">
+              <div className="text-right sm:w-9/12 md:w-10/12 lg:w-9/12 text-sm md:text-lg font-normal ">
                 <p>
                   This dashboard provides up-to-date information about the COVID-19 outbreak and the vaccination efforts
                   in Canada.
                 </p>
                 {/* <p>Tools used: React Semantic UI Leaflet Chart JS Webpack Axios</p> */}
-                <ul className="flex md:justify-end text-xs mt-3">
+                <ul className="flex justify-end md:justify-end text-xs mt-3 font-semibold pb-2">
                   <li className="md:ml-3 mr-3">React</li>
-                  <li className="md:ml-3 mr-3">Chart js</li>
+                  <li className="md:ml-3 mr-3">Chart.js</li>
                   <li className="md:ml-3 mr-3">COVID-19 API</li>
                 </ul>
 
@@ -82,6 +82,61 @@ const About: NextPage = () => {
                   </li>
                   <li>Regional bar graph compares the COVID-19 outbreak for the five regions.</li>
                 </ul> */}
+              </div>
+            </div>
+
+            <div className=" space-y-2 md:space-y-5">
+              <h1 className="mt-6 lg:mb-5 text-3xl font-extrabold leading-9 tracking-tight hover:text-gray-700 dark:hover:text-gray-300  sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+                Reels Movie Database
+              </h1>
+              <div className="sm:w-9/12 md:w-10/12 lg:w-9/12 text-sm md:text-lg font-normal ">
+                <p>
+                  A simplified Netflix clone with a personal twist. It helps you find your favortie movies and watch
+                  trailers.
+                </p>
+                <ul className="flex md:justify-end text-xs mt-3 font-semibold">
+                  <li className="md:ml-3 mr-3">React</li>
+                  <li className="md:ml-3 mr-3">React-Router</li>
+                  <li className="md:ml-3 mr-3">TMDb API</li>
+                </ul>
+                {/* <p>Features:</p>
+                <ul>
+                  <li>Search through 30,000 movies from the TMDb API.</li>
+                  <li>Browse through the weekly updated trending and upcoming movies.</li>
+                  <li>
+                    Every movie includes details such the release year, genre, movie runtime, a short summary, and a
+                    list of cast and crew involved.
+                  </li>
+                  <li>
+                    The individual movie page also allows user to watch a Youtube trailer in a modal and browse through
+                    a list of similar movies.
+                  </li>
+                </ul> */}
+              </div>
+            </div>
+
+            <div className=" space-y-2 md:space-y-5">
+              <h1 className="mt-6 lg:mb-5 text-3xl font-extrabold leading-9 tracking-tight hover:text-gray-700 dark:hover:text-gray-300  sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+                Google Keep Clone
+              </h1>
+              <div className="sm:w-9/12 md:w-10/12 lg:w-9/12 text-sm md:text-lg font-normal ">
+                <p>
+                  A minimalistic Google Keep clone. My goal with this project was to learn Next.js, Tailwind CSS, and
+                  Firebase and this glorified todo list helped me achieve exactly that.
+                </p>
+                <ul className="flex md:justify-end text-xs mt-3 font-semibold">
+                  <li className="md:ml-3 mr-3">Next.js</li>
+                  <li className="md:ml-3 mr-3">Firebase</li>
+                  <li className="md:ml-3 mr-3">Tailwind</li>
+                </ul>
+                {/* <p>Features:</p>
+              <ul>
+                <li>Static website importing dynamic assests from Firebase.</li>
+                <li>Users can create, update, and delete notes. All changes are immediately pushed to the database.</li>
+                <li>Enable/disable dark mode. Saves your preference for next time.</li>
+                <li>Adapts to all screen sizes, from mobile screens upto 4k displays.</li>
+              </ul>
+            </div> */}
               </div>
             </div>
           </div>
