@@ -7,12 +7,18 @@ const CallToAction = () => {
       <h2 className="mb-2 text-3xl font-extrabold tracking-tight md:text-4xl md:mb-6 md:leading-tight">
         Get In Touch!
       </h2>
-      <p className="mb-6 w-3/4 lg:w-4/6 m-auto text-center font-semibold ">
+      <p className="mb-6 w-5/6 sm:w-3/4 lg:w-5/6 xl:w-3/4 m-auto text-center font-medium md:font-semibold ">
         Whether you have an idea for a project or just want to say hi, feel free to shoot me an email!
       </p>
 
       <div className="mb-0 space-x-0 md:space-x-2">
         <a
+          href="#"
+          className="text-sm font-bold lg:text-base tracking-normal my-5 md:my-7 p-2.5 px-4 md:px-5 rounded ring-2 ring-gray-400 ring-opacity-50 hover:bg-gray-300 bg-gray-200 dark:bg-gray-900 dark:bg-opacity-50 dark:hover:bg-opacity-100 shadow transition"
+        >
+          Say Hello!
+        </a>
+        {/* <a
           className="inline-flex font-semibold tracking-wider text-sm items-center justify-center mb-2 p-2.5 px-5 rounded ring-2 ring-gray-400 ring-opacity-50 dark:bg-gray-900 bg-opacity-0 hover:bg-opacity-100 hover:text-white shadow transition sm:w-auto sm:mb-0"
           href="#"
         >
@@ -23,8 +29,8 @@ const CallToAction = () => {
                   d="M6.672 1.911a1 1 0 10-1.932.518l.259.966a1 1 0 001.932-.518l-.26-.966zM2.429 4.74a1 1 0 10-.517 1.932l.966.259a1 1 0 00.517-1.932l-.966-.26zm8.814-.569a1 1 0 00-1.415-1.414l-.707.707a1 1 0 101.415 1.415l.707-.708zm-7.071 7.072l.707-.707A1 1 0 003.465 9.12l-.708.707a1 1 0 001.415 1.415zm3.2-5.171a1 1 0 00-1.3 1.3l4 10a1 1 0 001.823.075l1.38-2.759 3.018 3.02a1 1 0 001.414-1.415l-3.019-3.02 2.76-1.379a1 1 0 00-.076-1.822l-10-4z"
                   clipRule="evenodd"
                 />
-              </svg> */}
-        </a>
+              </svg>
+        </a> */}
       </div>
     </div>
   )
