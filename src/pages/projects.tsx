@@ -104,13 +104,13 @@ const About: NextPage = () => {
               </div>
             </div>
 
-            <div className="flex w-full md:h-96 h-auto rounded-lg shadow-2xl relative">
+            <div className="md:cursor-pointer flex w-full md:mx-auto md:w-4/6 border border-gray-800 hover:border-gray-600 md:h-96 h-auto rounded-lg shadow-2xl relative">
               <div>
                 <img className="absolute inset-0 h-full w-full object-cover rounded-lg" src="/keep-dark.webp" alt="" />
-                <div className="absolute inset-0 bg-black bg-opacity-75 md:bg-opacity-60 md:bg-gradient-to-r from-black  " />
+                <div className="absolute inset-0 bg-black bg-opacity-75 rounded-lg md:bg-opacity-60 md:bg-gradient-to-r from-black  " />
               </div>
 
-              <div className="cursor-pointer px-6 py-3 relative   md:w-8/12   sm:my-auto text-gray-50 rounded-lg sm:border md:border-0 border-gray-600 hover:border-gray-400">
+              <div className="cursor-pointer px-6 py-3 relative  md:w-8/12   sm:my-auto text-gray-50 rounded-lg sm:border md:border-0 border-gray-600 hover:border-gray-400">
                 <h1 className="mt-2 lg:mb-5 text-xl font-extrabold leading-snug tracking-tight dark:hover:text-gray-300 sm:text-3xl sm:leading-10 md:leading-14">
                   Reels Movie Db
                 </h1>
