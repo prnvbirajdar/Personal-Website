@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
 import { NextPage } from 'next'
+import { Github } from '../components/Icons/Icons'
 
 const About: NextPage = () => {
   return (
@@ -96,15 +97,15 @@ const About: NextPage = () => {
               </div>
             </div>
 
-            <div className="w-full max-w-lg h-56  rounded-lg shadow-2xl overflow-y-visible relative">
+            <div className="w-full max-w-lg h-auto  rounded-lg shadow-2xl overflow-y-visible relative">
               <img
                 className="absolute inset-0 h-full w-full object-cover sm:object-contain rounded-lg"
                 src="/keep-dark.webp"
                 alt=""
               />
-              <div className="absolute inset-0 bg-black bg-opacity-75" />
-              <div className="px-6 py-3 relative text-gray-50">
-                <h1 className="mt-2 lg:mb-5 text-xl font-extrabold leading-9 tracking-tight hover:text-gray-700 dark:hover:text-gray-300 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+              <div className="absolute inset-0 bg-black bg-opacity-75 " />
+              <div className="cursor-pointer px-6 py-3 relative text-gray-50 rounded-lg border border-gray-600 hover:border-gray-400">
+                <h1 className="mt-2 lg:mb-5 text-xl font-extrabold leading-9 tracking-tight dark:hover:text-gray-300 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
                   Reels Movie Db
                 </h1>
                 <div className=" sm:w-9/12 md:w-10/12 lg:w-9/12 text-sm md:text-lg font-normal">
@@ -113,10 +114,19 @@ const About: NextPage = () => {
                     trailers.
                   </p>
                   <ul className="flex md:justify-end text-xs mt-3 font-semibold">
-                    <li className="md:ml-3 mr-3">React</li>
-                    <li className="md:ml-3 mr-3">Firebase</li>
-                    <li className="md:ml-3 mr-3">Tailwind</li>
+                    <li className="md:ml-3 mr-3">
+                      <i> Next.js</i>
+                    </li>
+                    <li className="md:ml-3 mr-3">
+                      <i>Firebase</i>
+                    </li>
+                    <li className="md:ml-3 mr-3">
+                      <i>Tailwind</i>
+                    </li>
                   </ul>
+                  <div className="pt-2 mt-1 inline-block">
+                    <Github />
+                  </div>
                 </div>
               </div>
             </div>
@@ -134,10 +144,16 @@ const About: NextPage = () => {
                       A minimalistic Google Keep clone. My goal with this project was to learn Next.js, Tailwind CSS,
                       and Firebase and this glorified todo list helped me achieve exactly that.
                     </p>
-                    <ul className="flex md:justify-end text-xs mt-3 font-semibold">
-                      <li className="md:ml-3 mr-3">Next.js</li>
-                      <li className="md:ml-3 mr-3">Firebase</li>
-                      <li className="md:ml-3 mr-3">Tailwind</li>
+                    <ul className="flex md:justify-end text-xs mt-3 font-semibold pb-2">
+                      <li className="md:ml-3 mr-3">
+                        <i> Next.js</i>
+                      </li>
+                      <li className="md:ml-3 mr-3">
+                        <i>Firebase</i>
+                      </li>
+                      <li className="md:ml-3 mr-3">
+                        <i>Tailwind</i>
+                      </li>
                     </ul>
                   </div>
                 </div>
