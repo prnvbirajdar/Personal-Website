@@ -29,178 +29,201 @@ const About: NextPage = () => {
             </p>
           </div>
           <div className="space-y-6 ">
-            <div className="mt-6 md:cursor-pointer flex w-full md:mx-auto lg:ml-0 lg:w-9/12 border border-gray-800 hover:border-gray-600 md:h-96 h-60 rounded-lg shadow-2xl relative">
-              <div>
+            <div className="mt-6  flex w-full md:mx-auto lg:ml-0 lg:w-9/12 border border-gray-800 hover:border-gray-600 md:h-96 h-60 rounded-lg shadow-2xl relative">
+              <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer">
                 <img
-                  className="absolute inset-0 h-full w-full object-cover rounded-lg"
+                  className=" absolute inset-0 h-full w-full object-cover rounded-lg"
                   src="/lift.png"
                   alt="lift workout app"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-40 rounded-lg md:bg-opacity-60 bg-gradient-to-r from-black  " />
-              </div>
+              </a>
 
-              <div className="cursor-pointer px-6 py-3 relative  md:w-8/12  my-auto text-gray-50 rounded-lg ">
-                <h1 className="mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight dark:hover:text-gray-300  sm:leading-10 md:leading-14">
-                  Lift Workout App
-                </h1>
-                <div className=" sm:w-9/12 md:w-full text-sm md:text-lg ">
-                  <p className="mt-2 leading-snug md:text-base">
-                    A simple, accessible workout app that allows a user to create, track, and update their daily workout
-                    routines.
-                  </p>
-                  <ul className="flex text-xs mt-3 font-semibold lg:mt-4">
-                    <li className=" mr-3">
-                      <i>Next.js</i>
-                    </li>
-                    <li className=" mr-3">
-                      <i>Firebase</i>
-                    </li>
-                    <li className=" mr-3">
-                      <i>Tailwind CSS</i>
-                    </li>
-                  </ul>
-
-                  <div className="pt-2 mt-1 lg:mt-2 flex">
-                    <div className="mr-5">
-                      <Github />
-                    </div>
-                    <div className="mr-5">
-                      <OpenLink2 />
-                    </div>
+              <div className=" px-6 py-3 relative  md:w-8/12  my-auto text-gray-50 rounded-lg ">
+                <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  <h1 className="mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight  sm:leading-10 md:leading-14">
+                    Lift Workout App
+                  </h1>
+                  <div className=" sm:w-9/12 md:w-full text-sm md:text-lg ">
+                    <p className="mt-2 leading-snug md:text-base">
+                      A simple, accessible workout app that allows a user to create, track, and update their daily
+                      workout routines.
+                    </p>
+                    <ul className="flex text-xs mt-3 font-semibold lg:mt-4">
+                      <li className=" mr-3">
+                        <i>Next.js</i>
+                      </li>
+                      <li className=" mr-3">
+                        <i>Firebase</i>
+                      </li>
+                      <li className=" mr-3">
+                        <i>Tailwind CSS</i>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+                <div className="pt-2 mt-1 lg:mt-2 flex">
+                  <a
+                    className="mr-5"
+                    href="https://github.com/prnvbirajdar/NEXT-Workout-App"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github />
+                  </a>
+                  <div className="mr-5">
+                    <OpenLink2 />
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="md:cursor-pointer flex w-full md:mx-auto lg:mr-0 lg:w-9/12 border border-gray-800 hover:border-gray-600 md:h-96 h-60 rounded-lg shadow-2xl relative">
-              <div>
+            <div className=" flex w-full md:mx-auto lg:mr-0 lg:w-9/12 border border-gray-800 hover:border-gray-600 md:h-96 h-60 rounded-lg shadow-2xl relative">
+              <a href="https://covid19ca.netlify.app/" target="_blank" rel="noopener noreferrer">
                 <img
                   className="absolute inset-0 h-full w-full object-cover rounded-lg"
                   src="/covid.png"
                   alt="covid-19 tracker"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-75 rounded-lg bg-gradient-to-r from-black  " />
-              </div>
-
-              <div className="cursor-pointer px-6 py-3 relative  md:w-8/12  my-auto text-gray-50 rounded-lg ">
-                <h1 className="mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight dark:hover:text-gray-300 sm:leading-10 md:leading-14">
-                  COVID-19 Tracker
-                </h1>
-                <div className=" sm:w-9/12 md:w-full text-sm md:text-lg ">
-                  <p className=" mt-2 md:mt-0  leading-snug md:text-base">
-                    This dashboard provides up-to-date information about the COVID-19 outbreak and the vaccination
-                    efforts in Canada.
-                  </p>
-                  <ul className="lg:mt-4 flex text-xs mt-3 font-semibold">
-                    <li className=" mr-3">
-                      <i>React</i>
-                    </li>
-                    <li className=" mr-3">
-                      <i>Chart.js</i>
-                    </li>
-                    <li className=" mr-3">
-                      <i>COVID-19 API</i>
-                    </li>
-                  </ul>
-                  <div className="pt-2 mt-1 flex lg:mt-2">
-                    <div className="mr-5">
-                      <Github />
-                    </div>
-                    <div className="mr-5">
-                      <OpenLink2 />
-                    </div>
+              </a>
+              <div className=" px-6 py-3 relative  md:w-8/12  my-auto text-gray-50 rounded-lg ">
+                <a href="https://covid19ca.netlify.app/" target="_blank" rel="noopener noreferrer">
+                  <h1 className="mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight sm:leading-10 md:leading-14">
+                    COVID-19 Tracker
+                  </h1>
+                  <div className=" sm:w-9/12 md:w-full text-sm md:text-lg ">
+                    <p className=" mt-2 md:mt-0  leading-snug md:text-base">
+                      This dashboard provides up-to-date information about the COVID-19 outbreak and the vaccination
+                      efforts in Canada.
+                    </p>
+                    <ul className="lg:mt-4 flex text-xs mt-3 font-semibold">
+                      <li className=" mr-3">
+                        <i>React</i>
+                      </li>
+                      <li className=" mr-3">
+                        <i>Chart.js</i>
+                      </li>
+                      <li className=" mr-3">
+                        <i>COVID-19 API</i>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+                <div className="pt-2 mt-1 flex lg:mt-2">
+                  <a
+                    className="mr-5"
+                    href="https://github.com/prnvbirajdar/covid19canada"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github />
+                  </a>
+                  <div className="mr-5">
+                    <OpenLink2 />
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="md:cursor-pointer flex w-full md:mx-auto lg:ml-0 lg:w-9/12 border border-gray-800 hover:border-gray-600 md:h-96 h-60 rounded-lg shadow-2xl relative">
-              <div>
+            <div className=" flex w-full md:mx-auto lg:ml-0 lg:w-9/12 border border-gray-800 hover:border-gray-600 md:h-96 h-60 rounded-lg shadow-2xl relative">
+              <a href="https://reels.netlify.app/" target="_blank" rel="noopener noreferrer">
                 <img
                   className="absolute inset-0 h-full w-full object-cover rounded-lg"
                   src="/reels2.png"
                   alt="reels movie db"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-40 rounded-lg md:bg-opacity-50 bg-gradient-to-r from-black  " />
-              </div>
-
-              <div className="cursor-pointer px-6 py-3 relative  md:w-8/12  my-auto text-gray-50 rounded-lg ">
-                <h1 className="mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight dark:hover:text-gray-300  sm:leading-10 md:leading-14">
-                  Reels Movie Db
-                </h1>
-                <div className=" sm:w-9/12 md:w-full text-sm md:text-lg ">
-                  <p className="mt-2 leading-snug md:text-base">
-                    A simplified Netflix clone that helps you browse through 600,000 movies and find the details of your
-                    favortie ones.
-                  </p>
-                  <ul className="flex text-xs mt-3 font-semibold lg:mt-4">
-                    <li className=" mr-3">
-                      <i>React</i>
-                    </li>
-                    <li className=" mr-3">
-                      <i>SCSS</i>
-                    </li>
-                    <li className=" mr-3">
-                      <i>TMDb API</i>
-                    </li>
-                  </ul>
-
-                  <div className="pt-2 mt-1 lg:mt-2 flex">
-                    <div className="mr-5">
-                      <Github />
-                    </div>
-                    <div className="mr-5">
-                      <OpenLink2 />
-                    </div>
+              </a>
+              <div className=" px-6 py-3 relative  md:w-8/12  my-auto text-gray-50 rounded-lg ">
+                <a href="https://reels.netlify.app/" target="_blank" rel="noopener noreferrer">
+                  <h1 className="mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight  sm:leading-10 md:leading-14">
+                    Reels Movie Db
+                  </h1>
+                  <div className=" sm:w-9/12 md:w-full text-sm md:text-lg ">
+                    <p className="mt-2 leading-snug md:text-base">
+                      A simplified Netflix clone that helps you browse through 600,000 movies and find the details of
+                      your favortie ones.
+                    </p>
+                    <ul className="flex text-xs mt-3 font-semibold lg:mt-4">
+                      <li className=" mr-3">
+                        <i>React</i>
+                      </li>
+                      <li className=" mr-3">
+                        <i>SCSS</i>
+                      </li>
+                      <li className=" mr-3">
+                        <i>TMDb API</i>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+                <div className="pt-2 mt-1 flex lg:mt-2">
+                  <a
+                    className="mr-5"
+                    href="https://github.com/prnvbirajdar/Movie-Database"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github />
+                  </a>
+                  <div className="mr-5">
+                    <OpenLink2 />
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="md:cursor-pointer flex w-full md:mx-auto lg:mr-0 lg:w-9/12 border border-gray-800 hover:border-gray-600 md:h-96 h-60 rounded-lg shadow-2xl relative">
-              <div>
+            <div className=" flex w-full md:mx-auto lg:mr-0 lg:w-9/12 border border-gray-800 hover:border-gray-600 md:h-96 h-60 rounded-lg shadow-2xl relative">
+              <a href="https://google-keep-next.vercel.app/" target="_blank" rel="noopener noreferrer">
                 <img
                   className="absolute inset-0 h-full w-full object-cover rounded-lg"
                   src="/keep-dark.webp"
                   alt="keep clone"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-75 rounded-lg md:bg-opacity-60 md:bg-gradient-to-r from-black  " />
-              </div>
-
-              <div className="cursor-pointer px-6 py-3 relative  md:w-8/12  my-auto text-gray-50 rounded-lg ">
-                <h1 className="mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight dark:hover:text-gray-300 sm:leading-10 md:leading-14">
-                  Keep Clone
-                </h1>
-                <div className=" sm:w-9/12 md:w-full text-sm md:text-lg ">
-                  <p className=" mt-2 md:mt-0  leading-snug md:text-base">
-                    A responsive Google Keep clone that allows users to create, delete and save their notes. Dark mode
-                    enabled!
-                  </p>
-                  <ul className="lg:mt-4 flex text-xs mt-3 font-semibold">
-                    <li className=" mr-3">
-                      <i>Next.js</i>
-                    </li>
-                    <li className=" mr-3">
-                      <i>Firebase</i>
-                    </li>
-                    <li className=" mr-3">
-                      <i>Tailwind</i>
-                    </li>
-                  </ul>
-                  <div className="pt-2 mt-1 flex lg:mt-2">
-                    <div className="mr-5">
-                      <Github />
-                    </div>
-                    <div className="mr-5">
-                      <OpenLink2 />
-                    </div>
+              </a>
+              <div className=" px-6 py-3 relative  md:w-8/12  my-auto text-gray-50 rounded-lg ">
+                <a href="https://google-keep-next.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  <h1 className="mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight sm:leading-10 md:leading-14">
+                    Keep Clone
+                  </h1>
+                  <div className=" sm:w-9/12 md:w-full text-sm md:text-lg ">
+                    <p className=" mt-2 md:mt-0  leading-snug md:text-base">
+                      A responsive Google Keep clone that allows users to create, delete and save their notes. Dark mode
+                      enabled!
+                    </p>
+                    <ul className="lg:mt-4 flex text-xs mt-3 font-semibold">
+                      <li className=" mr-3">
+                        <i>Next.js</i>
+                      </li>
+                      <li className=" mr-3">
+                        <i>Firebase</i>
+                      </li>
+                      <li className=" mr-3">
+                        <i>Tailwind</i>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+                <div className="pt-2 mt-1 flex lg:mt-2">
+                  <a
+                    className="mr-5"
+                    href="https://github.com/prnvbirajdar/NEXT-Google-Keep"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github />
+                  </a>
+                  <div className="mr-5">
+                    <OpenLink2 />
                   </div>
                 </div>
               </div>
             </div>
 
             {/* <div className=" space-y-2 md:space-y-5">
-              <h1 className="mt-6 lg:mb-5 text-3xl font-extrabold leading-9 tracking-tight hover:text-gray-700 dark:hover:text-gray-300  sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+              <h1 className="mt-6 lg:mb-5 text-3xl font-extrabold leading-9 tracking-tight hover:text-gray-700  sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
                 Reels Movie Db
               </h1>
               <div className="sm:w-9/12 md:w-10/12 lg:w-9/12 text-sm md:text-lg font-normal ">
@@ -230,7 +253,7 @@ const About: NextPage = () => {
             </div> */}
             {/* 
             <div className=" space-y-2 md:space-y-5">
-              <h1 className="mt-6 lg:mb-5 text-3xl font-extrabold leading-9 tracking-tight hover:text-gray-700 dark:hover:text-gray-300  sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+              <h1 className="mt-6 lg:mb-5 text-3xl font-extrabold leading-9 tracking-tight hover:text-gray-700  sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
                 Keep Clone
               </h1>
               <div className="sm:w-9/12 md:w-10/12 lg:w-9/12 text-sm md:text-lg font-normal ">
