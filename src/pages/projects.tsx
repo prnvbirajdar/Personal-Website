@@ -24,7 +24,7 @@ const About: NextPage = () => {
             <div className="mt-6 lg:mt-10 flex w-full md:mx-auto lg:ml-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 md:h-96 h-60 rounded-lg shadow-2xl relative">
               <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer">
                 <img
-                  className=" absolute inset-0 h-full w-full object-cover rounded-lg"
+                  className=" absolute inset-0 h-full w-full object-cover md:object-contain  rounded-lg"
                   src="/lift.png"
                   alt="lift workout app"
                 />
@@ -73,7 +73,7 @@ const About: NextPage = () => {
             <div className=" flex w-full md:mx-auto lg:mr-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 md:h-96 h-60 rounded-lg shadow-2xl relative">
               <a href="https://covid19ca.netlify.app/" target="_blank" rel="noopener noreferrer">
                 <img
-                  className="absolute inset-0 h-full w-full object-cover rounded-lg"
+                  className="absolute inset-0 h-full w-full object-cover md:object-contain rounded-lg"
                   src="/covid.png"
                   alt="covid-19 tracker"
                 />
@@ -121,7 +121,7 @@ const About: NextPage = () => {
             <div className=" flex w-full md:mx-auto lg:ml-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 md:h-96 h-60 rounded-lg shadow-2xl relative">
               <a href="https://reels.netlify.app/" target="_blank" rel="noopener noreferrer">
                 <img
-                  className="absolute inset-0 h-full w-full object-cover rounded-lg"
+                  className="absolute inset-0 h-full w-full object-cover md:object-contain rounded-lg"
                   src="/reels2.png"
                   alt="reels movie db"
                 />
@@ -169,7 +169,7 @@ const About: NextPage = () => {
             <div className=" flex w-full md:mx-auto lg:mr-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 md:h-96 h-60 rounded-lg shadow-2xl relative">
               <a href="https://google-keep-next.vercel.app/" target="_blank" rel="noopener noreferrer">
                 <img
-                  className="absolute inset-0 h-full w-full object-cover rounded-lg"
+                  className="absolute inset-0 h-full w-full object-cover md:object-contain rounded-lg"
                   src="/keep-dark.webp"
                   alt="keep clone"
                 />
