@@ -7,7 +7,7 @@ const CallToAction = () => {
       <h2 className="mb-2 text-3xl font-extrabold tracking-tight md:text-4xl md:mb-6 md:leading-tight">
         Get In Touch!
       </h2>
-      <p className="mb-6 w-5/6 sm:w-3/4 lg:w-5/6 xl:w-3/4 m-auto text-center font-medium ">
+      <p className="mb-6 text-gray-300 w-5/6 sm:w-3/4 lg:w-5/6 xl:w-3/4 m-auto text-center font-medium ">
         Whether you have an idea for a project or just want to say hi, feel free to shoot me an email!
       </p>
 

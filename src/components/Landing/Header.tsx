@@ -9,7 +9,7 @@ const Header = () => {
         <h1 className="text-4xl font-extrabold leading-tight tracking-tight dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl lg:text-6xl md:leading-14">
           Hi, I&apos;m Pranav👋
         </h1>
-        <p className="mt-6 sm:w-9/12 md:w-10/12 lg:w-full text-base md:text-lg font-medium ">
+        <p className="mt-6 sm:w-9/12 text-gray-300 md:w-10/12 lg:w-full text-base md:text-lg font-medium ">
           I am a software developer building beautiful interfaces and accessible applications.
         </p>
         <button
