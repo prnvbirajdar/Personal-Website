@@ -20,7 +20,9 @@ const Icons = () => {
         </svg>
       </a>
       <a
-        href="#"
+        href="https://github.com/prnvbirajdar"
+        target="_blank"
+        rel="noopener noreferrer"
         className="p-1.5 rounded text-gray-500 hover:text-gray-700 hover:bg-gray-200 dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-gray-800"
       >
         <svg
@@ -35,7 +37,9 @@ const Icons = () => {
         </svg>
       </a>
       <a
-        href="#"
+        href="https://twitter.com/prnvbirajdar"
+        target="_blank"
+        rel="noopener noreferrer"
         className="p-1.5 rounded text-gray-500 hover:text-gray-700 hover:bg-gray-200 dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-gray-800"
       >
         <svg
@@ -50,7 +54,9 @@ const Icons = () => {
         </svg>
       </a>
       <a
-        href="#"
+        href="https://www.linkedin.com/in/prnvbirajdar/"
+        target="_blank"
+        rel="noopener noreferrer"
         className="p-1.5 rounded text-gray-500 hover:text-gray-700 hover:bg-gray-200 dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-gray-800"
       >
         <svg
