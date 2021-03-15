@@ -2,15 +2,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
-import { NextPage } from 'next'
+import { GetStaticProps, NextPage } from 'next'
 import RecentProjects from '@src/components/Landing/RecentProjects'
 import LatestArticles from '@src/components/Landing/LatestArticles'
 import Header from '@src/components/Landing/Header'
-import { Moon, Sun } from '@src/components/Icons/Icons'
-import { useTheme } from 'next-themes'
+//import { Moon, Sun } from '@src/components/Icons/Icons'
+//import { useTheme } from 'next-themes'
 
-const Home: NextPage = () => {
-  const { theme, setTheme } = useTheme()
+const Home: NextPage = ({ devData }) => {
+  // const { theme, setTheme } = useTheme()
 
   return (
     <>
@@ -32,7 +32,7 @@ const Home: NextPage = () => {
             Next Page
           </a>
         </div> */}
-        <LatestArticles />
+        <LatestArticles devData={devData} />
         <div className="text-black px-5">
           <p className="px-5 rounded py-1 bg-gray-300 block sm:hidden">Mobile</p>
           <p className="px-5 rounded py-1 bg-red-300 hidden sm:block md:hidden">Sm</p>
@@ -52,6 +52,21 @@ const Home: NextPage = () => {
       </section>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
+  const devData = await res.json()
+
+  if (!devData) {
+    return {
+      notFound: true,
+    }
+  }
+
+  return {
+    props: { devData }, // will be passed to the page component as props
+  }
 }
 
 export default Home

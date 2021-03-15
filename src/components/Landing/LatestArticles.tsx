@@ -1,21 +1,21 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from 'react'
+//import Link from 'next/link'
 
-const LatestArticles = () => {
-  const [getFiles, setGetFiles] = useState([])
+const LatestArticles = (devData) => {
+  // const [getFiles, setGetFiles] = useState([])
 
-  const getData = async () => {
-    const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
-    const devData = await res.json()
-    setGetFiles(devData)
-    return devData
-  }
+  // const getData = async () => {
+  //   const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
+  //   const devData = await res.json()
+  //   setGetFiles(devData)
+  //   return devData
+  // }
 
-  console.log(getFiles)
-
-  useEffect(() => {
-    getData()
-  }, [])
+  devData.devData.map((data) => console.log(data))
+  // useEffect(() => {
+  //   getData()
+  // }, [])
 
   return (
     <section>
@@ -26,17 +26,17 @@ const LatestArticles = () => {
           </p> */}
       </div>
       <div className="flex flex-col">
-        {getFiles &&
-          getFiles.slice(0, 2).map(({ id, description, title }) => (
+        {/* {getFiles &&
+          getFiles.slice(0, 2).map(({ id, description, title, slug }) => (
             <div key={id} className=" mt-5">
-              <a href="#">
+              <a href={`/blog/${slug}`}>
                 <h3 className="mb-3 hover:text-gray-700 dark:hover:text-gray-300 text-xl  font-semibold tracking-normal md:text-2xl">
                   {title}
                 </h3>
                 <p className="text-base font-normal text-gray-700 dark:text-gray-300">{description}</p>
               </a>
             </div>
-          ))}
+          ))} */}
         {/* <div>
           <a href="#">
             <h3 className="mb-3 hover:text-gray-700 dark:hover:text-gray-300 text-xl mt-4 md:mt-8 font-semibold tracking-normal md:text-2xl">
@@ -66,10 +66,16 @@ const LatestArticles = () => {
 
 export default LatestArticles
 
-export async function getSortedPostsData() {
-  // Instead of the file system,
-  // fetch post data from an external API endpoint
+// export async function getSortedPostsData() {
+//   // Instead of the file system,
+//   // fetch post data from an external API endpoint
 
-  const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
-  return res.json()
-}
+//   const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
+//   return res.json()
+// }
+
+// const getPosts = async () => {
+//   const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
+//   const devData = await res.json()
+//   return devData
+// }
