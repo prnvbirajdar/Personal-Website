@@ -2,10 +2,15 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
 import { GetStaticProps, NextPage } from 'next'
+import renderToString from 'next-mdx-remote/render-to-string'
+import hydrate from 'next-mdx-remote/hydrate'
 
-const About: NextPage = (props) => {
-  const blogData = props.devData
-  console.log(blogData)
+const About: NextPage = ({ source }) => {
+  //   const blogData = props.devData
+
+  const content = hydrate(source)
+
+  console.log(content)
 
   return (
     <>
@@ -19,7 +24,7 @@ const About: NextPage = (props) => {
       </div>
       <section className="w-11/12 px-4 md:px-0 mt-16 md:mt-24 lg:mt-28 mx-auto md:w-3/4 lg:w-10/12 text-gray-300">
         {/* <div dangerouslySetInnerHTML={{ __html: blogData?.body_html }}></div>{' '} */}
-        <article class="prose lg:prose-xl  dark:text-gray-300">{blogData.body_markdown}</article>
+        <article className="prose lg:prose-xl dark:text-gray-300">{content}</article>
       </section>
     </>
   )
@@ -33,7 +38,15 @@ const getPost = async (slug: string) => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const devData = await getPost(params.slug)
+  const devData = await getPost(params?.slug)
+
+  const title = devData.title
+  const likes = devData.public_reactions_count
+  const markdown = devData.body_markdown
+
+  console.log(devData)
+
+  const mdxSource = await renderToString(devData.body_markdown)
 
   if (!devData) {
     return {
@@ -42,7 +55,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
 
   return {
-    props: { devData }, // will be passed to the page component as props
+    props: { source: mdxSource }, // will be passed to the page component as props
   }
 }
 
