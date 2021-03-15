@@ -2,8 +2,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-const LatestArticles = (devData) => {
-  const dataArray = devData.devData
+const LatestArticles = ({ devData }) => {
   return (
     <section>
       <div className="text-left ">
@@ -13,8 +12,8 @@ const LatestArticles = (devData) => {
           </p> */}
       </div>
       <div className="flex flex-col">
-        {dataArray &&
-          dataArray.slice(0, 2).map(({description, title, slug }) => (
+        {devData &&
+          devData.slice(0, 4).map(({ description, title, slug }) => (
             <div key={slug} className=" mt-5">
               <Link href={`/blog/${slug}`}>
                 <div className="cursor-pointer">

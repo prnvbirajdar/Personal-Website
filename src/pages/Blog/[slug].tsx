@@ -7,10 +7,11 @@ import hydrate from 'next-mdx-remote/hydrate'
 
 const About: NextPage = ({ source }) => {
   //   const blogData = props.devData
+  console.log(source)
 
-  const content = hydrate(source)
+  //   const content = hydrate(source)
 
-  console.log(content)
+  //   console.log(content)
 
   return (
     <>
@@ -24,29 +25,45 @@ const About: NextPage = ({ source }) => {
       </div>
       <section className="w-11/12 px-4 md:px-0 mt-16 md:mt-24 lg:mt-28 mx-auto md:w-3/4 lg:w-10/12 text-gray-300">
         {/* <div dangerouslySetInnerHTML={{ __html: blogData?.body_html }}></div>{' '} */}
-        <article className="prose lg:prose-xl dark:text-gray-300">{content}</article>
+        <article className="prose lg:prose-xl dark:text-gray-100 bg-gray-900">{source.title}</article>
       </section>
     </>
   )
 }
 
-const getPost = async (slug: string) => {
-  const res = await fetch(`https://dev.to/api/articles/prnvbirajdar/${slug}`)
-  const post = await res.json()
+const getPosts = async () => {
+  const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
+  const posts = await res.json()
 
-  return post
+  return posts
+}
+
+export const getStaticPaths = async () => {
+  const devData = await getPosts()
+
+  return {
+    paths: devData.map((data) => ({
+      params: { slug: data?.slug },
+    })),
+    fallback: true,
+  }
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const devData = await getPost(params?.slug)
 
-  const title = devData.title
-  const likes = devData.public_reactions_count
-  const markdown = devData.body_markdown
+  const devData = await getPosts()
 
-  console.log(devData)
+  const selectedBlog = devData.filter(data=> data?.slug === params?.slug)
 
-  const mdxSource = await renderToString(devData.body_markdown)
+  //console.log(devData)
+
+  //   const title = devData.title
+  //   const likes = devData.public_reactions_count
+  //   const markdown = devData.body_markdown
+
+  //   console.log(devData)
+
+  //const mdxSource = await renderToString(devData.body_markdown)
 
   if (!devData) {
     return {
@@ -55,15 +72,37 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
 
   return {
-    props: { source: mdxSource }, // will be passed to the page component as props
+    props: { source: selectedBlog[0] }, // will be passed to the page component as props
   }
 }
 
-export const getStaticPaths = () => {
-  return {
-    paths: [],
-    fallback: true,
-  }
-}
+// export const getStaticProps: GetStaticProps = async ({ params }) => {
+//   const devData = await getPost(params?.slug)
+
+//   const title = devData.title
+//   const likes = devData.public_reactions_count
+//   const markdown = devData.body_markdown
+
+//   //   console.log(devData)
+
+//   const mdxSource = await renderToString(devData.body_markdown)
+
+//   if (!devData) {
+//     return {
+//       notFound: true,
+//     }
+//   }
+
+//   return {
+//     props: { source: mdxSource }, // will be passed to the page component as props
+//   }
+// }
+
+// export const getStaticPaths = () => {
+//   return {
+//     paths: [],
+//     fallback: true,
+//   }
+// }
 
 export default About

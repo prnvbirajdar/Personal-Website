@@ -64,6 +64,8 @@ const getPosts = async () => {
 export const getStaticProps: GetStaticProps = async () => {
   const devData = await getPosts()
 
+  console.log(devData)
+
   if (!devData) {
     return {
       notFound: true,
