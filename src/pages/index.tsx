@@ -54,9 +54,15 @@ const Home: NextPage = ({ devData }) => {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+const getPosts = async () => {
   const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
-  const devData = await res.json()
+  const posts = await res.json()
+
+  return posts
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const devData = await getPosts()
 
   if (!devData) {
     return {

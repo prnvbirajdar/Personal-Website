@@ -31,5 +31,5 @@
     "**/*.jsx",
     "**/*.ts",
     "**/*.tsx"
-, "src/pages/Blog/[slug].tsx"  ]
+, "src/pages/blog/[slug].tsx"  ]
 }

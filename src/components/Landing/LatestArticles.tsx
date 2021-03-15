@@ -14,8 +14,8 @@ const LatestArticles = (devData) => {
       </div>
       <div className="flex flex-col">
         {dataArray &&
-          dataArray.slice(0, 2).map(({ id, description, title, slug }) => (
-            <div key={id} className=" mt-5">
+          dataArray.slice(0, 2).map(({description, title, slug }) => (
+            <div key={slug} className=" mt-5">
               <Link href={`/blog/${slug}`}>
                 <div className="cursor-pointer">
                   <h3 className="mb-3 hover:text-gray-700 dark:hover:text-gray-300 text-xl  font-semibold tracking-normal md:text-2xl">
