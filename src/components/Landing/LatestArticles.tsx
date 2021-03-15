@@ -26,8 +26,8 @@ const LatestArticles = (devData) => {
           </p> */}
       </div>
       <div className="flex flex-col">
-        {/* {getFiles &&
-          getFiles.slice(0, 2).map(({ id, description, title, slug }) => (
+        {devData.devData &&
+          devData.devData.slice(0, 2).map(({ id, description, title, slug }) => (
             <div key={id} className=" mt-5">
               <a href={`/blog/${slug}`}>
                 <h3 className="mb-3 hover:text-gray-700 dark:hover:text-gray-300 text-xl  font-semibold tracking-normal md:text-2xl">
@@ -36,7 +36,7 @@ const LatestArticles = (devData) => {
                 <p className="text-base font-normal text-gray-700 dark:text-gray-300">{description}</p>
               </a>
             </div>
-          ))} */}
+          ))}
         {/* <div>
           <a href="#">
             <h3 className="mb-3 hover:text-gray-700 dark:hover:text-gray-300 text-xl mt-4 md:mt-8 font-semibold tracking-normal md:text-2xl">
