@@ -90,18 +90,26 @@ const Nav2 = () => {
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
 
-                <Link href="/">
-                  <a className="hover:bg-gray-900 block px-3 py-2 rounded-md text-base font-medium">Home</a>
-                </Link>
-                <Link href="/blog">
-                  <a className="hover:bg-gray-900 block px-3 py-2 rounded-md text-base font-medium">Blog</a>
-                </Link>
-                <Link href="/projects">
-                  <a className="hover:bg-gray-900 block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-                </Link>
-                <Link href="/about">
-                  <a className="hover:bg-gray-900 block px-3 py-2 rounded-md text-base font-medium">About</a>
-                </Link>
+                <div onClick={() => setIsOpen(!isOpen)} aria-hidden="true">
+                  <Link href="/">
+                    <a className="hover:bg-gray-900 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                  </Link>
+                </div>
+                <div onClick={() => setIsOpen(!isOpen)} aria-hidden="true">
+                  <Link href="/blog">
+                    <a className="hover:bg-gray-900 block px-3 py-2 rounded-md text-base font-medium">Blog</a>
+                  </Link>
+                </div>
+                <div onClick={() => setIsOpen(!isOpen)} aria-hidden="true">
+                  <Link href="/projects">
+                    <a className="hover:bg-gray-900 block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                  </Link>
+                </div>
+                <div onClick={() => setIsOpen(!isOpen)} aria-hidden="true">
+                  <Link href="/about">
+                    <a className="hover:bg-gray-900 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                  </Link>
+                </div>
               </div>
             </div>
           )}
