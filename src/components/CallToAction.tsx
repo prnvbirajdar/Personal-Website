@@ -4,7 +4,7 @@ import React from 'react'
 const CallToAction = () => {
   return (
     <div className="w-11/12 px-4 py-20 mx-auto text-center md:w-3/4 lg:w-2/4  ">
-      <h2 className="mb-2 text-3xl font-extrabold tracking-tight md:text-4xl md:mb-6 md:leading-tight">
+      <h2 className="mb-2 text-3xl md:text-4xl font-extrabold tracking-tight  md:mb-6 md:leading-tight">
         Get In Touch!
       </h2>
       <p className="mb-6 text-gray-300 w-5/6 sm:w-3/4 lg:w-5/6 xl:w-3/4 m-auto text-center font-medium ">

@@ -5,10 +5,10 @@ const RecentProjects = () => {
   return (
     <section>
       <div className="text-left mt-16">
-        <h2 className="text-3xl sm:text-4xl font-bold ">Recent Projects</h2>
+        <h2 className="text-3xl md:text-4xl font-bold ">Recent Projects</h2>
       </div>
-      <div className="flex flex-col space-y-6 divide-y divide-gray-500 border border-gray-600 hover:border-gray-400 transition rounded mt-8">
-        <div className=" p-4 rounded">
+      <div className="flex flex-col border border-gray-600 hover:border-gray-400 transition rounded-lg md:mt-5">
+        <div className=" p-4 ">
           <a href="#" className="flex">
             <div>IMAGE</div>
             <div className="ml-4">
@@ -33,8 +33,8 @@ const RecentProjects = () => {
           </a>
         </div>
       </div>
-      <div className="flex flex-col space-y-6 divide-y divide-gray-500 border border-gray-600 hover:border-gray-400 transition rounded mt-8">
-        <div className=" p-4 rounded">
+      <div className="flex flex-col border border-gray-600 hover:border-gray-400 transition rounded-lg md:mt-5">
+        <div className=" p-4">
           <a href="#" className="flex">
             <div>IMAGE</div>
             <div className="ml-4">
