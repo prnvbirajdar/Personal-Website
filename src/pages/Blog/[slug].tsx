@@ -5,6 +5,7 @@ import { GetStaticProps, NextPage } from 'next'
 import renderToString from 'next-mdx-remote/render-to-string'
 import hydrate from 'next-mdx-remote/hydrate'
 import { parseISO, format } from 'date-fns'
+import ActiveScreen from '@src/components/ActiveScreen'
 
 const About: NextPage = ({ source, blogData }) => {
   const blogText = hydrate(source)
@@ -20,7 +21,7 @@ const About: NextPage = ({ source, blogData }) => {
         <div className="w-full mx-auto mb-8 text-left md:w-3/4 lg:w-1/2">
           <img
             src={blogData.cover_image}
-            className="object-fit  h-auto sm:object-cover w-full md:h-64 bg-center rounded-lg"
+            className="object-fit  h-auto md:object-cover w-full md:max-h-64 bg-center rounded-lg"
             alt="Blog Cover"
           />
           <h1
@@ -30,6 +31,8 @@ const About: NextPage = ({ source, blogData }) => {
           >
             {blogData.title}
           </h1>
+          <ActiveScreen />
+
           {/* <div className="flex mb-6 space-x-2 text-sm">
             {blogData.tag_list.map((tag) => (
               <p key={tag} className="text-gray-900 bg-gray-100 select-none px-1.5 py-0.75 rounded">
