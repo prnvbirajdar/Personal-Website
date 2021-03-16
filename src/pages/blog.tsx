@@ -26,7 +26,7 @@ const About: NextPage = ({ devData }) => {
               I love building new things. This blog is a way for me to write down and share new ideas and lessons with
               everyone.
             </p>
-            <ActiveScreen />
+            {/* <ActiveScreen /> */}
           </div>
           <div className="divide-y divide-gray-800">
             <div className="pt-6 pb-8 space-y-2 md:space-y-5">
@@ -63,7 +63,7 @@ const About: NextPage = ({ devData }) => {
                     <article className="space-y-2 xl:grid xl:grid-cols-5 xl:space-y-0 xl:items-baseline">
                       <dl>
                         <dt className="sr-only">Published on</dt>
-                        <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                        <dd className="prose prose-sm md:prose 2xl:prose-lg font-medium leading-6 text-gray-500 dark:text-gray-400">
                           <time>{format(parseISO(published_at), 'MMMM dd, yyyy')} </time>
                         </dd>
                       </dl>
@@ -80,23 +80,25 @@ const About: NextPage = ({ devData }) => {
                             ))}
                           </div> */}
                         </div>
-                        <div className="prose text-gray-500 dark:text-gray-400">
-                          {description}
-                          <a className="cursor-pointer ml-2 text-blue-500 inline-flex items-center">
-                            Learn More
-                            <svg
-                              className="w-4 h-4 ml-2"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              fill="none"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <path d="M5 12h14" />
-                              <path d="M12 5l7 7-7 7" />
-                            </svg>
-                          </a>
+                        <div className="text-sm md:text-base text-gray-500 dark:text-gray-400">
+                          {description}{' '}
+                          <Link href={`/blog/${slug}`}>
+                            <a className="cursor-pointer ml-2 text-blue-500 hover:text-blue-700 inline-flex items-center">
+                              Learn More
+                              <svg
+                                className="w-4 h-4 ml-2"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                fill="none"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              >
+                                <path d="M5 12h14" />
+                                <path d="M12 5l7 7-7 7" />
+                              </svg>
+                            </a>
+                          </Link>
                         </div>
                       </div>
                     </article>

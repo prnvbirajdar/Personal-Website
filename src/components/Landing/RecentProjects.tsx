@@ -5,15 +5,15 @@ const RecentProjects = () => {
   return (
     <section>
       <div className="text-left mt-16">
-        <h2 className="text-3xl md:text-4xl font-bold ">Recent Projects</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-5">Recent Projects</h2>
       </div>
-      <div className="flex flex-col border border-gray-600 hover:border-gray-400 transition rounded-lg md:mt-5">
+      <div className="mb-5 flex flex-col border border-gray-600 hover:border-gray-400 transition rounded-lg md:mt-5">
         <div className=" p-4 ">
-          <a href="#" className="flex">
+          <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex">
             <div>IMAGE</div>
             <div className="ml-4">
               <h3 className="mb-2 text-xl font-semibold tracking-normal ">Lift Workout App</h3>
-              <p className="text-base font-normal  text-gray-700 dark:text-gray-300">
+              <p className="text-sm md:text-base font-normal  text-gray-700 dark:text-gray-300">
                 A simple, accessible workout app that allows a user to create, track, and update their daily workout
                 routines.
                 {/* Users can also add, update or delete any previous logged workouts. */}
@@ -35,11 +35,11 @@ const RecentProjects = () => {
       </div>
       <div className="flex flex-col border border-gray-600 hover:border-gray-400 transition rounded-lg md:mt-5">
         <div className=" p-4">
-          <a href="#" className="flex">
+          <a href="https://covid19ca.netlify.app/" target="_blank" rel="noopener noreferrer" className="flex">
             <div>IMAGE</div>
             <div className="ml-4">
               <h3 className="mb-2 text-xl font-semibold tracking-normal">COVID-19 Dashboard for Canada</h3>
-              <p className="text-base font-normal text-gray-700 dark:text-gray-300">
+              <p className="text-sm md:text-base font-normal text-gray-700 dark:text-gray-300">
                 A dashboard providing up-to-date information on the COVID-19 outbreak and the vaccination efforts in
                 Canada.
                 {/* Users can also add, update or delete any previous logged workouts. */}

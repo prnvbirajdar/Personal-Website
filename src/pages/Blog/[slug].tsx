@@ -9,12 +9,10 @@ import { parseISO, format } from 'date-fns'
 const About: NextPage = ({ source, blogData }) => {
   const blogText = hydrate(source)
 
-  console.log(blogData);
-  
+  console.log(blogData)
 
   return (
     <>
-    
       <article
         className="dark:text-gray-300 px-4 py-16 mx-auto max-w-7xl"
         itemID="#"
@@ -58,7 +56,7 @@ const About: NextPage = ({ source, blogData }) => {
           </div>
         </div>
 
-        <div className="prose-blue dark:text-gray-300 w-full mx-auto prose prose-sm md:prose 2xl:prose-lg md:w-3/4 lg:w-1/2">
+        <div className=" dark:text-gray-300 w-full mx-auto prose prose-sm md:prose 2xl:prose-lg md:w-3/4 lg:w-1/2">
           {blogText}
         </div>
       </article>

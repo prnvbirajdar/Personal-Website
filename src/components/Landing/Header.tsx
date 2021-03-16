@@ -14,7 +14,7 @@ const Header = () => {
         </p>
         <button
           type="button"
-          className="text-sm font-bold lg:text-base tracking-normal my-5 md:my-7 p-2.5 px-4 md:px-5 rounded ring-2 ring-gray-400 ring-opacity-50 hover:bg-gray-300 bg-gray-200 dark:bg-gray-900 dark:bg-opacity-50 dark:hover:bg-opacity-100 shadow transition"
+          className="text-sm font-bold lg:text-base tracking-normal my-5 md:my-7 p-2.5 px-4 md:px-5 rounded ring-2 ring-gray-400 ring-opacity-50 hover:bg-gray-300 bg-gray-200 dark:bg-gray-900 dark:bg-opacity-50 dark:hover:bg-opacity-100 dark:focus:bg-opacity-100 shadow transition"
         >
           Resume
         </button>
