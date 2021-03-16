@@ -3,7 +3,6 @@
 import React from 'react'
 import { NextPage } from 'next'
 import Icons from '@src/components/Icons/Icons'
-import ActiveScreen from '@src/components/ActiveScreen'
 
 const About: NextPage = () => {
   return (
@@ -52,17 +51,20 @@ const About: NextPage = () => {
                 products.
               </p> */}
               <p className="mb-4">Here are a few technologies I&apos;ve been working with recently:</p>
-              <ul className="list-inside flex ">
+              <ul className="flex ">
                 <div>
-                  <li className="mb-0.25">React</li>
-                  <li className="mb-0.25">TypeScript</li>
-                  <li className="mb-0.25">JavaScript (ES6+)</li>
+                  <li className="mb-0.25">
+                    ▸ React
+                    {/* ► */}
+                  </li>
+                  <li className="mb-0.25">▸ TypeScript</li>
+                  <li className="mb-0.25">▸ JavaScript (ES6+)</li>
                 </div>
 
                 <div className="ml-20">
-                  <li className="mb-0.25">Firebase</li>
-                  <li className="mb-0.25">Semantic HTML</li>
-                  <li className="mb-0.25">(S)CSS</li>
+                  <li className="mb-0.25">▸ Firebase</li>
+                  <li className="mb-0.25">▸ Semantic HTML</li>
+                  <li className="mb-0.25">▸ (S)CSS</li>
                 </div>
               </ul>
             </div>
