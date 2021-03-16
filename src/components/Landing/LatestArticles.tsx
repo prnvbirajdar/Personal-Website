@@ -13,7 +13,7 @@ const LatestArticles = ({ devData }) => {
       </div>
       <div className="flex flex-col">
         {devData &&
-          devData.slice(0, 4).map(({ description, title, slug }) => (
+          devData.slice(0, 5).map(({ description, title, slug }) => (
             <div key={slug} className=" mt-5">
               <Link href={`/blog/${slug}`}>
                 <div className="cursor-pointer">

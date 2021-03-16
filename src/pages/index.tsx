@@ -10,6 +10,8 @@ import Header from '@src/components/Landing/Header'
 //import { useTheme } from 'next-themes'
 
 const Home: NextPage = ({ devData }) => {
+  console.log(devData)
+
   // const { theme, setTheme } = useTheme()
 
   return (
@@ -55,7 +57,10 @@ const Home: NextPage = ({ devData }) => {
 }
 
 const getPosts = async () => {
-  const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
+  //const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
+  const params = { per_page: 1000 }
+  const headers = { 'api-key': process.env.NEXT_API_KEY }
+  const res = await fetch(`https://dev.to/api/articles/me/published`, { params, headers })
   const posts = await res.json()
 
   return posts
@@ -63,8 +68,6 @@ const getPosts = async () => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const devData = await getPosts()
-
-  console.log(devData)
 
   if (!devData) {
     return {

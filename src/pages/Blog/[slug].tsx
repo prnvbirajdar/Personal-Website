@@ -5,13 +5,8 @@ import { GetStaticProps, NextPage } from 'next'
 import renderToString from 'next-mdx-remote/render-to-string'
 import hydrate from 'next-mdx-remote/hydrate'
 
-const About: NextPage = ({ source }) => {
-  //   const blogData = props.devData
-  console.log(source)
-
-  //   const content = hydrate(source)
-
-  //   console.log(content)
+const About: NextPage = ({ source, blogData }) => {
+  const blogText = hydrate(source)
 
   return (
     <>
@@ -24,15 +19,24 @@ const About: NextPage = ({ source }) => {
         <p className="px-5 rounded py-1 bg-purple-300 hidden sm:hidden md:hidden lg:hidden xl:hidden 2xl:block">2xl</p>
       </div>
       <section className="w-11/12 px-4 md:px-0 mt-16 md:mt-24 lg:mt-28 mx-auto md:w-3/4 lg:w-10/12 text-gray-300">
-        {/* <div dangerouslySetInnerHTML={{ __html: blogData?.body_html }}></div>{' '} */}
-        <article className="prose lg:prose-xl dark:text-gray-100 bg-gray-900">{source.title}</article>
+        <div className="dark:text-gray-100 prose prose-xl">{blogData.title}</div>
+        <div className="dark:text-gray-100 prose prose-xl">{blogData.page_views_count} views</div>
+        <div className="dark:text-gray-100 prose prose-xl">
+          {format(parseISO(blogData.published_at), 'MMMM dd, yyyy')}
+        </div>
+
+        {/* date={new Date(blogData.published_at).toISOString()} */}
+
+        <article className="prose lg:prose-xl dark:text-gray-100 ">{blogText}</article>
       </section>
     </>
   )
 }
-
 const getPosts = async () => {
-  const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
+  //const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
+  const params = { per_page: 1000 }
+  const headers = { 'api-key': process.env.NEXT_API_KEY }
+  const res = await fetch(`https://dev.to/api/articles/me/published`, { params, headers })
   const posts = await res.json()
 
   return posts
@@ -45,25 +49,23 @@ export const getStaticPaths = async () => {
     paths: devData.map((data) => ({
       params: { slug: data?.slug },
     })),
-    fallback: true,
+    fallback: false,
   }
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-
   const devData = await getPosts()
 
-  const selectedBlog = devData.filter(data=> data?.slug === params?.slug)
+  const selectedBlog = devData.filter((data) => data?.slug === params?.slug)
+  console.log(selectedBlog)
 
-  //console.log(devData)
-
-  //   const title = devData.title
-  //   const likes = devData.public_reactions_count
-  //   const markdown = devData.body_markdown
+  //   const title = selectedBlog.title
+  //   const likes = selectedBlog.public_reactions_count
+  const markdown = selectedBlog[0]?.body_markdown
 
   //   console.log(devData)
 
-  //const mdxSource = await renderToString(devData.body_markdown)
+  const mdxSource = await renderToString(markdown)
 
   if (!devData) {
     return {
@@ -71,8 +73,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     }
   }
 
+  //   return { props: { source: selectedBlog[0] } }
+
   return {
-    props: { source: selectedBlog[0] }, // will be passed to the page component as props
+    props: { source: mdxSource, blogData: selectedBlog[0] }, // will be passed to the page component as props
   }
 }
 
