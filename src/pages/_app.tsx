@@ -7,6 +7,7 @@ import CallToAction from '@src/components/CallToAction'
 import Footer from '@src/components/Footer'
 import { ThemeProvider } from 'next-themes'
 import Nav from '@src/components/Nav'
+import ScrollToTop from '@src/containers/scrollToTop'
 
 const App = ({ Component, pageProps }: AppProps) => (
   <>
@@ -21,6 +22,8 @@ const App = ({ Component, pageProps }: AppProps) => (
       <Component {...pageProps} />
       <section className="w-full mt-8 bg-gradient-to-b from-black to-gray-900">
         <CallToAction />
+        <ScrollToTop />
+
         <Footer />
       </section>
     </ThemeProvider>

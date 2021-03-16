@@ -9,8 +9,6 @@ import { parseISO, format } from 'date-fns'
 const About: NextPage = ({ source, blogData }) => {
   const blogText = hydrate(source)
 
-  console.log(blogData)
-
   return (
     <>
       <article

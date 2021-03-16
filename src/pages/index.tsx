@@ -28,10 +28,10 @@ const Home: NextPage = ({ devData }) => {
         <RecentProjects />
       </section>
 
-      <section className="w-full mt-8 bg-gradient-to-b from-black to-gray-900">
-        {/* <CallToAction />
-        <Footer /> */}
-      </section>
+      {/*   <section className="w-full mt-8 bg-gradient-to-b from-black to-gray-900">
+       <CallToAction />
+        <Footer /> 
+      </section>*/}
     </>
   )
 }

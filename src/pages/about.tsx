@@ -58,7 +58,7 @@ const About: NextPage = () => {
                     {/* ► */}
                   </li>
                   <li className="mb-0.25">▸ TypeScript</li>
-                  <li className="mb-0.25">▸ JavaScript (ES6+)</li>
+                  <li className="mb-0.25">▸ JavaScript</li>
                 </div>
 
                 <div className="ml-20">
