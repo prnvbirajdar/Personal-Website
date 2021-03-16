@@ -9,6 +9,9 @@ import { parseISO, format } from 'date-fns'
 const About: NextPage = ({ source, blogData }) => {
   const blogText = hydrate(source)
 
+  console.log(blogData);
+  
+
   return (
     <>
       <div className="text-black px-5">
@@ -37,7 +40,9 @@ const About: NextPage = ({ source, blogData }) => {
           </h1>
           <div className="flex mb-6 space-x-2 text-sm">
             {blogData.tag_list.map((tag) => (
-              <p className="text-gray-900 bg-gray-100 select-none px-1.5 py-0.75 rounded">{tag}</p>
+              <p key={tag} className="text-gray-900 bg-gray-100 select-none px-1.5 py-0.75 rounded">
+                {tag}
+              </p>
             ))}
           </div>
           <div className="flex justify-between">
