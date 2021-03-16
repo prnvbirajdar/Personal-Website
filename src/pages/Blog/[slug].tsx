@@ -20,7 +20,7 @@ const About: NextPage = ({ source, blogData }) => {
         <p className="px-5 rounded py-1 bg-purple-300 hidden sm:hidden md:hidden lg:hidden xl:hidden 2xl:block">2xl</p>
       </div>
       <article
-        className="dark:text-gray-300 px-4 py-24 mx-auto max-w-7xl"
+        className="dark:text-gray-300 px-4 py-16 mx-auto max-w-7xl"
         itemID="#"
         itemScope
         itemType="http://schema.org/BlogPosting"
@@ -29,7 +29,7 @@ const About: NextPage = ({ source, blogData }) => {
           <img src={blogData.cover_image} className="object-cover w-full h-64 bg-center rounded-lg" alt="Blog Cover" />
           {/* <p className="mt-6 mb-2 text-xs font-semibold tracking-wider uppercase text-primary">Development</p> */}
           <h1
-            className="mt-6 mb-3 text-3xl font-bold leading-tight text-white md:text-4xl"
+            className="mt-6 mb-6 text-3xl font-bold leading-tight text-white md:text-4xl"
             itemProp="headline"
             title={blogData.title}
           >
@@ -47,12 +47,15 @@ const About: NextPage = ({ source, blogData }) => {
               </div>
               <div className="ml-2">
                 <p className=" font-semibold "> {blogData.user.name}</p>
-                <p className="text-sm text-gray-500">{format(parseISO(blogData.published_at), 'MMMM dd, yyyy')}</p>
+                <p className="text-sm text-gray-400">{format(parseISO(blogData.published_at), 'MMMM dd, yyyy')}</p>
               </div>
             </div>
-            <div>
-              <div className="dark:text-gray-100 text-sm">{blogData.page_views_count} views</div>
-              <p className="text-sm flex justify-end text-gray-100">{blogData.public_reactions_count} 💖</p>
+            <div className="self-center">
+              {/* <span className="dark:text-gray-400 text-sm">
+                {blogData.page_views_count} views • {blogData.public_reactions_count} 💖
+              </span> */}
+              <p className="text-sm flex justify-end text-gray-400">{blogData.public_reactions_count} 💖</p>
+              <p className="dark:text-gray-400 flex justify-end text-sm">{blogData.page_views_count} views</p>
             </div>
           </div>
         </div>
@@ -61,17 +64,6 @@ const About: NextPage = ({ source, blogData }) => {
           {blogText}
         </div>
       </article>
-
-      {/*    <section className="w-11/12 px-4 md:px-0 mt-16 md:mt-24 lg:mt-28 mx-auto md:w-3/4 lg:w-10/12 text-gray-300">
-        <div className="dark:text-gray-100 prose prose-xl">{blogData.title}</div>
-        <div className="dark:text-gray-100 prose prose-xl">{blogData.page_views_count} views</div>
-        <div className="dark:text-gray-100 prose prose-xl">
-          {format(parseISO(blogData.published_at), 'MMMM dd, yyyy')}
-        </div>
-
-
-        <article className="prose lg:prose-xl dark:text-gray-100 ">{blogText}</article>
-      </section> */}
     </>
   )
 }
@@ -92,7 +84,7 @@ export const getStaticPaths = async () => {
     paths: devData.map((data) => ({
       params: { slug: data?.slug },
     })),
-    fallback: false,
+    fallback: true,
   }
 }
 
@@ -120,36 +112,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: { source: mdxSource, blogData: selectedBlog[0] }, // will be passed to the page component as props
+
+    revalidate: 60,
   }
 }
-
-// export const getStaticProps: GetStaticProps = async ({ params }) => {
-//   const devData = await getPost(params?.slug)
-
-//   const title = devData.title
-//   const likes = devData.public_reactions_count
-//   const markdown = devData.body_markdown
-
-//   //   console.log(devData)
-
-//   const mdxSource = await renderToString(devData.body_markdown)
-
-//   if (!devData) {
-//     return {
-//       notFound: true,
-//     }
-//   }
-
-//   return {
-//     props: { source: mdxSource }, // will be passed to the page component as props
-//   }
-// }
-
-// export const getStaticPaths = () => {
-//   return {
-//     paths: [],
-//     fallback: true,
-//   }
-// }
-
 export default About
