@@ -25,15 +25,6 @@ const Home: NextPage = ({ devData }) => {
           {/* {theme === 'dark' ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />} */}button
         </button>
         <Header />
-
-        {/* <div className="flex flex-col items-center justify-center pt-12 mt-12 space-x-0 space-y-2 border-t border-gray-200 md:space-x-2 md:space-y-0 md:flex-row">
-          <a href="#" className="w-full rounded-full btn btn-light btn-xl md:w-auto">
-            Previous Page
-          </a>
-          <a href="#" className="w-full rounded-full btn btn-light btn-xl md:w-auto">
-            Next Page
-          </a>
-        </div> */}
         <LatestArticles devData={devData} />
         <div className="text-black px-5">
           <p className="px-5 rounded py-1 bg-gray-300 block sm:hidden">Mobile</p>

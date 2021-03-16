@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { NextPage } from 'next'
 import Link from 'next/link'
 import { parseISO, format } from 'date-fns'
+import ActiveScreen from '@src/components/ActiveScreen'
 
 const About: NextPage = ({ devData }) => {
   const [searchValue, setSearchValue] = useState('')
@@ -25,6 +26,7 @@ const About: NextPage = ({ devData }) => {
               I love building new things. This blog is a way for me to write down and share new ideas and lessons with
               everyone.
             </p>
+            <ActiveScreen />
           </div>
           <div className="divide-y divide-gray-800">
             <div className="pt-6 pb-8 space-y-2 md:space-y-5">
@@ -58,29 +60,44 @@ const About: NextPage = ({ devData }) => {
                 const { description, title, slug, published_at, tag_list } = data
                 return (
                   <li key={slug} className="py-4">
-                    <article className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
+                    <article className="space-y-2 xl:grid xl:grid-cols-5 xl:space-y-0 xl:items-baseline">
                       <dl>
                         <dt className="sr-only">Published on</dt>
                         <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                           <time>{format(parseISO(published_at), 'MMMM dd, yyyy')} </time>
                         </dd>
                       </dl>
-                      <div className="space-y-3 xl:col-span-3">
+                      <div className="space-y-3 xl:col-span-4">
                         <div>
-                          <h3 className="text-2xl font-bold leading-8 tracking-tight">
-                            <Link href={`/blog/${slug}`} className="text-gray-900 dark:text-gray-100">
-                              {title}
-                            </Link>
+                          <h3 className="text-2xl font-bold leading-8 text-white hover:text-gray-300 tracking-tight">
+                            <Link href={`/blog/${slug}`}>{title}</Link>
                           </h3>
-                          <div className="flex mb-6 space-x-2 text-sm">
+                          {/* <div className="flex mb-6 space-x-2 text-sm">
                             {tag_list.map((tag) => (
                               <p key={tag} className="text-gray-900 bg-gray-100 select-none px-1.5 py-0.75 rounded">
                                 {tag}
                               </p>
                             ))}
-                          </div>
+                          </div> */}
                         </div>
-                        <div className="prose text-gray-500 max-w-none dark:text-gray-400">{description}</div>
+                        <div className="prose text-gray-500 dark:text-gray-400">
+                          {description}
+                          <a className="cursor-pointer ml-2 text-blue-500 inline-flex items-center">
+                            Learn More
+                            <svg
+                              className="w-4 h-4 ml-2"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              fill="none"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <path d="M5 12h14" />
+                              <path d="M12 5l7 7-7 7" />
+                            </svg>
+                          </a>
+                        </div>
                       </div>
                     </article>
                   </li>
@@ -95,10 +112,10 @@ const About: NextPage = ({ devData }) => {
 }
 
 const getPosts = async () => {
-  //const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
+  // const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
   const params = { per_page: 1000 }
   const headers = { 'api-key': process.env.NEXT_API_KEY }
-  const res = await fetch(`https://dev.to/api/articles/me/published`, { params, headers })
+  const res = await fetch('https://dev.to/api/articles/me/published', { params, headers })
   const posts = await res.json()
 
   return posts
