@@ -13,7 +13,7 @@ const LatestArticles = ({ devData }) => {
           devData.slice(0, 2).map(({ description, title, slug }) => (
             <div key={slug} className=" mt-5">
               <Link href={`/blog/${slug}`}>
-                <h3 className="cursor-pointer mb-2 md:mb-3 hover:text-gray-700 dark:hover:text-gray-300 dark:focus:text-gray-300  text-xl  font-semibold tracking-normal md:text-2xl">
+                <h3 className="cursor-pointer mb-2 md:mb-3 hover:text-gray-700 dark:hover:text-gray-300  text-xl  font-semibold tracking-normal md:text-2xl">
                   {title}
                 </h3>
               </Link>

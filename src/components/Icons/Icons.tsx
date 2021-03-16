@@ -5,7 +5,7 @@ const Icons = () => {
   return (
     <div className="flex mb-4 space-x-2">
       <a
-        href="#"
+        href="mailto:prnvbirajdar@gmail.com"
         className="p-1.5 rounded text-gray-500 hover:text-gray-700 hover:bg-gray-200 dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-gray-800 dark:focus:bg-gray-800  "
       >
         <svg

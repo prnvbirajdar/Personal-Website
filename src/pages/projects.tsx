@@ -31,13 +31,13 @@ const About: NextPage = () => {
                 <div className="absolute inset-0 bg-black bg-opacity-40 rounded-lg md:bg-opacity-60 bg-gradient-to-r from-black  " />
               </a>
 
-              <div className=" px-6 py-3 relative  md:w-8/12  my-auto text-gray-50 rounded-lg ">
+              <div className=" px-6 py-3 relative  md:w-8/12  my-auto rounded-lg ">
                 <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer">
-                  <h1 className="mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight  sm:leading-10 md:leading-14">
+                  <h1 className="text-gray-100 mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight  sm:leading-10 md:leading-14">
                     Lift Workout App
                   </h1>
                   <div className=" sm:w-9/12 md:w-full text-sm md:text-lg ">
-                    <p className="mt-2 leading-snug md:text-base">
+                    <p className="text-sm mt-2 leading-snug md:text-base">
                       A simple, accessible workout app that allows a user to create, track, and update their daily
                       workout routines.
                     </p>
@@ -79,13 +79,13 @@ const About: NextPage = () => {
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-75 rounded-lg bg-gradient-to-r from-black  " />
               </a>
-              <div className=" px-6 py-3 relative  md:w-8/12  my-auto text-gray-50 rounded-lg ">
+              <div className=" px-6 py-3 relative  md:w-8/12  my-auto rounded-lg ">
                 <a href="https://covid19ca.netlify.app/" target="_blank" rel="noopener noreferrer">
-                  <h1 className="mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight sm:leading-10 md:leading-14">
+                  <h1 className="text-gray-100 mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight sm:leading-10 md:leading-14">
                     COVID-19 Tracker
                   </h1>
                   <div className=" sm:w-9/12 md:w-full text-sm md:text-lg ">
-                    <p className=" mt-2 md:mt-0  leading-snug md:text-base">
+                    <p className="text-sm  mt-2  leading-snug md:text-base">
                       This dashboard provides up-to-date information about the COVID-19 outbreak and the vaccination
                       efforts in Canada.
                     </p>
@@ -127,13 +127,13 @@ const About: NextPage = () => {
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-40 rounded-lg md:bg-opacity-50 bg-gradient-to-r from-black  " />
               </a>
-              <div className=" px-6 py-3 relative  md:w-8/12  my-auto text-gray-50 rounded-lg ">
+              <div className=" px-6 py-3 relative  md:w-8/12  my-auto rounded-lg ">
                 <a href="https://reels.netlify.app/" target="_blank" rel="noopener noreferrer">
-                  <h1 className="mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight  sm:leading-10 md:leading-14">
+                  <h1 className="text-gray-100 mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight  sm:leading-10 md:leading-14">
                     Reels Movie Db
                   </h1>
                   <div className=" sm:w-9/12 md:w-full text-sm md:text-lg ">
-                    <p className="mt-2 leading-snug md:text-base">
+                    <p className="text-sm mt-2 leading-snug md:text-base">
                       A simplified Netflix clone that helps you browse through 600,000 movies and find the details and
                       watch trailers of your favorite ones.
                     </p>
@@ -175,13 +175,13 @@ const About: NextPage = () => {
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-75 rounded-lg md:bg-opacity-60 md:bg-gradient-to-r from-black  " />
               </a>
-              <div className=" px-6 py-3 relative  md:w-8/12  my-auto text-gray-50 rounded-lg ">
+              <div className=" px-6 py-3 relative  md:w-8/12  my-auto rounded-lg ">
                 <a href="https://google-keep-next.vercel.app/" target="_blank" rel="noopener noreferrer">
-                  <h1 className="mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight sm:leading-10 md:leading-14">
+                  <h1 className="text-gray-100 mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight sm:leading-10 md:leading-14">
                     Keep Clone
                   </h1>
                   <div className=" sm:w-9/12 md:w-full text-sm md:text-lg ">
-                    <p className=" mt-2 md:mt-0  leading-snug md:text-base">
+                    <p className="text-sm  mt-2 leading-snug md:text-base">
                       A responsive Google Keep clone that allows users to create, delete and save their notes. Dark mode
                       enabled!
                     </p>

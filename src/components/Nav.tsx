@@ -7,8 +7,8 @@ const Nav2 = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 w-full bg-black z-20">
-      <nav className="border-b border-gray-600">
+    <header className="fixed top-0 w-full bg-black z-20 text-gray-100">
+      <nav className="border-b border-gray-800">
         <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className=" flex items-center justify-between h-16">
             <div className="flex items-center">
@@ -23,16 +23,24 @@ const Nav2 = () => {
                 <div className="ml-10 flex items-baseline space-x-4">
                   {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
                   <Link href="/">
-                    <a className=" hover:bg-gray-900 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a className=" hover:bg-gray-900 focus:bg-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+                      Home
+                    </a>
                   </Link>
                   <Link href="/blog">
-                    <a className=" hover:bg-gray-900 px-3 py-2 rounded-md text-sm font-medium">Blog</a>
+                    <a className=" hover:bg-gray-900 focus:bg-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+                      Blog
+                    </a>
                   </Link>
                   <Link href="/projects">
-                    <a className=" hover:bg-gray-900 px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                    <a className=" hover:bg-gray-900 focus:bg-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+                      Projects
+                    </a>
                   </Link>
                   <Link href="/about">
-                    <a className=" hover:bg-gray-900 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                    <a className=" hover:bg-gray-900 focus:bg-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+                      About
+                    </a>
                   </Link>
                 </div>
               </div>
@@ -92,22 +100,30 @@ const Nav2 = () => {
 
                 <div onClick={() => setIsOpen(!isOpen)} aria-hidden="true">
                   <Link href="/">
-                    <a className="hover:bg-gray-900 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                    <a className="hover:bg-gray-900 focus:bg-gray-900 block px-3 py-2 rounded-md text-base font-medium">
+                      Home
+                    </a>
                   </Link>
                 </div>
                 <div onClick={() => setIsOpen(!isOpen)} aria-hidden="true">
                   <Link href="/blog">
-                    <a className="hover:bg-gray-900 block px-3 py-2 rounded-md text-base font-medium">Blog</a>
+                    <a className="hover:bg-gray-900 focus:bg-gray-900 block px-3 py-2 rounded-md text-base font-medium">
+                      Blog
+                    </a>
                   </Link>
                 </div>
                 <div onClick={() => setIsOpen(!isOpen)} aria-hidden="true">
                   <Link href="/projects">
-                    <a className="hover:bg-gray-900 block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                    <a className="hover:bg-gray-900 focus:bg-gray-900 block px-3 py-2 rounded-md text-base font-medium">
+                      Projects
+                    </a>
                   </Link>
                 </div>
                 <div onClick={() => setIsOpen(!isOpen)} aria-hidden="true">
                   <Link href="/about">
-                    <a className="hover:bg-gray-900 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                    <a className="hover:bg-gray-900 focus:bg-gray-900 block px-3 py-2 rounded-md text-base font-medium">
+                      About
+                    </a>
                   </Link>
                 </div>
               </div>

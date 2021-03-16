@@ -11,7 +11,7 @@ const RecentProjects = () => {
         <div className=" p-4 ">
           <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex">
 
-            <div className="ml-4">
+            <div>
               <h3 className="mb-2 text-xl font-semibold tracking-normal ">Lift Workout App</h3>
               <p className="text-sm md:text-base font-normal  text-gray-700 dark:text-gray-300">
                 A simple, accessible workout app that allows a user to create, track, and update their daily workout
@@ -36,7 +36,7 @@ const RecentProjects = () => {
       <div className="flex flex-col border border-gray-600 hover:border-gray-400 transition rounded-lg md:mt-5">
         <div className=" p-4">
           <a href="https://covid19ca.netlify.app/" target="_blank" rel="noopener noreferrer" className="flex">
-            <div className="ml-4">
+            <div>
               <h3 className="mb-2 text-xl font-semibold tracking-normal">COVID-19 Dashboard for Canada</h3>
               <p className="text-sm md:text-base font-normal text-gray-700 dark:text-gray-300">
                 A dashboard providing up-to-date information on the COVID-19 outbreak and the vaccination efforts in
