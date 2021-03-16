@@ -24,7 +24,6 @@ const App = ({ Component, pageProps }: AppProps) => (
         <Footer />
       </section>
     </ThemeProvider>
-    {/* <p>//className="w-full mt-8 dark:bg-gradient-to-b from-black to-gray-900"</p> */}
   </>
 )
 

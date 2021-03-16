@@ -10,13 +10,11 @@ import Header from '@src/components/Landing/Header'
 //import { useTheme } from 'next-themes'
 
 const Home: NextPage = ({ devData }) => {
-  console.log(devData)
-
   // const { theme, setTheme } = useTheme()
 
   return (
     <>
-      <section className="w-11/12 px-4 md:px-0 mt-36 mx-auto md:w-3/4 lg:w-2/4 ">
+      <section className="w-11/12 px-4 md:px-0 pt-40 md:pt-44 lg:pt-52 mx-auto md:w-3/4 lg:w-2/4 mt-0 ">
         {/* <button
           aria-label="dark mode"
           // onClick={toggleMode}
@@ -39,7 +37,6 @@ const Home: NextPage = ({ devData }) => {
 }
 
 const getPosts = async () => {
-  //const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
   const params = { per_page: 1000 }
   const headers = { 'api-key': process.env.NEXT_API_KEY }
   const res = await fetch(`https://dev.to/api/articles/me/published`, { params, headers })

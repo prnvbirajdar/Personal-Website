@@ -7,7 +7,7 @@ import { Github, OpenLink2 } from '../components/Icons/Icons'
 const About: NextPage = () => {
   return (
     <>
-      <section className="w-11/12 px-4 md:px-0 mt-16 md:mt-24 lg:mt-28 mx-auto md:w-3/4 lg:w-10/12 text-gray-300">
+      <section className="w-11/12 px-4 md:px-0 pt-24 md:pt-28 lg:pt-32 mx-auto md:w-3/4 lg:w-10/12 text-gray-300">
         <div className="divide-y divide-gray-800">
           <div className=" pb-6 space-y-2 md:space-y-5 ">
             <h1 className=" text-4xl font-extrabold leading-9 tracking-tight text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">

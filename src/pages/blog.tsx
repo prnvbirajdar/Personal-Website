@@ -4,7 +4,6 @@ import React, { useState } from 'react'
 import { NextPage } from 'next'
 import Link from 'next/link'
 import { parseISO, format } from 'date-fns'
-import ActiveScreen from '@src/components/ActiveScreen'
 
 const About: NextPage = ({ devData }) => {
   const [searchValue, setSearchValue] = useState('')
@@ -16,7 +15,7 @@ const About: NextPage = ({ devData }) => {
 
   return (
     <>
-      <section className="w-11/12 px-4 md:px-0 mt-16 md:mt-24 lg:mt-28 mx-auto md:w-3/4 lg:w-10/12 text-gray-300">
+      <section className="w-11/12 px-4 md:px-0 pt-24 md:pt-28 lg:pt-32 mx-auto md:w-3/4 lg:w-10/12 text-gray-300">
         <div>
           <div className=" space-y-2 md:space-y-5">
             <h1 className="mb-3 lg:mb-5 text-4xl font-extrabold leading-9 tracking-tight text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
@@ -59,7 +58,7 @@ const About: NextPage = ({ devData }) => {
               {filteredBlogPosts.map((data) => {
                 const { description, title, slug, published_at, tag_list } = data
                 return (
-                  <li key={slug} className="py-4">
+                  <li key={slug} className="py-4 xl:py-6">
                     <article className="space-y-2 xl:grid xl:grid-cols-5 xl:space-y-0 xl:items-baseline">
                       <dl>
                         <dt className="sr-only">Published on</dt>
@@ -67,7 +66,7 @@ const About: NextPage = ({ devData }) => {
                           <time>{format(parseISO(published_at), 'MMMM dd, yyyy')} </time>
                         </dd>
                       </dl>
-                      <div className="space-y-3 xl:col-span-4">
+                      <div className="space-y-3 xl:col-span-4 xl:pr-20">
                         <div>
                           <h3 className="text-2xl font-bold leading-8 text-white hover:text-gray-300 tracking-tight">
                             <Link href={`/blog/${slug}`}>{title}</Link>

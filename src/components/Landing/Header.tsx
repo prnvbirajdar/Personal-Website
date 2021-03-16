@@ -4,7 +4,7 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <header className="flex flex-col space-y-12 divide-y divide-gray-200 mb-32">
+    <header className="flex flex-col space-y-12 divide-y divide-gray-200 mb-32 ">
       <div>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight dark:text-gray-100  sm:leading-10   md:leading-14">
           Hi, I&apos;m Pranav👋
