@@ -1,11 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
-import { GetStaticProps, NextPage } from 'next'
+import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import renderToString from 'next-mdx-remote/render-to-string'
 import hydrate from 'next-mdx-remote/hydrate'
 import { parseISO, format } from 'date-fns'
-import ActiveScreen from '@src/components/ActiveScreen'
 
 const About: NextPage = ({ source, blogData }) => {
   const blogText = hydrate(source)
@@ -73,7 +72,7 @@ const getPosts = async () => {
   return posts
 }
 
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
   const devData = await getPosts()
 
   return {

@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React, { useState } from 'react'
-import { NextPage } from 'next'
+import { GetStaticProps, NextPage } from 'next'
 import Link from 'next/link'
 import { parseISO, format } from 'date-fns'
 
@@ -113,7 +113,6 @@ const About: NextPage = ({ devData }) => {
 }
 
 const getPosts = async () => {
-  // const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
   const params = { per_page: 1000 }
   const headers = { 'api-key': process.env.NEXT_API_KEY }
   const res = await fetch('https://dev.to/api/articles/me/published', { params, headers })

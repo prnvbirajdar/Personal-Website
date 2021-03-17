@@ -28,15 +28,15 @@ const About: NextPage = () => {
                   src="/lift.png"
                   alt="lift workout app"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-40 rounded-lg md:bg-opacity-60 bg-gradient-to-r from-black  " />
+                <div className=" absolute inset-0 bg-black bg-opacity-40 rounded-lg md:bg-opacity-60 bg-gradient-to-r from-black  " />
               </a>
 
-              <div className=" px-6 py-3 relative  md:w-8/12  my-auto rounded-lg ">
+              <div className=" px-6 py-3 relative  md:w-8/12 my-auto rounded-lg  ">
                 <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer">
-                  <h1 className="text-gray-100 mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight  sm:leading-10 md:leading-14">
+                  <h1 className="text-gray-100 mt-2  lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight  sm:leading-10 md:leading-14">
                     Lift Workout App
                   </h1>
-                  <div className=" sm:w-9/12 md:w-full text-sm md:text-lg ">
+                  <div className="  sm:w-9/12 md:w-full text-sm md:text-lg ">
                     <p className="text-sm mt-2 leading-snug md:text-base">
                       A simple, accessible workout app that allows a user to create, track, and update their daily
                       workout routines.
@@ -134,8 +134,8 @@ const About: NextPage = () => {
                   </h1>
                   <div className=" sm:w-9/12 md:w-full text-sm md:text-lg ">
                     <p className="text-sm mt-2 leading-snug md:text-base">
-                      A simplified Netflix clone that helps you browse through 600,000 movies and find the details and
-                      watch trailers of your favorite ones.
+                      A Netflix clone that lets users browse through 600,000 movies and find details and watch trailers
+                      of their favorite ones.
                     </p>
                     <ul className="flex text-xs mt-3 font-semibold lg:mt-4">
                       <li className=" mr-3">

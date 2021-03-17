@@ -10,7 +10,6 @@ const RecentProjects = () => {
       <div className="mb-5 flex flex-col border border-gray-600 hover:border-gray-400 transition rounded-lg md:mt-5">
         <div className=" p-4 ">
           <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex">
-
             <div>
               <h3 className="mb-2 text-xl font-semibold tracking-normal ">Lift Workout App</h3>
               <p className="text-sm md:text-base font-normal  text-gray-700 dark:text-gray-300">
