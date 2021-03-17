@@ -95,65 +95,63 @@ const About: NextPage<Props> = (props) => {
             </div>
             <ul>
               {!filteredBlogPosts.length && 'No posts found.'}
-              {filteredBlogPosts.map(
-                (data: { description: string; title: string; slug: string; published_at: string }) => {
-                  const { description, title, slug, published_at } = data
-                  return (
-                    <li key={slug} className="py-4 xl:py-6">
-                      <article className="space-y-2 xl:grid xl:grid-cols-5 xl:space-y-0 xl:items-baseline">
-                        <dl>
-                          <dt className="sr-only">Published on</dt>
-                          <dd className="prose prose-sm md:prose 2xl:prose-lg font-medium leading-6 text-gray-500 dark:text-gray-400">
-                            <time>{format(parseISO(published_at), 'MMMM dd, yyyy')} </time>
-                          </dd>
-                        </dl>
-                        <div className="space-y-3 xl:col-span-4 xl:pr-20">
-                          <div>
-                            <h3 className="text-2xl font-bold leading-8 text-white hover:text-gray-300 tracking-tight">
-                              <Link href={`/blog/${slug}`}>{title}</Link>
-                            </h3>
-                            {/* <div className="flex mb-6 space-x-2 text-sm">
+              {filteredBlogPosts.map((data) => {
+                const { description, title, slug, published_at } = data
+                return (
+                  <li key={slug} className="py-4 xl:py-6">
+                    <article className="space-y-2 xl:grid xl:grid-cols-5 xl:space-y-0 xl:items-baseline">
+                      <dl>
+                        <dt className="sr-only">Published on</dt>
+                        <dd className="prose prose-sm md:prose 2xl:prose-lg font-medium leading-6 text-gray-500 dark:text-gray-400">
+                          <time>{format(parseISO(published_at), 'MMMM dd, yyyy')} </time>
+                        </dd>
+                      </dl>
+                      <div className="space-y-3 xl:col-span-4 xl:pr-20">
+                        <div>
+                          <h3 className="text-2xl font-bold leading-8 text-white hover:text-gray-300 tracking-tight">
+                            <Link href={`/blog/${slug}`}>{title}</Link>
+                          </h3>
+                          {/* <div className="flex mb-6 space-x-2 text-sm">
                             {tag_list.map((tag) => (
                               <p key={tag} className="text-gray-900 bg-gray-100 select-none px-1.5 py-0.75 rounded">
                                 {tag}
                               </p>
                             ))}
                           </div> */}
-                            {/* I love coding and building things, and when I build something new, I usually learn something in the
+                          {/* I love coding and building things, and when I build something new, I usually learn something in the
               process. This blog is a way for me to write down and share these ideas and lessons with everyone. */}
-                            {/*  I like to write and share the
+                          {/*  I like to write and share the
               things I have learned I regularly write about solving problems with code, desiging things people use,
               teaching, and learning. I love coding and the feeling that comes with building something by yourself. When
               I build something new, I usually learn something in the process. This blog is a way for me to chronicle
               these lessons and ideas. Most of my articles are around solutions to problems that we face when building
               great web products. */}
-                          </div>
-                          <div className="text-sm md:text-base text-gray-500 dark:text-gray-400">
-                            {description}{' '}
-                            <Link href={`/blog/${slug}`}>
-                              <a className="cursor-pointer ml-2 text-blue-500 hover:text-blue-700 inline-flex items-center">
-                                Learn More
-                                <svg
-                                  className="w-4 h-4 ml-2"
-                                  viewBox="0 0 24 24"
-                                  stroke="currentColor"
-                                  strokeWidth="2"
-                                  fill="none"
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                >
-                                  <path d="M5 12h14" />
-                                  <path d="M12 5l7 7-7 7" />
-                                </svg>
-                              </a>
-                            </Link>
-                          </div>
                         </div>
-                      </article>
-                    </li>
-                  )
-                },
-              )}
+                        <div className="text-sm md:text-base text-gray-500 dark:text-gray-400">
+                          {description}{' '}
+                          <Link href={`/blog/${slug}`}>
+                            <a className="cursor-pointer ml-2 text-blue-500 hover:text-blue-700 inline-flex items-center">
+                              Learn More
+                              <svg
+                                className="w-4 h-4 ml-2"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                fill="none"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              >
+                                <path d="M5 12h14" />
+                                <path d="M12 5l7 7-7 7" />
+                              </svg>
+                            </a>
+                          </Link>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                )
+              })}
             </ul>
           </div>
         </div>
