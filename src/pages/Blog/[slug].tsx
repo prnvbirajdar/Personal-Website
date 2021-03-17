@@ -6,9 +6,20 @@ import renderToString from 'next-mdx-remote/render-to-string'
 import hydrate from 'next-mdx-remote/hydrate'
 import { parseISO, format } from 'date-fns'
 
-const About: NextPage = ({ source, blogData }) => {
-  const blogText = hydrate(source)
+type BlogData = {
+  blogData: {
+    cover_image: string
+    title: string
+    published_at: string
+    public_reactions_count: number
+    page_views_count: number
+    user: { profile_image_90: string; name: string }
+  }
+  source: { compiledSource: string; renderedOutput: string }
+}
 
+const About: NextPage<BlogData> = ({ source, blogData }) => {
+  const blogText = hydrate(source)
   return (
     <>
       <article
@@ -30,7 +41,6 @@ const About: NextPage = ({ source, blogData }) => {
           >
             {blogData.title}
           </h1>
-          <ActiveScreen />
 
           {/* <div className="flex mb-6 space-x-2 text-sm">
             {blogData.tag_list.map((tag) => (
@@ -64,9 +74,9 @@ const About: NextPage = ({ source, blogData }) => {
   )
 }
 const getPosts = async () => {
-  const params = { per_page: 1000 }
-  const headers = { 'api-key': process.env.NEXT_API_KEY }
-  const res = await fetch('https://dev.to/api/articles/me/published', { params, headers })
+  // const params = { per_page: 1000 }
+  const headers = { 'api-key': process.env.NEXT_API_KEY! }
+  const res = await fetch('https://dev.to/api/articles/me/published', { headers })
   const posts = await res.json()
 
   return posts
@@ -76,7 +86,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const devData = await getPosts()
 
   return {
-    paths: devData.map((data) => ({
+    paths: devData.map((data: { slug: string }) => ({
       params: { slug: data?.slug },
     })),
     fallback: true,
@@ -86,7 +96,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const devData = await getPosts()
 
-  const selectedBlog = devData.filter((data) => data?.slug === params?.slug)
+  const selectedBlog = devData.filter((data: { slug: string | string[] | undefined }) => data?.slug === params?.slug)
   const markdown = selectedBlog[0]?.body_markdown
   const mdxSource = await renderToString(markdown)
 

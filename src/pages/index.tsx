@@ -6,10 +6,13 @@ import { GetStaticProps, NextPage } from 'next'
 import RecentProjects from '@src/components/Landing/RecentProjects'
 import LatestArticles from '@src/components/Landing/LatestArticles'
 import Header from '@src/components/Landing/Header'
-//import { Moon, Sun } from '@src/components/Icons/Icons'
-//import { useTheme } from 'next-themes'
+// import { Moon, Sun } from '@src/components/Icons/Icons'
+// import { useTheme } from 'next-themes'
 
-const Home: NextPage = ({ devData }) => {
+type BlogData = {
+  devData: []
+}
+const Home: NextPage<BlogData> = ({ devData }) => {
   // const { theme, setTheme } = useTheme()
 
   return (
@@ -27,19 +30,14 @@ const Home: NextPage = ({ devData }) => {
 
         <RecentProjects />
       </section>
-
-      {/*   <section className="w-full mt-8 bg-gradient-to-b from-black to-gray-900">
-       <CallToAction />
-        <Footer /> 
-      </section>*/}
     </>
   )
 }
 
 const getPosts = async () => {
-  const params = { per_page: 1000 }
-  const headers = { 'api-key': process.env.NEXT_API_KEY }
-  const res = await fetch(`https://dev.to/api/articles/me/published`, { params, headers })
+  // const params = { per_page: 1000 }
+  const headers = { 'api-key': process.env.NEXT_API_KEY! }
+  const res = await fetch('https://dev.to/api/articles/me/published', { headers })
   const posts = await res.json()
 
   return posts

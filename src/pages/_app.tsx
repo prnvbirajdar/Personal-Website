@@ -12,8 +12,8 @@ import ScrollToTop from '@src/containers/scrollToTop'
 const App = ({ Component, pageProps }: AppProps) => (
   <>
     <Head>
-      <title>Personal Portfolio</title>
-      <link rel="Lift Icon" type="image/ico" href="/dumbell.ico" />
+      <title>Pranav Birajdar</title>
+      <link rel="Logo Icon" type="image/png" href="/fav.png" />
       <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>

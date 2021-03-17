@@ -14,9 +14,9 @@ module.exports = {
             color: '#333',
             a: {
               color: 'rgba(59, 130, 246)',
-              textDecoration: `none`,
+              textDecoration: 'none',
               '&:hover': {
-                textDecoration: `underline`,
+                textDecoration: 'underline',
               },
             },
             h3: {
@@ -31,5 +31,6 @@ module.exports = {
     },
   },
   variants: {},
+  // eslint-disable-next-line global-require
   plugins: [require('@tailwindcss/typography')],
 }
