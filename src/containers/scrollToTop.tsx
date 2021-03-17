@@ -4,15 +4,6 @@ import React, { useEffect, useState } from 'react'
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false)
 
-  // Show button when page is scorlled upto given distance
-  const toggleVisibility = () => {
-    if (window.pageYOffset > 500) {
-      setIsVisible(true)
-    } else {
-      setIsVisible(false)
-    }
-  }
-
   // Set the top cordinate to 0
   // make scrolling smooth
   const scrollToTop = () => {
@@ -23,7 +14,18 @@ export default function ScrollToTop() {
   }
 
   useEffect(() => {
+    // Button is displayed after scrolling for 500 pixels
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 500) {
+        setIsVisible(true)
+      } else {
+        setIsVisible(false)
+      }
+    }
+
     window.addEventListener('scroll', toggleVisibility)
+
+    return () => window.removeEventListener('scroll', toggleVisibility)
   }, [])
 
   return (
