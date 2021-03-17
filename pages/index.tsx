@@ -3,10 +3,11 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
 import { GetStaticProps, NextPage } from 'next'
-import RecentProjects from '@src/components/Landing/RecentProjects'
-// import LatestArticles from '@src/components/Landing/LatestArticles'
-import Header from '@src/components/Landing/Header'
 import Link from 'next/link'
+
+import RecentProjects from '../src/components/Landing/RecentProjects'
+// import LatestArticles from '@src/components/Landing/LatestArticles'
+import Header from '../src/components/Landing/Header'
 
 // import { Moon, Sun } from '@src/components/Icons/Icons'
 // import { useTheme } from 'next-themes'

@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
 import { NextPage } from 'next'
-import Icons from '@src/components/Icons/Icons'
+import Icons from '../src/components/Icons/Icons'
 
 const About: NextPage = () => {
   return (

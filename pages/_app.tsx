@@ -1,13 +1,13 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react'
 import { AppProps } from 'next/app'
-import '@src/css/tailwind.css'
 import Head from 'next/head'
-import CallToAction from '@src/components/CallToAction'
-import Footer from '@src/components/Footer'
 import { ThemeProvider } from 'next-themes'
-import Nav from '@src/components/Nav'
-import ScrollToTop from '@src/containers/scrollToTop'
+import Nav from '../src/components/Nav'
+import ScrollToTop from '../src/containers/scrollToTop'
+import Footer from '../src/components/Footer'
+import '../src/css/tailwind.css'
+import CallToAction from '../src/components/CallToAction'
 
 const App = ({ Component, pageProps }: AppProps) => (
   <>
