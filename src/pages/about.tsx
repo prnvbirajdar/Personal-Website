@@ -23,7 +23,6 @@ const About: NextPage = () => {
               />
               <h3 className="pt-4 text-2xl md:text-3xl font-bold leading-8 tracking-tight">Pranav Birajdar</h3>
               <div className="md:text-lg text-gray-400 dark:text-gray-400 mb-2 md:mt-1">Software Developer</div>
-              {/* <div className="text-gray-500 dark:text-gray-400">Stanford University</div> */}
               <Icons />
             </div>
             <div className="lg:pt-4 pb-8 lg:col-span-2 text-base font-normal sm:w-9/12 md:w-10/12 mx-auto  lg:mx-0">
