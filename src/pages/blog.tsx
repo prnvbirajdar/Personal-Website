@@ -6,12 +6,46 @@ import { GetStaticProps, NextPage } from 'next'
 import Link from 'next/link'
 import { parseISO, format } from 'date-fns'
 
-type BlogData = {
-  devData: []
+interface User {
+  github_username: string
+  name: string
+  profile_image: string
+  profile_image_90: string
+  twitter_username: string
+  username: string
+  website_url?: null | string
 }
 
-const About: NextPage<BlogData> = ({ devData }) => {
+interface BlogPost {
+  id: number
+  title: string
+  description: string
+  type_of: string
+  tag_list: string[]
+  canonical_url: string
+  slug: string
+  body_markdown: string
+  comments_count: number
+  cover_image: string
+  page_views_count: number
+  path: string
+  positive_reactions_count: number
+  public_reactions_count: number
+  published: boolean
+  published_at: string
+  published_timestamp: string
+  url: string
+  user: User
+}
+
+interface Props {
+  devData: BlogPost[]
+}
+
+const About: NextPage<Props> = (props) => {
   const [searchValue, setSearchValue] = useState('')
+
+  const { devData } = props
 
   const filteredBlogPosts = devData.filter((data: { title: string; description: string; tag_list: string[] }) => {
     const searchContent = data.title + data.description + data.tag_list.join(' ')
@@ -30,7 +64,6 @@ const About: NextPage<BlogData> = ({ devData }) => {
               I love building new things. This blog is a way for me to write down and share new ideas and lessons with
               everyone.
             </p>
-            {/* <ActiveScreen /> */}
           </div>
           <div className="divide-y divide-gray-800">
             <div className="pt-6 pb-8 space-y-2 md:space-y-5">
