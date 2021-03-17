@@ -160,7 +160,7 @@ const About: NextPage<Props> = (props) => {
 
 const getPosts = async () => {
   //   const params = { per_page: 1000 }
-  const headers = { 'api-key': process.env.NEXT_API_KEY! }
+  const headers = { 'api-key': 'u6fFae5kYdEF1NiaUuGZdhTh' }
   const res = await fetch('https://dev.to/api/articles/me/published', { headers })
   const posts = await res.json()
 
