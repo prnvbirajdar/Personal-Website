@@ -47,7 +47,9 @@ const About: NextPage<Props> = (props) => {
 
   const { devData } = props
 
-  const filteredBlogPosts = devData.filter((data: { title: string; description: string; tag_list: string[] }) => {
+  console.log(devData)
+
+  const filteredBlogPosts = devData.filter((data) => {
     const searchContent = data.title + data.description + data.tag_list.join(' ')
     return searchContent.toLowerCase().includes(searchValue.toLowerCase())
   })
