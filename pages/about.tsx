@@ -50,7 +50,7 @@ const About: NextPage = () => {
                 products.
               </p> */}
               <p className="mb-4">Here are a few technologies I&apos;ve been working with recently:</p>
-              <ul className="flex ">
+              <ul className="md:flex ">
                 <div>
                   <li className="mb-0.25">
                     ▸ React
@@ -60,7 +60,7 @@ const About: NextPage = () => {
                   <li className="mb-0.25">▸ JavaScript</li>
                 </div>
 
-                <div className="ml-20">
+                <div className="md:ml-20">
                   <li className="mb-0.25">▸ Firebase</li>
                   <li className="mb-0.25">▸ Semantic HTML</li>
                   <li className="mb-0.25">▸ (S)CSS</li>
