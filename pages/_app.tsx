@@ -21,7 +21,6 @@ const App = ({ Component, pageProps }: AppProps) => (
     <section className="w-full mt-8 bg-gradient-to-b from-black to-gray-900">
       <CallToAction />
       <ScrollToTop />
-
       <Footer />
     </section>
   </>

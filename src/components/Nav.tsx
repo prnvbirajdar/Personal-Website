@@ -12,7 +12,7 @@ const Nav2 = () => {
         <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className=" flex items-center justify-between h-16">
             <div className="flex items-center">
-              <div className="flex-shrink-0 cursor-pointer">
+              <div className="flex-shrink-0 cursor-pointer" aria-hidden="true" onClick={() => setIsOpen(!isOpen)}>
                 <Link href="/">
                   <a>
                     <svg
