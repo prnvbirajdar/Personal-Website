@@ -6,7 +6,7 @@ const Icons = () => {
     <div className="flex mb-4 space-x-2">
       <a
         href="mailto:prnvbirajdar@gmail.com"
-        className="p-1.5 rounded text-gray-300 hover:text-gray-100 hover:bg-black focus:bg-black  "
+        className="p-1.5 rounded text-gray-300 hover:text-gray-100 hover:bg-gray-800 focus:bg-gray-800  "
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,7 @@ const Icons = () => {
         href="https://github.com/prnvbirajdar"
         target="_blank"
         rel="noopener noreferrer"
-        className="p-1.5 rounded text-gray-300 hover:text-gray-100 hover:bg-black focus:bg-black   "
+        className="p-1.5 rounded text-gray-300 hover:text-gray-100 hover:bg-gray-800 focus:bg-gray-800   "
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +40,7 @@ const Icons = () => {
         href="https://twitter.com/prnvbirajdar"
         target="_blank"
         rel="noopener noreferrer"
-        className="p-1.5 rounded text-gray-300 hover:text-gray-100 hover:bg-black focus:bg-black  "
+        className="p-1.5 rounded text-gray-300 hover:text-gray-100 hover:bg-gray-800 focus:bg-gray-800  "
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +57,7 @@ const Icons = () => {
         href="https://www.linkedin.com/in/prnvbirajdar/"
         target="_blank"
         rel="noopener noreferrer"
-        className="p-1.5 rounded text-gray-300 hover:text-gray-100 hover:bg-black focus:bg-black  "
+        className="p-1.5 rounded text-gray-300 hover:text-white hover:bg-gray-800 focus:bg-gray-800  "
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
