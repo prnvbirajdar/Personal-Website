@@ -11,7 +11,7 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
-            color: '#333',
+            color: 'rgba(209, 213, 219)',
             a: {
               color: 'rgba(59, 130, 246)',
               textDecoration: 'none',
