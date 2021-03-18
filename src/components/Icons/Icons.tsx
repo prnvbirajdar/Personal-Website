@@ -5,6 +5,7 @@ const Icons = () => {
   return (
     <div className="flex mb-4 space-x-2">
       <a
+        aria-label="Mail"
         href="mailto:prnvbirajdar@gmail.com"
         className="p-1.5 rounded text-gray-300 hover:text-gray-100 hover:bg-gray-800 focus:bg-gray-800  "
       >
@@ -20,6 +21,7 @@ const Icons = () => {
         </svg>
       </a>
       <a
+        aria-label="Github"
         href="https://github.com/prnvbirajdar"
         target="_blank"
         rel="noopener noreferrer"
@@ -37,6 +39,7 @@ const Icons = () => {
         </svg>
       </a>
       <a
+        aria-label="Twitter"
         href="https://twitter.com/prnvbirajdar"
         target="_blank"
         rel="noopener noreferrer"
@@ -54,6 +57,7 @@ const Icons = () => {
         </svg>
       </a>
       <a
+        aria-label="LinkedIn"
         href="https://www.linkedin.com/in/prnvbirajdar/"
         target="_blank"
         rel="noopener noreferrer"
@@ -129,7 +133,7 @@ const Github = () => {
 
 const OpenLink = () => {
   return (
-    <a href="#" className="rounded  text-gray-300 hover:text-gray-100 ">
+    <a aria-label="Open Link" className="rounded  text-gray-300 hover:text-gray-100 ">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="flex-none w-5 h-5"
@@ -153,7 +157,7 @@ const OpenLink = () => {
 
 const OpenLink2 = () => {
   return (
-    <a href="#" className="rounded  text-gray-300 hover:text-gray-100 ">
+    <a aria-label="Open Link" className="rounded  text-gray-300 hover:text-gray-100 ">
       <svg
         className="flex-none w-5 h-5"
         xmlns="http://www.w3.org/2000/svg"
