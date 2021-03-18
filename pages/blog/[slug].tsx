@@ -5,7 +5,6 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import renderToString from 'next-mdx-remote/render-to-string'
 import hydrate from 'next-mdx-remote/hydrate'
 import { parseISO, format } from 'date-fns'
-import ActiveScreen from '@src/components/ActiveScreen'
 
 type BlogData = {
   blogData: {
@@ -66,7 +65,6 @@ const BlogPage: NextPage<BlogData> = ({ source, blogData }) => {
             </div>
           </div>
         </div>
-        <ActiveScreen />
         <div className=" px-4 sm:px-0 text-gray-300 w-full mx-auto prose prose-sm md:prose 2xl:prose-lg  md:w-3/4 lg:w-1/2">
           {blogText}
         </div>
