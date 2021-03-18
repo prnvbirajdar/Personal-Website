@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
-import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
+import { GetStaticPaths, GetStaticProps } from 'next'
 import renderToString from 'next-mdx-remote/render-to-string'
 import hydrate from 'next-mdx-remote/hydrate'
 import { parseISO, format } from 'date-fns'
@@ -62,11 +62,11 @@ interface BlogPost {
 // }
 
 interface AllBlogProps {
-  source: { compiledSource: string; renderedOutput: string }
+  source: MdxRemote.Source
   blogData: BlogPost
 }
 
-const BlogPage: NextPage<AllBlogProps> = ({ source, blogData }) => {
+const BlogPage = ({ source, blogData }: AllBlogProps) => {
   const blogText = hydrate(source)
 
   console.log(source)
