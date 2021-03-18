@@ -77,12 +77,12 @@ const Home: NextPage<Props> = (props) => {
               devData.slice(0, 2).map(({ description, title, slug }) => (
                 <div key={slug} className=" mt-5">
                   <Link href={`/blog/${slug}`}>
-                    <h3 className="cursor-pointer mb-2 md:mb-3 hover:text-gray-700 dark:hover:text-gray-300  text-xl  font-semibold tracking-normal md:text-2xl">
+                    <h3 className="cursor-pointer mb-2 md:mb-3 text-xl  font-semibold tracking-normal md:text-2xl">
                       {title}
                     </h3>
                   </Link>
 
-                  <div className="text-sm md:text-base font-normal text-gray-700 dark:text-gray-300">
+                  <div className="text-sm md:text-base font-normal text-gray-300">
                     {description}
                     <Link href={`/blog/${slug}`}>
                       <a className="cursor-pointer ml-2 text-blue-500 hover:text-blue-700 focus:text-blue-700 inline-flex items-center">

@@ -73,10 +73,10 @@ const About: NextPage<Props> = (props) => {
                   type="text"
                   onChange={(e) => setSearchValue(e.target.value)}
                   placeholder="Search articles"
-                  className="block w-full px-4 py-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:border-gray-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-gray-100"
+                  className="block w-full px-4 py-2 border  rounded-md border-gray-900 focus:ring-blue-500 focus:border-blue-500 bg-gray-800 text-gray-100"
                 />
                 <svg
-                  className="absolute w-5 h-5 text-gray-400 right-3 top-3 dark:text-gray-300"
+                  className="absolute w-5 h-5 right-3 top-3"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -100,13 +100,13 @@ const About: NextPage<Props> = (props) => {
                     <article className="space-y-2 xl:grid xl:grid-cols-5 xl:space-y-0 xl:items-baseline">
                       <dl>
                         <dt className="sr-only">Published on</dt>
-                        <dd className="prose prose-sm md:prose 2xl:prose-lg font-medium leading-6 text-gray-500 dark:text-gray-400">
+                        <dd className="text-gray-400 prose text-sm md:text-base font-medium leading-6 ">
                           <time>{format(parseISO(published_at), 'MMMM dd, yyyy')} </time>
                         </dd>
                       </dl>
                       <div className="space-y-3 xl:col-span-4 xl:pr-20">
                         <div>
-                          <h3 className="text-2xl font-bold leading-8 text-white hover:text-gray-300 tracking-tight">
+                          <h3 className="text-2xl font-bold leading-8 text-gray-100 tracking-tight">
                             <Link href={`/blog/${slug}`}>{title}</Link>
                           </h3>
                           {/* <div className="flex mb-6 space-x-2 text-sm">
@@ -125,7 +125,7 @@ const About: NextPage<Props> = (props) => {
               these lessons and ideas. Most of my articles are around solutions to problems that we face when building
               great web products. */}
                         </div>
-                        <div className="text-sm md:text-base text-gray-500 dark:text-gray-400">
+                        <div className="text-sm md:text-base text-gray-400">
                           {description}{' '}
                           <Link href={`/blog/${slug}`}>
                             <a className="cursor-pointer ml-2 text-blue-500 hover:text-blue-700 inline-flex items-center">
