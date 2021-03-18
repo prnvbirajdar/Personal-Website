@@ -42,7 +42,7 @@ interface Props {
   devData: BlogPost[]
 }
 
-const About: NextPage<Props> = (props) => {
+const Blog: NextPage<Props> = (props) => {
   const [searchValue, setSearchValue] = useState('')
 
   const { devData } = props
@@ -182,4 +182,4 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-export default About
+export default Blog

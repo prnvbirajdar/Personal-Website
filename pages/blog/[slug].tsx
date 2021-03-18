@@ -6,6 +6,38 @@ import renderToString from 'next-mdx-remote/render-to-string'
 import hydrate from 'next-mdx-remote/hydrate'
 import { parseISO, format } from 'date-fns'
 
+interface User {
+  github_username: string
+  name: string
+  profile_image: string
+  profile_image_90: string
+  twitter_username: string
+  username: string
+  website_url?: null | string
+}
+
+interface BlogPost {
+  id: number
+  title: string
+  description: string
+  type_of: string
+  tag_list: string[]
+  canonical_url: string
+  slug: string
+  body_markdown: string
+  comments_count: number
+  cover_image: string
+  page_views_count: number
+  path: string
+  positive_reactions_count: number
+  public_reactions_count: number
+  published: boolean
+  published_at: string
+  published_timestamp: string
+  url: string
+  user: User
+}
+
 type BlogData = {
   blogData: {
     cover_image: string
@@ -82,10 +114,10 @@ const getPosts = async () => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const devData = await getPosts()
+  const devData: BlogPost[] = await getPosts()
 
   return {
-    paths: devData.map((data: { slug: string }) => ({
+    paths: devData.map((data) => ({
       params: { slug: data?.slug },
     })),
     fallback: true,
@@ -93,9 +125,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const devData = await getPosts()
+  const devData: BlogPost[] = await getPosts()
 
-  const selectedBlog = devData.filter((data: { slug: string | string[] | undefined }) => data?.slug === params?.slug)
+  const selectedBlog = devData.filter((data) => data?.slug === params?.slug)
   const markdown = selectedBlog[0]?.body_markdown
   const mdxSource = await renderToString(markdown)
 
@@ -110,4 +142,35 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     revalidate: 60,
   }
 }
+
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   const devData = await getPosts()
+
+//   return {
+//     paths: devData.map((data: { slug: string }) => ({
+//       params: { slug: data?.slug },
+//     })),
+//     fallback: true,
+//   }
+// }
+
+// export const getStaticProps: GetStaticProps = async ({ params }) => {
+//   const devData = await getPosts()
+
+//   const selectedBlog = devData.filter((data: { slug: string | string[] | undefined }) => data?.slug === params?.slug)
+//   const markdown = selectedBlog[0]?.body_markdown
+//   const mdxSource = await renderToString(markdown)
+
+//   if (!devData) {
+//     return {
+//       notFound: true,
+//     }
+//   }
+
+//   return {
+//     props: { source: mdxSource, blogData: selectedBlog[0] }, // will be passed to the page component as props
+//     revalidate: 60,
+//   }
+// }
+
 export default BlogPage
