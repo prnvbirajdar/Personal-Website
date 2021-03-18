@@ -14,8 +14,8 @@ const Nav2 = () => {
             <div className="flex items-center">
               <div
                 className="flex-shrink-0 cursor-pointer"
-                onKeyPress={() => setIsOpen(!isOpen)}
-                onClick={() => setIsOpen(!isOpen)}
+                onKeyPress={() => setIsOpen(false)}
+                onClick={() => setIsOpen(false)}
                 role="button"
                 tabIndex={0}
               >

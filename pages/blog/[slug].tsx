@@ -5,6 +5,7 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import renderToString from 'next-mdx-remote/render-to-string'
 import hydrate from 'next-mdx-remote/hydrate'
 import { parseISO, format } from 'date-fns'
+import { MdxRemote } from 'next-mdx-remote/types'
 
 interface User {
   github_username: string
@@ -15,6 +16,10 @@ interface User {
   username: string
   website_url?: null | string
 }
+
+// interface Markdown {
+//   body_markdown: string
+// }
 
 interface BlogPost {
   id: number
@@ -38,20 +43,32 @@ interface BlogPost {
   user: User
 }
 
-type BlogData = {
-  blogData: {
-    cover_image: string
-    title: string
-    published_at: string
-    public_reactions_count: number
-    page_views_count: number
-    user: { profile_image_90: string; name: string }
-  }
-  source: { compiledSource: string; renderedOutput: string }
+// interface MdxProps {
+//   source: MdxRemote.Source
+// }
+
+// type BlogData = {
+//   blogData: {
+//     body_markdown: string
+//     cover_image: string
+//     title: string
+//     published_at: string
+//     public_reactions_count: number
+//     page_views_count: number
+
+//     user: { profile_image_90: string; name: string }
+//   }
+//   source: { compiledSource: string; renderedOutput: string }
+// }
+
+interface AllBlogProps {
+  source: MdxRemote.Source
+  blogData: BlogPost
 }
 
-const BlogPage: NextPage<BlogData> = ({ source, blogData }) => {
+const BlogPage: NextPage<AllBlogProps> = ({ source, blogData }) => {
   const blogText = hydrate(source)
+
   return (
     <>
       {blogData && blogText && (
@@ -75,13 +92,6 @@ const BlogPage: NextPage<BlogData> = ({ source, blogData }) => {
               {blogData.title}
             </h1>
 
-            {/* <div className="flex mb-6 space-x-2 text-sm">
-            {blogData.tag_list.map((tag) => (
-              <p key={tag} className="text-gray-900 bg-gray-100 select-none px-1.5 py-0.75 rounded">
-                {tag}
-              </p>
-            ))}
-          </div> */}
             <div className="flex justify-between px-4 sm:px-0">
               <div className="flex items-center ">
                 <div className="avatar ">
@@ -118,6 +128,15 @@ const getPosts = async () => {
 
   return posts
 }
+
+// const getHTMLPosts = async () => {
+//   // const params = { per_page: 1000 }
+//   // const headers = { 'api-key': 'u6fFae5kYdEF1NiaUuGZdhTh' }
+//   const res = await fetch('https://dev.to/api/articles/me/published')
+//   const posts = await res.json()
+
+//   return posts
+// }
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const devData: BlogPost[] = await getPosts()
