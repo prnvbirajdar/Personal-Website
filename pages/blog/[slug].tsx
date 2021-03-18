@@ -62,12 +62,14 @@ interface BlogPost {
 // }
 
 interface AllBlogProps {
-  source: MdxRemote.Source
+  source: { compiledSource: string; renderedOutput: string }
   blogData: BlogPost
 }
 
 const BlogPage: NextPage<AllBlogProps> = ({ source, blogData }) => {
   const blogText = hydrate(source)
+
+  console.log(source)
 
   return (
     <>
