@@ -209,8 +209,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const selectedBlog = devData.filter((data) => data?.slug === params?.slug)
 
-  const htmlBlog = await (await fetch(`https://dev.to/api/articles/${selectedBlog[0]?.id}`)).json()
-
+  const resHtmlBlog = await await fetch(`https://dev.to/api/articles/${selectedBlog[0]?.id}`, {
+    headers: {
+      // update with your user-agent
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:86.0) Gecko/20100101 Firefox/86.0',
+      Accept: '	text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    },
+  })
+  const htmlBlog = await resHtmlBlog.json()
   // const markdown = selectedBlog[0]?.body_markdown
   // const mdxSource = await renderToString(markdown)
 
