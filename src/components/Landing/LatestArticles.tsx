@@ -51,9 +51,7 @@ const LatestArticles: React.FC<Posts> = (props) => {
           devData.slice(0, 2).map(({ description, title, slug }) => (
             <div key={slug} className=" mt-5">
               <Link href={`/blog/${slug}`}>
-                <h3 className="cursor-pointer mb-2 md:mb-3 text-xl  font-semibold tracking-normal md:text-2xl">
-                  {title}
-                </h3>
+                <h3 className="cursor-pointer mb-2 md:mb-3 text-xl  font-semibold tracking-normal ">{title}</h3>
               </Link>
 
               <div className="text-sm md:text-base font-normal text-gray-300">
