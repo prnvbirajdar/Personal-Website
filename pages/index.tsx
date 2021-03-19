@@ -3,6 +3,7 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
 import { GetStaticProps, NextPage } from 'next'
+import Head from 'next/head'
 import LatestArticles from '@src/components/Landing/LatestArticles'
 import RecentProjects from '../src/components/Landing/RecentProjects'
 import Header from '../src/components/Landing/Header'
@@ -48,6 +49,9 @@ const Home: NextPage<Props> = (props) => {
 
   return (
     <>
+      <Head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <section className="w-11/12 px-4 md:px-0 pt-40 md:pt-44 lg:pt-52 mx-auto md:w-3/4 lg:w-2/4 mt-0 ">
         <Header />
         <LatestArticles devData={devData} />

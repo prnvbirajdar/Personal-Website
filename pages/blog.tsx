@@ -3,6 +3,7 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React, { useState } from 'react'
 import { GetStaticProps, NextPage } from 'next'
+import Head from 'next/head'
 import Link from 'next/link'
 import { parseISO, format } from 'date-fns'
 
@@ -54,6 +55,9 @@ const Blog: NextPage<Props> = (props) => {
 
   return (
     <>
+      <Head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <section className="w-11/12 px-4 md:px-0 pt-24 md:pt-28 lg:pt-32 mx-auto md:w-3/4 lg:w-10/12 text-gray-300">
         <div>
           <div className=" space-y-2 md:space-y-5">

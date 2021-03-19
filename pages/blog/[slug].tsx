@@ -3,6 +3,7 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
+import Head from 'next/head'
 import axios from 'axios'
 
 // import renderToString from 'next-mdx-remote/render-to-string'
@@ -110,6 +111,9 @@ interface AllBlogProps {
 const BlogPage: NextPage<AllBlogProps> = ({ hopeBlog }) => {
   return (
     <>
+      <Head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       {hopeBlog && (
         <article
           className="text-gray-300 sm:px-4 py-16 mx-auto max-w-7xl pt-20 md:pt-28"
