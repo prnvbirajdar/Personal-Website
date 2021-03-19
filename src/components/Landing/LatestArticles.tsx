@@ -71,12 +71,12 @@ const LatestArticles: React.FC<Posts> = (props) => {
               >
                 <div className="flex justify-between">
                   <h3 className=" mb-2 md:mb-3 text-xl  font-semibold tracking-normal">{title}</h3>
-                  <span className="text-gray-300 text-sm flex pl-5">
+                  {/* <span className="text-gray-300 text-sm flex pl-5">
                     {positive_reactions_count}&nbsp;
                     <span role="img" aria-label="Heart">
                       💖
                     </span>
-                  </span>
+                  </span> */}
                 </div>
 
                 <div className="text-sm md:text-base font-normal text-gray-300">
