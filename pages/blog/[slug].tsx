@@ -114,7 +114,6 @@ const BlogPage: NextPage<AllBlogProps> = ({ hopeBlog }) => {
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="Description" content="Put your description here." />
-
       </Head>
       {hopeBlog && (
         <article
