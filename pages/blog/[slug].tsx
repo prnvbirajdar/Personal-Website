@@ -3,32 +3,12 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
+import axios from 'axios'
+
 // import renderToString from 'next-mdx-remote/render-to-string'
 // import hydrate from 'next-mdx-remote/hydrate'
 import { parseISO, format } from 'date-fns'
 // import { MdxRemote } from 'next-mdx-remote/types'
-
-interface BlogPost {
-  id: number
-  title: string
-  description: string
-  type_of: string
-  tag_list: string[]
-  canonical_url: string
-  slug: string
-  body_markdown: string
-  comments_count: number
-  cover_image: string
-  page_views_count: number
-  path: string
-  positive_reactions_count: number
-  public_reactions_count: number
-  published: boolean
-  published_at: string
-  published_timestamp: string
-  url: string
-  user: User
-}
 
 interface HopeBlog {
   id: number
@@ -62,12 +42,12 @@ interface HopeBlog {
 }
 
 interface User {
-  github_username: string
+  github_username?: string
   name: string
-  profile_image: string
-  profile_image_90: string
-  twitter_username: string
-  username: string
+  profile_image?: string
+  profile_image_90?: string
+  twitter_username?: string
+  username?: string
   website_url?: null | string
 }
 
@@ -97,22 +77,30 @@ interface BlogPost {
   user: User
 }
 
-// interface MdxProps {
-//   source: MdxRemote.Source
+// interface GetAllBlogs {
+//   type_of: string
+//   id: number
+//   title: string
+//   description: string
+//   tag_list: string[]
+//   canonical_url: string
+//   slug: string
+//   body_markdown: string
+//   comments_count: number
+//   cover_image: string
+//   page_views_count: number
+//   path: string
+//   positive_reactions_count: number
+//   public_reactions_count: number
+//   published: boolean
+//   published_at: string
+//   published_timestamp: string
+//   url: string
+//   user: User
 // }
 
-// type BlogData = {
-//   blogData: {
-//     body_markdown: string
-//     cover_image: string
-//     title: string
-//     published_at: string
-//     public_reactions_count: number
-//     page_views_count: number
-
-//     user: { profile_image_90: string; name: string }
-//   }
-//   source: { compiledSource: string; renderedOutput: string }
+// interface MdxProps {
+//   source: MdxRemote.Source
 // }
 
 interface AllBlogProps {
@@ -175,26 +163,29 @@ const BlogPage: NextPage<AllBlogProps> = ({ hopeBlog }) => {
     </>
   )
 }
-const getPosts = async () => {
-  // const params = { per_page: 1000 }
-  const headers = { 'api-key': 'u6fFae5kYdEF1NiaUuGZdhTh' }
-  const res = await fetch('https://dev.to/api/articles/me/published', { headers })
-  const posts = await res.json()
-
-  return posts
-}
-
-// const getHTMLPosts = async () => {
+// const getPosts = async () => {
 //   // const params = { per_page: 1000 }
-//   // const headers = { 'api-key': 'u6fFae5kYdEF1NiaUuGZdhTh' }
-//   const res = await fetch('https://dev.to/api/articles/me/published')
+//   const headers = { 'api-key': 'u6fFae5kYdEF1NiaUuGZdhTh' }
+//   const res = await fetch('https://dev.to/api/articles/me/published', { headers })
 //   const posts = await res.json()
 
 //   return posts
 // }
 
+const getAllBlogs = async () => {
+  // try {
+  const response = await axios.get('https://dev.to/api/articles?username=prnvbirajdar')
+  const { data } = response
+  return data
+  // } catch (error) {
+  //   console.error(error)
+  // }
+}
+
 export const getStaticPaths: GetStaticPaths = async () => {
-  const devData: BlogPost[] = await getPosts()
+  // const devData: BlogPost[] = await getPosts()
+
+  const devData: BlogPost[] = await getAllBlogs()
 
   return {
     paths: devData.map((data) => ({
@@ -205,7 +196,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const devData: BlogPost[] = await getPosts()
+  const devData: BlogPost[] = await getAllBlogs()
 
   const selectedBlog = devData.filter((data) => data?.slug === params?.slug)
 

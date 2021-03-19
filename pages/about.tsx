@@ -2,9 +2,24 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
 import { NextPage } from 'next'
+// import axios from 'axios'
 import Icons from '../src/components/Icons/Icons'
 
 const About: NextPage = () => {
+  // useEffect(() => {
+  //   const getAllBlogs = async () => {
+  //     try {
+  //       const response = await axios.get('https://dev.to/api/articles?username=prnvbirajdar')
+  //       console.log(response.data)
+  //     } catch (error) {
+  //       console.error(error)
+  //     }
+  //   }
+
+  //   getAllBlogs()
+  //   return () => {}
+  // }, [])
+
   return (
     <>
       <section className="w-11/12 px-4 md:px-0 pt-24 md:pt-28 lg:pt-32 mx-auto md:w-3/4 lg:w-10/12 text-gray-300">
