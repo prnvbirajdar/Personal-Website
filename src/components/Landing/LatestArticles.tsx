@@ -41,22 +41,47 @@ interface Posts {
 const LatestArticles: React.FC<Posts> = (props) => {
   const { devData } = props
 
+  function compare(a: { public_reactions_count: number }, b: { public_reactions_count: number }) {
+    const countA = a.public_reactions_count
+    const countB = b.public_reactions_count
+
+    let comparison = 0
+    if (countA < countB) {
+      comparison = 1
+    } else if (countA > countB) {
+      comparison = -1
+    }
+    return comparison
+  }
+
+  const mostLikedData = devData.sort(compare).slice(0, 2)
+
   return (
     <section>
       <div className="text-left ">
-        <h2 className="text-3xl md:text-4xl font-bold ">Latest Articles</h2>
+        <h2 className="text-3xl md:text-4xl font-bold ">Popular Articles</h2>
       </div>
       <div className="flex flex-col">
         {devData &&
-          devData.slice(0, 2).map(({ description, title, slug }) => (
-            <div key={slug} className=" mt-5">
-              <Link href={`/blog/${slug}`}>
-                <h3 className="cursor-pointer mb-2 md:mb-3 text-xl  font-semibold tracking-normal ">{title}</h3>
-              </Link>
+          mostLikedData.map(({ description, title, slug, positive_reactions_count }) => (
+            <Link href={`/blog/${slug}`}>
+              <div
+                key={slug}
+                className="p-4 cursor-pointer border border-gray-600 hover:border-gray-400 transition rounded-lg mt-5"
+              >
+                <div className="flex justify-between">
+                  <h3 className=" mb-2 md:mb-3 text-xl  font-semibold tracking-normal">{title}</h3>
+                  <span className="text-gray-300 text-sm flex pl-5">
+                    {positive_reactions_count}&nbsp;
+                    <span role="img" aria-label="Heart">
+                      💖
+                    </span>
+                  </span>
+                </div>
 
-              <div className="text-sm md:text-base font-normal text-gray-300">
-                {description}
-                {/* <Link href={`/blog/${slug}`}>
+                <div className="text-sm md:text-base font-normal text-gray-300">
+                  {description}
+                  {/* <Link href={`/blog/${slug}`}>
                       <a className="cursor-pointer ml-2 text-blue-500 hover:text-blue-700 focus:text-blue-700 inline-flex items-center">
                         Read More
                         <svg
@@ -73,10 +98,14 @@ const LatestArticles: React.FC<Posts> = (props) => {
                         </svg>
                       </a>
                     </Link> */}
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
       </div>
+      <Link href="/blog">
+        <div className="text-center text-sm p-3 cursor-pointer">More Articles</div>
+      </Link>
     </section>
   )
 }

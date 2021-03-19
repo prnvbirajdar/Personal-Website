@@ -1,6 +1,5 @@
 /* eslint-disable react/no-danger */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
@@ -151,7 +150,12 @@ const BlogPage: NextPage<AllBlogProps> = ({ hopeBlog }) => {
                 </div>
               </div>
               <div className="self-center">
-                <p className="text-sm flex justify-end text-gray-400">{hopeBlog.public_reactions_count} 💖</p>
+                <p className="text-sm flex justify-end text-gray-400">
+                  {hopeBlog.public_reactions_count}&nbsp;
+                  <span role="img" aria-label="Heart">
+                    💖
+                  </span>
+                </p>
                 {/* <p className="text-gray-400 flex justify-end text-sm">{hopeBlog.page_views_count} views</p> */}
               </div>
             </div>

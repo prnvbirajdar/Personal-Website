@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
+import Link from 'next/link'
 
 const RecentProjects = () => {
   return (
@@ -59,6 +60,9 @@ const RecentProjects = () => {
           </a>
         </div>
       </div>
+      <Link href="/projects">
+        <div className="text-center text-sm p-3 cursor-pointer">More Projects</div>
+      </Link>
     </section>
   )
 }
