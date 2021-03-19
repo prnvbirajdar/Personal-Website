@@ -3,7 +3,6 @@
 import React from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
-import axios from 'axios'
 
 // import renderToString from 'next-mdx-remote/render-to-string'
 // import hydrate from 'next-mdx-remote/hydrate'
@@ -183,8 +182,12 @@ const BlogPage: NextPage<AllBlogProps> = ({ hopeBlog }) => {
 
 const getAllBlogs = async () => {
   // try {
-  const response = await axios.get('https://dev.to/api/articles?username=prnvbirajdar')
-  const { data } = response
+  // const response = await axios.get('https://dev.to/api/articles?username=prnvbirajdar')
+  // const { data } = response
+
+  const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
+  const data = await res.json()
+
   return data
   // } catch (error) {
   //   console.error(error)

@@ -63,7 +63,7 @@ const LatestArticles: React.FC<Posts> = (props) => {
       </div>
       <div className="flex flex-col">
         {devData &&
-          mostLikedData.map(({ description, title, slug, positive_reactions_count }) => (
+          mostLikedData.map(({ description, title, slug }) => (
             <Link href={`/blog/${slug}`}>
               <div
                 key={slug}
