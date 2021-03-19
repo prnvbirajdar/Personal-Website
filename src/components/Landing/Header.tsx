@@ -12,12 +12,12 @@ const Main = () => {
         <p className="mt-6 sm:w-9/12 text-gray-300 md:w-10/12 lg:w-full text-base md:text-lg font-medium ">
           I am a software developer building beautiful interfaces and accessible applications.
         </p>
-        <button
-          type="button"
+        <a
+          href="mailto:prnvbirajdar@gmail.com"
           className="text-sm font-bold lg:text-base tracking-normal my-5 md:my-7 p-2.5 px-4 md:px-5 rounded ring-2 ring-gray-400 ring-opacity-50 bg-gray-900 bg-opacity-50 hover:bg-opacity-100 focus:bg-opacity-100 shadow transition"
         >
-          Resume
-        </button>
+          Say Hello!
+        </a>
       </div>
     </main>
   )
