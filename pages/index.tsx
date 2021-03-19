@@ -50,8 +50,8 @@ const Home: NextPage<Props> = (props) => {
   return (
     <>
       <Head>
-        <html lang="en" />
-        <title>Pranav Birajdar</title>
+        {/* <html lang="en" />
+        <title>Pranav Birajdar</title> */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="Home Page" content="welcome to the home page!" />
       </Head>
