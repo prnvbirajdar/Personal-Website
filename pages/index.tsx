@@ -84,7 +84,7 @@ const Home: NextPage<Props> = (props) => {
 
                   <div className="text-sm md:text-base font-normal text-gray-300">
                     {description}
-                    <Link href={`/blog/${slug}`}>
+                    {/* <Link href={`/blog/${slug}`}>
                       <a className="cursor-pointer ml-2 text-blue-500 hover:text-blue-700 focus:text-blue-700 inline-flex items-center">
                         Read More
                         <svg
@@ -100,7 +100,7 @@ const Home: NextPage<Props> = (props) => {
                           <path d="M12 5l7 7-7 7" />
                         </svg>
                       </a>
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               ))}

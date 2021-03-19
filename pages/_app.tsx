@@ -13,9 +13,9 @@ const App = ({ Component, pageProps }: AppProps) => (
     <Head>
       <html lang="en" />
       <title>Pranav Birajdar</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="Logo Icon" type="image/png" href="/fav.png" />
       <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <Nav />
     <Component {...pageProps} />
