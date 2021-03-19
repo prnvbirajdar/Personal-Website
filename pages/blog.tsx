@@ -57,6 +57,8 @@ const Blog: NextPage<Props> = (props) => {
     <>
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="Description" content="Put your description here." />
+
       </Head>
       <section className="w-11/12 px-4 md:px-0 pt-24 md:pt-28 lg:pt-32 mx-auto md:w-3/4 lg:w-10/12 text-gray-300">
         <div>
