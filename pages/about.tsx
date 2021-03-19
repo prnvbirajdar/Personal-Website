@@ -16,11 +16,7 @@ const About: NextPage = () => {
           </div>
           <div className="items-start space-y-2 lg:grid lg:grid-cols-3 lg:space-y-0 lg:pt-4">
             <div className="flex flex-col items-center pt-6 xl:pt-5">
-              <img
-                src="https://avatars.githubusercontent.com/u/15911693?s=400u=2b0df1b5fed0e01367e86e01a3f39868360f2663v=4"
-                alt="avatar"
-                className="w-48 h-48 rounded-xl"
-              />
+              <img src="/profile1.jpg" alt="avatar" className="w-48 h-48 rounded-xl" />
               <h3 className="pt-4 text-2xl md:text-3xl font-bold leading-8 tracking-tight">Pranav Birajdar</h3>
               <div className="md:text-lg text-gray-400 mb-2 md:mt-1">Software Developer</div>
               <Icons />

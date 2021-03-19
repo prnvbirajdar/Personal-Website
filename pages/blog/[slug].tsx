@@ -147,7 +147,7 @@ const BlogPage: NextPage<AllBlogProps> = ({ hopeBlog }) => {
               </div>
               <div className="self-center">
                 <p className="text-sm flex justify-end text-gray-400">{hopeBlog.public_reactions_count} 💖</p>
-                <p className="text-gray-400 flex justify-end text-sm">{hopeBlog.page_views_count} views</p>
+                {/* <p className="text-gray-400 flex justify-end text-sm">{hopeBlog.page_views_count} views</p> */}
               </div>
             </div>
           </div>
