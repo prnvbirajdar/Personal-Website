@@ -244,7 +244,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: { blogData: selectedBlog[0], hopeBlog: htmlBlog }, // will be passed to the page component as props
-    revalidate: 60,
+    revalidate: 1,
   }
 }
 

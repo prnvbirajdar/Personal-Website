@@ -22,6 +22,12 @@ module.exports = {
             h3: {
               color: 'rgba(209, 213, 219)',
             },
+            h4: {
+              color: 'rgba(209, 213, 219)',
+            },
+            h5: {
+              color: 'rgba(209, 213, 219)',
+            },
             code: {
               color: '#ec4899',
             },

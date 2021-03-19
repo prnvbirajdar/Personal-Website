@@ -183,7 +183,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: { devData }, // will be passed to the page component as props
-    revalidate: 60,
+    revalidate: 1,
   }
 }
 
