@@ -50,8 +50,12 @@ const Home: NextPage<Props> = (props) => {
   return (
     <>
       <Head>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="Description" content="Put your description here." />
+        <html lang="en" />
+        <title>Pranav Birajdar</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="Home page" content="Welcome to the home page!" />
+        <link rel="Logo Icon" type="image/png" href="/fav.png" />
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </Head>
       <section className="w-11/12 px-4 md:px-0 pt-40 md:pt-44 lg:pt-52 mx-auto md:w-3/4 lg:w-2/4 mt-0 ">
         <Header />
