@@ -112,7 +112,7 @@ const BlogPage: NextPage<AllBlogProps> = ({ hopeBlog }) => {
     <>
       {hopeBlog && (
         <article
-          className="text-gray-300 sm:px-4 py-16 mx-auto max-w-7xl pt-16 md:pt-28"
+          className="text-gray-300 sm:px-4 py-16 mx-auto max-w-7xl pt-20 md:pt-28"
           itemID="#"
           itemScope
           itemType="http://schema.org/BlogPosting"
@@ -228,6 +228,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
 
   const htmlBlog = data
+  // eslint-disable-next-line no-console
   console.log(error)
 
   if (!devData) {
