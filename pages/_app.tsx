@@ -11,6 +11,7 @@ import CallToAction from '../src/components/CallToAction'
 const App = ({ Component, pageProps }: AppProps) => (
   <>
     <Head>
+      <html lang="en" />
       <title>Pranav Birajdar</title>
       <link rel="Logo Icon" type="image/png" href="/fav.png" />
       <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />

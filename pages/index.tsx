@@ -86,7 +86,7 @@ const Home: NextPage<Props> = (props) => {
                     {description}
                     <Link href={`/blog/${slug}`}>
                       <a className="cursor-pointer ml-2 text-blue-500 hover:text-blue-700 focus:text-blue-700 inline-flex items-center">
-                        Learn More
+                        Read More
                         <svg
                           className="w-4 h-4 ml-2"
                           viewBox="0 0 24 24"
