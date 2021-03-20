@@ -54,10 +54,7 @@ const About: NextPage = () => {
               <p className="mb-4">Here are a few technologies I&apos;ve been working with recently:</p>
               <ul className="md:flex ">
                 <div>
-                  <li className="mb-0.25">
-                    ▸ React
-                    {/* ► */}
-                  </li>
+                  <li className="mb-0.25">▸ React</li>
                   <li className="mb-0.25">▸ TypeScript</li>
                   <li className="mb-0.25">▸ JavaScript</li>
                 </div>

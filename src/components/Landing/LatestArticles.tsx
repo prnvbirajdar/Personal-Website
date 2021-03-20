@@ -1,44 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import Link from 'next/link'
+import { Props } from '../../containers/Interfaces/Interface'
 
-interface User {
-  github_username: string
-  name: string
-  profile_image: string
-  profile_image_90: string
-  twitter_username: string
-  username: string
-  website_url?: null | string
-}
-
-interface BlogPost {
-  id: number
-  title: string
-  description: string
-  type_of: string
-  tag_list: string[]
-  canonical_url: string
-  slug: string
-  body_markdown: string
-  comments_count: number
-  cover_image: string
-  page_views_count: number
-  path: string
-  positive_reactions_count: number
-  public_reactions_count: number
-  published: boolean
-  published_at: string
-  published_timestamp: string
-  url: string
-  user: User
-}
-
-interface Posts {
-  devData: BlogPost[]
-}
-
-const LatestArticles: React.FC<Posts> = (props) => {
+const LatestArticles: React.FC<Props> = (props) => {
   const { devData } = props
 
   function compare(a: { public_reactions_count: number }, b: { public_reactions_count: number }) {
@@ -64,11 +29,8 @@ const LatestArticles: React.FC<Posts> = (props) => {
       <div className="flex flex-col">
         {devData &&
           mostLikedData.map(({ description, title, slug }) => (
-            <Link href={`/blog/${slug}`}>
-              <div
-                key={slug}
-                className="p-4 cursor-pointer border border-gray-600 hover:border-gray-400 transition rounded-lg mt-5"
-              >
+            <Link key={slug} href={`/blog/${slug}`}>
+              <div className="p-4 cursor-pointer border border-gray-600 hover:border-gray-400 transition rounded-lg mt-5">
                 <div className="flex justify-between">
                   <h3 className=" mb-2 md:mb-3 text-xl  font-semibold tracking-normal">{title}</h3>
                   {/* <span className="text-gray-300 text-sm flex pl-5">

@@ -1,47 +1,11 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/accessible-emoji */
 import React, { useState } from 'react'
 import { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import { parseISO, format } from 'date-fns'
-
-interface User {
-  github_username: string
-  name: string
-  profile_image: string
-  profile_image_90: string
-  twitter_username: string
-  username: string
-  website_url?: null | string
-}
-
-interface BlogPost {
-  id: number
-  title: string
-  description: string
-  type_of: string
-  tag_list: string[]
-  canonical_url: string
-  slug: string
-  body_markdown: string
-  comments_count: number
-  cover_image: string
-  page_views_count: number
-  path: string
-  positive_reactions_count: number
-  public_reactions_count: number
-  published: boolean
-  published_at: string
-  published_timestamp: string
-  url: string
-  user: User
-}
-
-interface Props {
-  devData: BlogPost[]
-}
+import { Props } from '../src/containers/Interfaces/Interface'
 
 const Blog: NextPage<Props> = (props) => {
   const [searchValue, setSearchValue] = useState('')
@@ -131,7 +95,7 @@ const Blog: NextPage<Props> = (props) => {
               great web products. */}
                         </div>
                         <div className="text-sm md:text-base text-gray-400">
-                          {description}{' '}
+                          {description}
                           <Link href={`/blog/${slug}`}>
                             <a className="cursor-pointer ml-2 text-blue-500 hover:text-blue-700 inline-flex items-center">
                               Learn More

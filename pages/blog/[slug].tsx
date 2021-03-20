@@ -3,110 +3,15 @@
 import React from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
-
-// import renderToString from 'next-mdx-remote/render-to-string'
-// import hydrate from 'next-mdx-remote/hydrate'
 import { parseISO, format } from 'date-fns'
-// import { MdxRemote } from 'next-mdx-remote/types'
-
-interface HopeBlog {
-  id: number
-  title: string
-  description: string
-  type_of: string
-  canonical_url: string
-  slug: string
-  body_markdown: string
-  comments_count: number
-  cover_image: string
-  page_views_count: number
-  path: string
-  positive_reactions_count: number
-  public_reactions_count: number
-  published: boolean
-  published_at: string
-  published_timestamp: string
-  url: string
-  user: User
-  readable_publish_date: string
-  collection_id: null | number
-  social_image: string
-  created_at: string
-  edited_at: string
-  crossposted_at: null | string
-  last_comment_at: string
-  tag_list: string
-  tags: string[]
-  body_html: string
-}
-
-interface User {
-  github_username?: string
-  name: string
-  profile_image?: string
-  profile_image_90?: string
-  twitter_username?: string
-  username?: string
-  website_url?: null | string
-}
-
-// interface Markdown {
-//   body_markdown: string
-// }
-
-interface BlogPost {
-  id: number
-  title: string
-  description: string
-  type_of: string
-  tag_list: string[]
-  canonical_url: string
-  slug: string
-  body_markdown: string
-  comments_count: number
-  cover_image: string
-  page_views_count: number
-  path: string
-  positive_reactions_count: number
-  public_reactions_count: number
-  published: boolean
-  published_at: string
-  published_timestamp: string
-  url: string
-  user: User
-}
-
-// interface GetAllBlogs {
-//   type_of: string
-//   id: number
-//   title: string
-//   description: string
-//   tag_list: string[]
-//   canonical_url: string
-//   slug: string
-//   body_markdown: string
-//   comments_count: number
-//   cover_image: string
-//   page_views_count: number
-//   path: string
-//   positive_reactions_count: number
-//   public_reactions_count: number
-//   published: boolean
-//   published_at: string
-//   published_timestamp: string
-//   url: string
-//   user: User
-// }
-
-// interface MdxProps {
-//   source: MdxRemote.Source
-// }
-
-interface AllBlogProps {
-  hopeBlog: HopeBlog
-}
+// import Prism from 'prismjs'
+import { BlogPost, AllBlogProps } from '../../src/containers/Interfaces/Interface'
 
 const BlogPage: NextPage<AllBlogProps> = ({ hopeBlog }) => {
+  // const html = Prism.highlight(hopeBlog.body_html, Prism.languages.javascript, 'javascript')
+
+  // console.log(hopeBlog)
+
   return (
     <>
       <Head>
