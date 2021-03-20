@@ -4,29 +4,25 @@ import React from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import { parseISO, format } from 'date-fns'
-import renderToString from 'next-mdx-remote/render-to-string'
-import hydrate from 'next-mdx-remote/hydrate'
-import { MdxRemote } from 'next-mdx-remote/types'
-// import Prism from 'prismjs'
+
+import remark from 'remark'
+import html from 'remark-html'
+import prism from 'remark-prism'
+
 import { BlogPost } from '../../src/containers/Interfaces/Interface'
 
 export interface AllBlogProps {
   hopeBlog: BlogPost
-  mdxSource: MdxRemote.Source
+  remarkContent: string
 }
 
-const BlogPage: NextPage<AllBlogProps> = ({ hopeBlog, mdxSource }) => {
-  // const html = Prism.highlight(hopeBlog.body_html, Prism.languages.javascript, 'javascript')
-
-  // console.log(hopeBlog)
-
-  const content = hydrate(mdxSource)
-
+const BlogPage: NextPage<AllBlogProps> = ({ remarkContent, hopeBlog }) => {
   return (
     <>
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="Description" content="Put your description here." />
+        <link href="https://unpkg.com/prismjs@0.0.1/themes/prism-okaidia.css" rel="stylesheet" />
       </Head>
       {hopeBlog && (
         <article
@@ -74,13 +70,10 @@ const BlogPage: NextPage<AllBlogProps> = ({ hopeBlog, mdxSource }) => {
               </div>
             </div>
           </div>
-          <div className=" px-4 sm:px-0 text-gray-300 w-full mx-auto prose  md:prose 2xl:prose-lg  md:w-3/4 lg:w-1/2">
-            {content}
-          </div>
-          {/* <div
+          <div
             className=" px-4 sm:px-0 text-gray-300 w-full mx-auto prose  md:prose 2xl:prose-lg  md:w-3/4 lg:w-1/2"
-            dangerouslySetInnerHTML={{ __html: hopeBlog.body_html }}
-          /> */}
+            dangerouslySetInnerHTML={{ __html: remarkContent }}
+          />
         </article>
       )}
     </>
@@ -91,6 +84,11 @@ const getAllBlogs = async () => {
   const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
   const data = await res.json()
   return data
+}
+
+const markdownToHtml = async (markdown: string) => {
+  const result = await remark().use(html).use(prism).process(markdown)
+  return result.toString()
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -111,7 +109,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const res = await fetch(`https://dev.to/api/articles/${selectedBlog[0]?.id}`)
   const htmlBlog = await res.json()
 
-  const mdxSource = await renderToString(htmlBlog.body_markdown)
+  const remarkContent = await markdownToHtml(htmlBlog.body_markdown)
 
   if (!devData) {
     return {
@@ -120,7 +118,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
 
   return {
-    props: { mdxSource, hopeBlog: htmlBlog }, // will be passed to the page component as props
+    props: { remarkContent, hopeBlog: htmlBlog }, // will be passed to the page component as props
     revalidate: 1,
   }
 }
