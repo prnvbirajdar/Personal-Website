@@ -44,13 +44,6 @@ const About: NextPage = () => {
                 When I’m not in front of a computer screen, I am probably working out, riding my bike, or trying out a
                 new recipe in the kitchen.
               </p>
-
-              {/* <p>
-                I love coding and the feeling that comes with building something by yourself. When I build something
-                new, I usually learn something in the process. This website is a way for me to chronicle these lessons
-                and ideas. Most of my articles are around solutions to problems that we face when building great web
-                products.
-              </p> */}
               <p className="mb-4">Here are a few technologies I&apos;ve been working with recently:</p>
               <ul className="md:flex ">
                 <div>

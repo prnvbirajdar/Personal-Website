@@ -4,13 +4,23 @@ import React from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import { parseISO, format } from 'date-fns'
+import renderToString from 'next-mdx-remote/render-to-string'
+import hydrate from 'next-mdx-remote/hydrate'
+import { MdxRemote } from 'next-mdx-remote/types'
 // import Prism from 'prismjs'
-import { BlogPost, AllBlogProps } from '../../src/containers/Interfaces/Interface'
+import { BlogPost } from '../../src/containers/Interfaces/Interface'
 
-const BlogPage: NextPage<AllBlogProps> = ({ hopeBlog }) => {
+export interface AllBlogProps {
+  hopeBlog: BlogPost
+  mdxSource: MdxRemote.Source
+}
+
+const BlogPage: NextPage<AllBlogProps> = ({ hopeBlog, mdxSource }) => {
   // const html = Prism.highlight(hopeBlog.body_html, Prism.languages.javascript, 'javascript')
 
   // console.log(hopeBlog)
+
+  const content = hydrate(mdxSource)
 
   return (
     <>
@@ -64,26 +74,18 @@ const BlogPage: NextPage<AllBlogProps> = ({ hopeBlog }) => {
               </div>
             </div>
           </div>
-          {/* <div className=" px-4 sm:px-0 text-gray-300 w-full mx-auto prose prose-sm md:prose 2xl:prose-lg  md:w-3/4 lg:w-1/2">
-            {blogText}
-          </div> */}
-          <div
+          <div className=" px-4 sm:px-0 text-gray-300 w-full mx-auto prose  md:prose 2xl:prose-lg  md:w-3/4 lg:w-1/2">
+            {content}
+          </div>
+          {/* <div
             className=" px-4 sm:px-0 text-gray-300 w-full mx-auto prose  md:prose 2xl:prose-lg  md:w-3/4 lg:w-1/2"
             dangerouslySetInnerHTML={{ __html: hopeBlog.body_html }}
-          />
+          /> */}
         </article>
       )}
     </>
   )
 }
-// const getPosts = async () => {
-//   // const params = { per_page: 1000 }
-//   const headers = { 'api-key': 'u6fFae5kYdEF1NiaUuGZdhTh' }
-//   const res = await fetch('https://dev.to/api/articles/me/published', { headers })
-//   const posts = await res.json()
-
-//   return posts
-// }
 
 const getAllBlogs = async () => {
   const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
@@ -106,8 +108,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const devData: BlogPost[] = await getAllBlogs()
 
   const selectedBlog = devData.filter((data) => data?.slug === params?.slug)
-  const res = await fetch(`https://dev.to/api/articles/${selectedBlog[0]?.id}`, {})
+  const res = await fetch(`https://dev.to/api/articles/${selectedBlog[0]?.id}`)
   const htmlBlog = await res.json()
+
+  const mdxSource = await renderToString(htmlBlog.body_markdown)
 
   if (!devData) {
     return {
@@ -116,7 +120,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
 
   return {
-    props: { hopeBlog: htmlBlog }, // will be passed to the page component as props
+    props: { mdxSource, hopeBlog: htmlBlog }, // will be passed to the page component as props
     revalidate: 1,
   }
 }

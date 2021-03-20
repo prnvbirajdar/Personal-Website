@@ -13,7 +13,7 @@ const Blog: NextPage<Props> = (props) => {
   const { devData } = props
 
   const filteredBlogPosts = devData.filter((data) => {
-    const searchContent = data.title + data.description + data.tag_list.join(' ')
+    const searchContent = data.title + data.description
     return searchContent.toLowerCase().includes(searchValue.toLowerCase())
   })
 
@@ -78,21 +78,6 @@ const Blog: NextPage<Props> = (props) => {
                           <h3 className="text-2xl font-bold leading-8 text-gray-100 tracking-tight">
                             <Link href={`/blog/${slug}`}>{title}</Link>
                           </h3>
-                          {/* <div className="flex mb-6 space-x-2 text-sm">
-                            {tag_list.map((tag) => (
-                              <p key={tag} className="text-gray-900 bg-gray-100 select-none px-1.5 py-0.75 rounded">
-                                {tag}
-                              </p>
-                            ))}
-                          </div> */}
-                          {/* I love coding and building things, and when I build something new, I usually learn something in the
-              process. This blog is a way for me to write down and share these ideas and lessons with everyone. */}
-                          {/*  I like to write and share the
-              things I have learned I regularly write about solving problems with code, desiging things people use,
-              teaching, and learning. I love coding and the feeling that comes with building something by yourself. When
-              I build something new, I usually learn something in the process. This blog is a way for me to chronicle
-              these lessons and ideas. Most of my articles are around solutions to problems that we face when building
-              great web products. */}
                         </div>
                         <div className="text-sm md:text-base text-gray-400">
                           {description}
@@ -128,8 +113,6 @@ const Blog: NextPage<Props> = (props) => {
 }
 
 const getPosts = async () => {
-  //   const params = { per_page: 1000 }
-  // const headers = { 'api-key': 'u6fFae5kYdEF1NiaUuGZdhTh' }
   const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
   const posts = await res.json()
 

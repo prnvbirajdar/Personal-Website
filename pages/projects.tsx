@@ -19,9 +19,6 @@ const About: NextPage = () => {
               Projects
             </h1>
             <p className=" sm:w-9/12 md:w-10/12 lg:w-9/12 text-base md:text-lg font-normal ">
-              {/* With each new project, my goal it to either learn something new, or increase the size and the scope of the
-              technologies I have previosly used. */}
-              {/* These are some of my personal projects. This is a way for me to chronicle my growth as a developer. */}
               My personal projects are a way for me to chronicle my growth as a developer.
             </p>
           </div>

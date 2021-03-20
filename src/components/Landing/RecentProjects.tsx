@@ -16,7 +16,6 @@ const RecentProjects = () => {
               <p className="text-sm md:text-base font-normal text-gray-300">
                 A simple, accessible workout app that allows a user to create, track, and update their daily workout
                 routines.
-                {/* Users can also add, update or delete any previous logged workouts. */}
               </p>
               <ul className="flex md:justify-end text-xs mt-3 font-semibold">
                 <li className="md:ml-1 mr-3">
