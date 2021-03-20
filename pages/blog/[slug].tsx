@@ -68,7 +68,7 @@ const BlogPage: NextPage<AllBlogProps> = ({ hopeBlog }) => {
             {blogText}
           </div> */}
           <div
-            className=" px-4 sm:px-0 text-gray-300 w-full mx-auto prose prose-sm md:prose 2xl:prose-lg  md:w-3/4 lg:w-1/2"
+            className=" px-4 sm:px-0 text-gray-300 w-full mx-auto prose  md:prose 2xl:prose-lg  md:w-3/4 lg:w-1/2"
             dangerouslySetInnerHTML={{ __html: hopeBlog.body_html }}
           />
         </article>
@@ -86,22 +86,12 @@ const BlogPage: NextPage<AllBlogProps> = ({ hopeBlog }) => {
 // }
 
 const getAllBlogs = async () => {
-  // try {
-  // const response = await axios.get('https://dev.to/api/articles?username=prnvbirajdar')
-  // const { data } = response
-
   const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
   const data = await res.json()
-
   return data
-  // } catch (error) {
-  //   console.error(error)
-  // }
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // const devData: BlogPost[] = await getPosts()
-
   const devData: BlogPost[] = await getAllBlogs()
 
   return {
@@ -116,37 +106,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const devData: BlogPost[] = await getAllBlogs()
 
   const selectedBlog = devData.filter((data) => data?.slug === params?.slug)
-
-  // const resHtmlBlog = await await fetch(`https://dev.to/api/articles/${selectedBlog[0]?.id}`, {
-  //   headers: {
-  //     // update with your user-agent
-  //     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:86.0) Gecko/20100101 Firefox/86.0',
-  //     Accept: '	text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-  //   },
-  // })
-  // const htmlBlog = await resHtmlBlog.json()
-  // const markdown = selectedBlog[0]?.body_markdown
-  // const mdxSource = await renderToString(markdown)
-
-  let data = {}
-  let error = ''
-  try {
-    const res = await await fetch(`https://dev.to/api/articles/${selectedBlog[0]?.id}`, {
-      headers: {
-        // update with your user-agent
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:86.0) Gecko/20100101 Firefox/86.0',
-        Accept: '	text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-      },
-    })
-
-    data = await res.json()
-  } catch (e) {
-    error = e.toString()
-  }
-
-  const htmlBlog = data
-  // eslint-disable-next-line no-console
-  console.log(error)
+  const res = await fetch(`https://dev.to/api/articles/${selectedBlog[0]?.id}`, {})
+  const htmlBlog = await res.json()
 
   if (!devData) {
     return {
@@ -155,39 +116,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
 
   return {
-    props: { blogData: selectedBlog[0], hopeBlog: htmlBlog }, // will be passed to the page component as props
+    props: { hopeBlog: htmlBlog }, // will be passed to the page component as props
     revalidate: 1,
   }
 }
-
-// export const getStaticPaths: GetStaticPaths = async () => {
-//   const devData = await getPosts()
-
-//   return {
-//     paths: devData.map((data: { slug: string }) => ({
-//       params: { slug: data?.slug },
-//     })),
-//     fallback: true,
-//   }
-// }
-
-// export const getStaticProps: GetStaticProps = async ({ params }) => {
-//   const devData = await getPosts()
-
-//   const selectedBlog = devData.filter((data: { slug: string | string[] | undefined }) => data?.slug === params?.slug)
-//   const markdown = selectedBlog[0]?.body_markdown
-//   const mdxSource = await renderToString(markdown)
-
-//   if (!devData) {
-//     return {
-//       notFound: true,
-//     }
-//   }
-
-//   return {
-//     props: { source: mdxSource, blogData: selectedBlog[0] }, // will be passed to the page component as props
-//     revalidate: 60,
-//   }
-// }
 
 export default BlogPage
