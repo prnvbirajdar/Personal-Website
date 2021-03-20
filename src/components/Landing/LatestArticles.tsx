@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import Link from 'next/link'
+import { parseISO, format } from 'date-fns'
+
 import { Props } from '../../containers/Interfaces/Interface'
 
 const LatestArticles: React.FC<Props> = (props) => {
@@ -28,17 +30,31 @@ const LatestArticles: React.FC<Props> = (props) => {
       </div>
       <div className="flex flex-col">
         {devData &&
-          mostLikedData.map(({ description, title, slug }) => (
+          mostLikedData.map(({ description, title, slug, positive_reactions_count, published_at }) => (
             <Link key={slug} href={`/blog/${slug}`}>
               <div className="p-4 cursor-pointer border border-gray-600 hover:border-gray-400 transition rounded-lg mt-5">
                 <div className="flex justify-between">
-                  <h3 className=" mb-2 md:mb-3 text-xl  font-semibold tracking-normal">{title}</h3>
+                  <h3 className=" mb-1 text-xl  font-semibold tracking-normal">{title}</h3>
                   {/* <span className="text-gray-300 text-sm flex pl-5">
                     {positive_reactions_count}&nbsp;
                     <span role="img" aria-label="Heart">
                       💖
                     </span>
                   </span> */}
+                </div>
+                <div className="flex justify-between mb-1">
+                  <dl>
+                    <dt className="sr-only">Published on</dt>
+                    <dd className="text-gray-400 prose text-sm  leading-6 ">
+                      <time>{format(parseISO(published_at), 'MMMM dd, yyyy')} </time>
+                    </dd>
+                  </dl>
+                  <span className="text-gray-400 text-sm flex">
+                    {positive_reactions_count}&nbsp;
+                    <span role="img" aria-label="Heart">
+                      💖
+                    </span>
+                  </span>
                 </div>
 
                 <div className="text-sm md:text-base font-normal text-gray-300">
