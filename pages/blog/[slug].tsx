@@ -98,7 +98,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     paths: devData.map((data) => ({
       params: { slug: data?.slug },
     })),
-    fallback: true,
+    fallback: false,
   }
 }
 
