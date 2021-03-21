@@ -3,6 +3,7 @@
 import React from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import { parseISO, format } from 'date-fns'
 
 import remark from 'remark'
@@ -17,6 +18,13 @@ export interface AllBlogProps {
 }
 
 const BlogPage: NextPage<AllBlogProps> = ({ remarkContent, hopeBlog }) => {
+  const router = useRouter()
+
+  // If the page is not yet generated, this will be displayed
+  // initially until getStaticProps() finishes running
+  if (router.isFallback) {
+    return <div>Loading...</div>
+  }
   return (
     <>
       <Head>
@@ -98,7 +106,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     paths: devData.map((data) => ({
       params: { slug: data?.slug },
     })),
-    fallback: false,
+    fallback: true,
   }
 }
 
