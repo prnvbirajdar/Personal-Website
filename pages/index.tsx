@@ -30,7 +30,8 @@ const Home: NextPage<Props> = (props) => {
 }
 
 const getPosts = async () => {
-  const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
+  const headers = { 'api-key': 'u6fFae5kYdEF1NiaUuGZdhTh' }
+  const res = await fetch('https://dev.to/api/articles/me/published', { headers })
   const posts = await res.json()
 
   return posts
