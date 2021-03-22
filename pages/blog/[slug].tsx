@@ -20,6 +20,8 @@ export interface AllBlogProps {
 const BlogPage: NextPage<AllBlogProps> = ({ remarkContent, hopeBlog }) => {
   const router = useRouter()
 
+  console.log(hopeBlog)
+
   // If the page is not yet generated, this will be displayed
   // initially until getStaticProps() finishes running
   if (router.isFallback) {
