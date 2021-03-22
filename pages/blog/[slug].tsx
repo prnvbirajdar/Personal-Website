@@ -88,11 +88,9 @@ const BlogPage: NextPage<AllBlogProps> = ({ remarkContent, hopeBlog }) => {
   )
 }
 
-// u6fFae5kYdEF1NiaUuGZdhTh
-
 const getAllBlogs = async () => {
-  const headers = { 'api-key': 'u6fFae5kYdEF1NiaUuGZdhTh' }
-  const res = await fetch('https://dev.to/api/articles/me/published', { headers })
+  // const headers = { 'api-key': 'u6fFae5kYdEF1NiaUuGZdhTh' }
+  const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
   const data = await res.json()
   return data
 }
@@ -105,10 +103,12 @@ const markdownToHtml = async (markdown: string) => {
 export const getStaticPaths: GetStaticPaths = async () => {
   const devData: BlogPost[] = await getAllBlogs()
 
+  const paths = devData.map((data) => ({
+    params: { slug: data?.slug },
+  }))
+
   return {
-    paths: devData.map((data) => ({
-      params: { slug: data?.slug },
-    })),
+    paths,
     fallback: true,
   }
 }
@@ -120,21 +120,21 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   // console.log(selectedBlog)
 
-  const blogObj = selectedBlog[0]
+  // const blogObj = selectedBlog[0]
 
-  // const res = await fetch(`https://dev.to/api/articles/${selectedBlog[0]?.id}`)
-  // const htmlBlog = await res.json()
+  const res = await fetch(`https://dev.to/api/articles/${selectedBlog[0]?.id}`)
+  const htmlBlog = await res.json()
 
-  const remarkContent = await markdownToHtml(blogObj.body_markdown)
+  const remarkContent = await markdownToHtml(htmlBlog.body_markdown)
 
-  // if (!devData) {
-  //   return {
-  //     notFound: true,
-  //   }
-  // }
+  if (!devData) {
+    return {
+      notFound: true,
+    }
+  }
 
   return {
-    props: { remarkContent, hopeBlog: blogObj }, // will be passed to the page component as props
+    props: { remarkContent, hopeBlog: htmlBlog }, // will be passed to the page component as props
     revalidate: 1,
   }
 }
