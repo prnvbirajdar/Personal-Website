@@ -27,7 +27,7 @@ const About: NextPage = () => {
               <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer">
                 <img
                   className=" absolute inset-0 h-full w-full object-cover md:object-contain  rounded-lg"
-                  src="/lift.png"
+                  src="/lift-app.jpg"
                   alt="lift workout app"
                 />
                 <div className=" absolute inset-0 bg-black bg-opacity-40 rounded-lg md:bg-opacity-60 bg-gradient-to-r from-black  " />
@@ -76,7 +76,7 @@ const About: NextPage = () => {
               <a href="https://covid19ca.netlify.app/" target="_blank" rel="noopener noreferrer">
                 <img
                   className="absolute inset-0 h-full w-full object-cover md:object-contain rounded-lg"
-                  src="/covid.png"
+                  src="/covid19.jpg"
                   alt="covid-19 tracker"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-75 rounded-lg bg-gradient-to-r from-black  " />
@@ -124,7 +124,7 @@ const About: NextPage = () => {
               <a href="https://reels.netlify.app/" target="_blank" rel="noopener noreferrer">
                 <img
                   className="absolute inset-0 h-full w-full object-cover md:object-contain rounded-lg"
-                  src="/reels2-min.png"
+                  src="/reels.jpg"
                   alt="reels movie db"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-40 rounded-lg md:bg-opacity-50 bg-gradient-to-r from-black  " />
@@ -172,7 +172,7 @@ const About: NextPage = () => {
               <a href="https://google-keep-next.vercel.app/" target="_blank" rel="noopener noreferrer">
                 <img
                   className="absolute inset-0 h-full w-full object-cover md:object-contain rounded-lg"
-                  src="/keep.png"
+                  src="/keep-dark.jpg"
                   alt="keep clone"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-75 rounded-lg md:bg-opacity-60 md:bg-gradient-to-r from-black  " />

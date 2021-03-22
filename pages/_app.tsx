@@ -2,6 +2,7 @@
 import React from 'react'
 import Head from 'next/head'
 import { AppProps } from 'next/app'
+import { GoogleFonts } from 'next-google-fonts'
 import Nav from '../src/components/Nav'
 import ScrollToTop from '../src/containers/scrollToTop'
 import Footer from '../src/components/Footer'
@@ -10,9 +11,9 @@ import CallToAction from '../src/components/CallToAction'
 
 const App = ({ Component, pageProps }: AppProps) => (
   <>
+    <GoogleFonts href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" />
     <Head>
       <link rel="Logo Icon" type="image/png" href="/fav.png" />
-      <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     </Head>
     <Nav />
     <Component {...pageProps} />
