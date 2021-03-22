@@ -6,21 +6,22 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { parseISO, format } from 'date-fns'
 
-import remark from 'remark'
-import html from 'remark-html'
-import prism from 'remark-prism'
+// import remark from 'remark'
+// import html from 'remark-html'
+// import prism from 'remark-prism'
 
 import { BlogPost } from '../../src/containers/Interfaces/Interface'
 
 export interface AllBlogProps {
   hopeBlog: BlogPost
-  remarkContent: string
+  // remarkContent: string
 }
 
-const BlogPage: NextPage<AllBlogProps> = ({ remarkContent, hopeBlog }) => {
+const BlogPage: NextPage<AllBlogProps> = ({
+  // remarkContent,
+  hopeBlog,
+}) => {
   const router = useRouter()
-
-  console.log(hopeBlog)
 
   // If the page is not yet generated, this will be displayed
   // initially until getStaticProps() finishes running
@@ -80,9 +81,12 @@ const BlogPage: NextPage<AllBlogProps> = ({ remarkContent, hopeBlog }) => {
               </div>
             </div>
           </div>
+          {/* <div className=" prose md:prose 2xl:prose-lg px-4 sm:px-0 text-gray-300 w-full mx-auto  md:w-3/4 lg:w-1/2">
+            {hopeBlog.body_html}
+          </div> */}
           <div
             className=" px-4 sm:px-0 text-gray-300 w-full mx-auto prose  md:prose 2xl:prose-lg  md:w-3/4 lg:w-1/2"
-            dangerouslySetInnerHTML={{ __html: remarkContent }}
+            dangerouslySetInnerHTML={{ __html: hopeBlog.body_html }}
           />
         </article>
       )}
@@ -91,25 +95,24 @@ const BlogPage: NextPage<AllBlogProps> = ({ remarkContent, hopeBlog }) => {
 }
 
 const getAllBlogs = async () => {
-  // const headers = { 'api-key': 'u6fFae5kYdEF1NiaUuGZdhTh' }
-  // const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
-  // const data = await res.json()
-  // return data
+  const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
+  const data = await res.json()
+  return data
 
-  const r = await fetch('https://dev.to/api/articles/me/published', {
-    headers: { 'api-key': 'u6fFae5kYdEF1NiaUuGZdhTh' || '' },
-  })
+  // const r = await fetch('https://dev.to/api/articles/me/published', {
+  //   headers: { 'api-key': '' || '' },
+  // })
 
-  if (r.status < 200 || r.status >= 300) {
-    throw new Error(`Error fetching... Status code: ${r.status}, ${r.statusText}`)
-  }
-  return r.json()
+  // if (r.status < 200 || r.status >= 300) {
+  //   throw new Error(`Error fetching... Status code: ${r.status}, ${r.statusText}`)
+  // }
+  // return r.json()
 }
 
-const markdownToHtml = async (markdown: string) => {
-  const result = await remark().use(html).use(prism).process(markdown)
-  return result.toString()
-}
+// const markdownToHtml = async (markdown: string) => {
+//   const result = await remark().use(html).use(prism).process(markdown)
+//   return result.toString()
+// }
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const devData: BlogPost[] = await getAllBlogs()
@@ -129,12 +132,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const selectedBlog = devData.filter((data) => data?.slug === params?.slug)
 
-  const blogObj = selectedBlog[0]
+  // const blogObj = selectedBlog[0]
 
-  // const res = await fetch(`https://dev.to/api/articles/${selectedBlog[0]?.id}`)
-  // const blogObj = await res.json()
+  const res = await fetch(`https://dev.to/api/articles/${selectedBlog[0]?.id}`)
+  const blogObj = await res.json()
 
-  const remarkContent = await markdownToHtml(blogObj.body_markdown)
+  // const remarkContent = await markdownToHtml(blogObj.body_markdown)
 
   if (!devData) {
     return {
@@ -143,7 +146,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
 
   return {
-    props: { remarkContent, hopeBlog: blogObj }, // will be passed to the page component as props
+    props: {
+      // remarkContent,
+      hopeBlog: blogObj,
+    }, // will be passed to the page component as props
     revalidate: 1,
   }
 }
