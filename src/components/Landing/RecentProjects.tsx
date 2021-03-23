@@ -61,10 +61,10 @@ const RecentProjects = () => {
         </div>
       </div>
       <Link href="/projects">
-        <div className=" flex justify-center p-3 text-gray-300">
+        <a className=" flex justify-center p-3 text-gray-300">
           <div className="text-center text-sm   md:text-base cursor-pointer">More Projects</div>
           <ClickArrow />
-        </div>
+        </a>
       </Link>
     </section>
   )

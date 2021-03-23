@@ -33,7 +33,7 @@ const LatestArticles: React.FC<Props> = (props) => {
         {devData &&
           mostLikedData.map(({ description, title, slug, positive_reactions_count, published_at }) => (
             <Link key={slug} href={`/blog/${slug}`}>
-              <div className="p-4 cursor-pointer border border-gray-600 hover:border-gray-400 transition rounded-lg mt-5">
+              <a className="p-4 cursor-pointer border border-gray-600 hover:border-gray-400 transition rounded-lg mt-5">
                 <div className="flex justify-between">
                   <h3 className=" mb-1 text-xl  font-semibold tracking-normal">{title}</h3>
                 </div>
@@ -72,15 +72,15 @@ const LatestArticles: React.FC<Props> = (props) => {
                     </a>
                   </Link> */}
                 </div>
-              </div>
+              </a>
             </Link>
           ))}
       </div>
       <Link href="/blog">
-        <div className=" flex justify-center p-3 text-gray-300">
+        <a className=" flex justify-center p-3 text-gray-300">
           <div className="text-center text-sm   md:text-base cursor-pointer">More Articles</div>
           <ClickArrow />
-        </div>
+        </a>
       </Link>
     </section>
   )
