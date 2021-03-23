@@ -25,5 +25,3 @@ yarn-debug.log*
 yarn-error.log*
 
 # Environment Variables
-.env
-.env.local
