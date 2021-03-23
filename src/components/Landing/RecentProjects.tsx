@@ -11,30 +11,6 @@ const RecentProjects = () => {
       </div>
       <div className="mb-5 flex flex-col border border-gray-600 hover:border-gray-400 transition rounded-lg md:mt-5">
         <div className=" p-4 ">
-          <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex">
-            <div>
-              <h3 className="mb-2 text-xl font-semibold tracking-normal text-gray-100 ">Lift Workout App</h3>
-              <p className="text-sm md:text-base font-normal text-gray-300">
-                A simple, accessible workout app that allows a user to create, track, and update their daily workout
-                routines.
-              </p>
-              <ul className="flex md:justify-end text-xs mt-3 font-semibold">
-                <li className="md:ml-1 mr-3">
-                  <i>Next.js</i>
-                </li>
-                <li className="md:ml-1 mr-3">
-                  <i>Firebase</i>
-                </li>
-                <li className="md:ml-1 mr-3 md:mr-0">
-                  <i>Tailwind CSS</i>
-                </li>
-              </ul>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div className="flex flex-col border border-gray-600 hover:border-gray-400 transition rounded-lg md:mt-5">
-        <div className=" p-4">
           <a href="https://covid19ca.netlify.app/" target="_blank" rel="noopener noreferrer" className="flex">
             <div>
               <h3 className="mb-2 text-xl font-semibold tracking-normal text-gray-100">
@@ -54,6 +30,51 @@ const RecentProjects = () => {
                 </li>
                 <li className="md:ml-1 mr-3 md:mr-0">
                   <i>COVID-19 API</i>
+                </li>
+              </ul>
+            </div>
+          </a>
+          {/* <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex">
+            <div>
+              <h3 className="mb-2 text-xl font-semibold tracking-normal text-gray-100 ">Lift Workout App</h3>
+              <p className="text-sm md:text-base font-normal text-gray-300">
+                A simple, accessible workout app that allows a user to create, track, and update their daily workout
+                routines.
+              </p>
+              <ul className="flex md:justify-end text-xs mt-3 font-semibold">
+                <li className="md:ml-1 mr-3">
+                  <i>Next.js</i>
+                </li>
+                <li className="md:ml-1 mr-3">
+                  <i>Firebase</i>
+                </li>
+                <li className="md:ml-1 mr-3 md:mr-0">
+                  <i>Tailwind CSS</i>
+                </li>
+              </ul>
+            </div>
+          </a> */}
+        </div>
+      </div>
+      <div className="flex flex-col border border-gray-600 hover:border-gray-400 transition rounded-lg md:mt-5">
+        <div className=" p-4">
+          <a href="https://reels.netlify.app/" target="_blank" rel="noopener noreferrer" className="flex">
+            <div>
+              <h3 className="mb-2 text-xl font-semibold tracking-normal text-gray-100">Reels Movie Database</h3>
+              <p className="text-sm md:text-base font-normal text-gray-300">
+                A Netflix clone that lets users browse through 600,000 movies and find details and watch trailers of
+                their favorite ones.
+                {/* Users can also add, update or delete any previous logged workouts. */}
+              </p>
+              <ul className="flex md:justify-end text-xs mt-3 font-semibold">
+                <li className="md:ml-1 mr-3">
+                  <i>React</i>
+                </li>
+                <li className="md:ml-1 mr-3">
+                  <i>SCSS</i>
+                </li>
+                <li className="md:ml-1 mr-3 md:mr-0">
+                  <i>TMDB API</i>
                 </li>
               </ul>
             </div>

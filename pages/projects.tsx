@@ -23,7 +23,7 @@ const About: NextPage = () => {
             </p>
           </div>
           <div className="space-y-6 ">
-            <div className="mt-6 lg:mt-10 flex w-full md:mx-auto lg:ml-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 md:h-96 h-60 rounded-lg shadow-2xl relative">
+            {/* <div className="mt-6 lg:mt-10 flex w-full md:mx-auto lg:ml-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 md:h-96 h-60 rounded-lg shadow-2xl relative">
               <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer">
                 <img
                   className=" absolute inset-0 h-full w-full object-cover md:object-contain  rounded-lg"
@@ -70,9 +70,9 @@ const About: NextPage = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div className=" flex w-full md:mx-auto lg:mr-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 md:h-96 h-60 rounded-lg shadow-2xl relative">
+            <div className="mt-6 lg:mt-10 flex w-full md:mx-auto lg:ml-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 md:h-96 h-60 rounded-lg shadow-2xl relative">
               <a href="https://covid19ca.netlify.app/" target="_blank" rel="noopener noreferrer">
                 <img
                   className="absolute inset-0 h-full w-full object-cover md:object-contain rounded-lg"
@@ -120,7 +120,7 @@ const About: NextPage = () => {
               </div>
             </div>
 
-            <div className=" flex w-full md:mx-auto lg:ml-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 md:h-96 h-60 rounded-lg shadow-2xl relative">
+            <div className=" flex w-full md:mx-auto lg:mr-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 md:h-96 h-60 rounded-lg shadow-2xl relative">
               <a href="https://reels.netlify.app/" target="_blank" rel="noopener noreferrer">
                 <img
                   className="absolute inset-0 h-full w-full object-cover md:object-contain rounded-lg"
@@ -168,7 +168,7 @@ const About: NextPage = () => {
               </div>
             </div>
 
-            <div className=" flex w-full md:mx-auto lg:mr-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 md:h-96 h-60 rounded-lg shadow-2xl relative">
+            <div className=" flex w-full md:mx-auto lg:ml-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 md:h-96 h-60 rounded-lg shadow-2xl relative">
               <a href="https://google-keep-next.vercel.app/" target="_blank" rel="noopener noreferrer">
                 <img
                   className="absolute inset-0 h-full w-full object-cover md:object-contain rounded-lg"

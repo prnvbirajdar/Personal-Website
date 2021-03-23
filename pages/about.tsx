@@ -32,7 +32,8 @@ const About: NextPage = () => {
                 Hello! I&apos;m Pranav, a software developer and personal trainer based in Ottawa, CA🍁.
               </p>
               <p className="mb-4">
-                I’m a first year student at Algonquin College studying Computer Engineering Technology. I have
+                I’m a self-taught developer working on all things front-end.{' '}
+                {/* first year student at Algonquin College studying Computer Engineering Technology.  */} I have
                 experience designing and developing applications for the web, from simple landing pages to progressive
                 web applications.
               </p>
