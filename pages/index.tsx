@@ -16,6 +16,7 @@ const Home: NextPage<Props> = (props) => {
     <>
       <Head>
         <title>Pranav Birajdar</title>
+
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="Home Page" content="welcome to the home page!" />
         <meta name="Description" content="This is a home page of my website!" />
