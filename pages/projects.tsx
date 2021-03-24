@@ -40,7 +40,7 @@ const About: NextPage = () => {
                   </h1>
                   <div className="  sm:w-9/12 md:w-full text-sm md:text-lg ">
                     <p className="text-sm mt-2 leading-snug md:text-base">
-                      Lift is an resistance training app that allows users to create, track, and update their daily
+                      Lift is a resistance training app that allows users to create, track, and update their daily
                       workout routines.
                     </p>
                     <ul className="flex text-xs mt-3 font-semibold lg:mt-4">
