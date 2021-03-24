@@ -23,14 +23,14 @@ const About: NextPage = () => {
             </p>
           </div>
           <div className="space-y-6 ">
-            {/* <div className="mt-6 lg:mt-10 flex w-full md:mx-auto lg:ml-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 md:h-96 h-60 rounded-lg shadow-2xl relative">
+            <div className="mt-6 lg:mt-10 flex w-full md:mx-auto lg:ml-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 md:h-96 h-60 rounded-lg shadow-2xl relative">
               <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer">
                 <img
                   className=" absolute inset-0 h-full w-full object-cover md:object-contain  rounded-lg"
                   src="/lift-app.jpg"
                   alt="lift workout app"
                 />
-                <div className=" absolute inset-0 bg-black bg-opacity-40 rounded-lg md:bg-opacity-60 bg-gradient-to-r from-black  " />
+                <div className=" absolute inset-0 bg-black bg-opacity-40 rounded-lg md:bg-opacity-50 bg-gradient-to-r from-black  " />
               </a>
 
               <div className=" px-6 py-3 relative  md:w-8/12 my-auto rounded-lg  ">
@@ -40,7 +40,7 @@ const About: NextPage = () => {
                   </h1>
                   <div className="  sm:w-9/12 md:w-full text-sm md:text-lg ">
                     <p className="text-sm mt-2 leading-snug md:text-base">
-                      A simple, accessible workout app that allows a user to create, track, and update their daily
+                      Lift is an resistance training app that allows users to create, track, and update their daily
                       workout routines.
                     </p>
                     <ul className="flex text-xs mt-3 font-semibold lg:mt-4">
@@ -70,9 +70,9 @@ const About: NextPage = () => {
                   </a>
                 </div>
               </div>
-            </div> */}
+            </div>
 
-            <div className="mt-6 lg:mt-10 flex w-full md:mx-auto lg:ml-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 md:h-96 h-60 rounded-lg shadow-2xl relative">
+            <div className="mt-6 lg:mt-10 flex w-full md:mx-auto lg:mr-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 md:h-96 h-60 rounded-lg shadow-2xl relative">
               <a href="https://covid19ca.netlify.app/" target="_blank" rel="noopener noreferrer">
                 <img
                   className="absolute inset-0 h-full w-full object-cover md:object-contain rounded-lg"
@@ -120,7 +120,7 @@ const About: NextPage = () => {
               </div>
             </div>
 
-            <div className=" flex w-full md:mx-auto lg:mr-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 md:h-96 h-60 rounded-lg shadow-2xl relative">
+            <div className=" flex w-full md:mx-auto lg:ml-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 md:h-96 h-60 rounded-lg shadow-2xl relative">
               <a href="https://reels.netlify.app/" target="_blank" rel="noopener noreferrer">
                 <img
                   className="absolute inset-0 h-full w-full object-cover md:object-contain rounded-lg"
@@ -168,14 +168,14 @@ const About: NextPage = () => {
               </div>
             </div>
 
-            <div className=" flex w-full md:mx-auto lg:ml-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 md:h-96 h-60 rounded-lg shadow-2xl relative">
+            <div className=" flex w-full md:mx-auto lg:mr-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 md:h-96 h-60 rounded-lg shadow-2xl relative">
               <a href="https://google-keep-next.vercel.app/" target="_blank" rel="noopener noreferrer">
                 <img
                   className="absolute inset-0 h-full w-full object-cover md:object-contain rounded-lg"
                   src="/keep-dark.jpg"
                   alt="keep clone"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-75 rounded-lg md:bg-opacity-60 md:bg-gradient-to-r from-black  " />
+                <div className="absolute inset-0 bg-black bg-opacity-60 rounded-lg md:bg-opacity-50 md:bg-gradient-to-r from-black  " />
               </a>
               <div className=" px-6 py-3 relative  md:w-8/12  my-auto rounded-lg ">
                 <a href="https://google-keep-next.vercel.app/" target="_blank" rel="noopener noreferrer">

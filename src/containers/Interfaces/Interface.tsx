@@ -8,6 +8,12 @@ export interface User {
   website_url?: null | string
 }
 
+export interface FlareTag {
+  name?: string
+  bg_color_hex?: string
+  text_color_hex?: string
+}
+
 export interface BlogPost {
   id: number
   title: string
@@ -27,11 +33,12 @@ export interface BlogPost {
   published_timestamp: string
   url: string
   user: User
+  flare_tag?: FlareTag
   readable_publish_date: string
   collection_id: null | number
   social_image: string
   created_at: string
-  edited_at: string
+  edited_at: string | null
   crossposted_at: null | string
   last_comment_at: string
   body_html: string
