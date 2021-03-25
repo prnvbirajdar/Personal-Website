@@ -2,16 +2,21 @@
 import React, { useState } from 'react'
 import { Transition } from '@headlessui/react'
 import Link from 'next/link'
+import { useTheme } from 'next-themes'
+import { Moon, Sun } from './Icons/Icons'
 
 const Nav2 = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const { theme, setTheme } = useTheme()
+
+  console.log(theme)
 
   return (
     <header className="fixed top-0 w-full bg-white dark:text-gray-100 text-black  dark:bg-black z-20">
       <nav className="border-b border-gray-200 dark:border-gray-800">
         <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className=" flex items-center justify-between h-16">
-            <div className="flex items-center justify-between w-full">
+            <div className="flex items-center">
               <div
                 className="flex-shrink-0 cursor-pointer"
                 onKeyPress={() => setIsOpen(false)}
@@ -57,6 +62,14 @@ const Nav2 = () => {
                 </div>
               </div>
             </div>
+            <button
+              type="button"
+              aria-label="dark mode"
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              className="self-center bg-white hover:bg-gray-100 focus:ring focus:ring-gray-500 transition dark:bg-gray-800 dark:hover:bg-gray-900 focus:outline-none rounded-md p-1.5"
+            >
+              {theme === 'dark' ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}
+            </button>
             <div className="-mr-2 flex md:hidden">
               {/* <!-- Mobile menu button --> */}
               <button

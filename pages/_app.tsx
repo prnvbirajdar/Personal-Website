@@ -35,7 +35,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       <ThemeProvider attribute="class">
         <Nav />
         <Component {...pageProps} />
-        <section className="w-full mt-8 dark:bg-gradient-to-b from-black to-gray-900">
+        <section className="w-full mt-8 bg-gradient-to-b dark:from-black dark:to-gray-900  from-white to-gray-300">
           <CallToAction />
           <ScrollToTop />
           <Footer />
