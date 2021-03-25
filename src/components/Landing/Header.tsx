@@ -22,7 +22,7 @@ const Main = () => {
 
         <a
           href="mailto:prnvbirajdar@gmail.com"
-          className="hover:bg-gray-100 mt-6 text-sm font-bold lg:text-base tracking-normal my-5 md:my-7 p-2.5 px-4 md:px-5 rounded ring-2 ring-gray-400 ring-opacity-50 dark:bg-gray-900 bg-opacity-50 hover:bg-opacity-100 focus:bg-opacity-100 shadow transition"
+          className="bg-gray-200 hover:bg-gray-300 mt-6 text-sm font-bold lg:text-base tracking-normal my-5 md:my-7 p-2.5 px-4 md:px-5 rounded ring-2 ring-gray-400 ring-opacity-50 dark:bg-gray-900 bg-opacity-50 hover:bg-opacity-100 focus:bg-opacity-100 shadow transition"
         >
           Say Hello!
         </a>
