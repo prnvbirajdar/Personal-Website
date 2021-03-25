@@ -68,7 +68,7 @@ const Nav2 = () => {
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               className="self-center bg-white hover:bg-gray-100 focus:ring focus:ring-gray-500 transition dark:bg-gray-800 dark:hover:bg-gray-900 focus:outline-none rounded-md p-1.5"
             >
-              {theme === 'dark' ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}
+              {theme === 'light' ? <Moon aria-hidden="true" /> : <Sun aria-hidden="true" />}
             </button>
             <div className="-mr-2 flex md:hidden">
               {/* <!-- Mobile menu button --> */}
