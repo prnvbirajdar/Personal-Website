@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import { GoogleFonts } from 'next-google-fonts'
-import { ThemeProvider } from 'next-themes'
+import { Windmill } from '@windmill/react-ui'
 import * as gtag from '../lib/gtag'
 import Nav from '../src/components/Nav'
 import ScrollToTop from '../src/containers/scrollToTop'
@@ -32,7 +32,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="Logo Icon" type="image/png" href="/fav.png" />
       </Head>
-      <ThemeProvider attribute="class">
+      <Windmill usePreferences>
         <Nav />
         <Component {...pageProps} />
         <section className="w-full mt-8 bg-gradient-to-b dark:from-black dark:to-gray-900  from-white to-gray-300">
@@ -40,7 +40,8 @@ const App = ({ Component, pageProps }: AppProps) => {
           <ScrollToTop />
           <Footer />
         </section>
-      </ThemeProvider>
+      </Windmill>
+      ,
     </>
   )
 }

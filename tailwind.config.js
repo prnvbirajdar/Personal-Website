@@ -1,4 +1,6 @@
-module.exports = {
+const windmill = require('@windmill/react-ui/config')
+
+module.exports = windmill({
   purge: {
     content: ['./pages/**/*.{js,jsx,ts,tsx}', './src/**/*.{js,jsx,ts,tsx}'],
   },
@@ -42,4 +44,4 @@ module.exports = {
   variants: {},
   // eslint-disable-next-line global-require
   plugins: [require('@tailwindcss/typography')],
-}
+})

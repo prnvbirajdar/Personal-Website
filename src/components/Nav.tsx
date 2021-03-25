@@ -1,15 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Transition } from '@headlessui/react'
 import Link from 'next/link'
-import { useTheme } from 'next-themes'
+import { WindmillContext } from '@windmill/react-ui'
 import { Moon, Sun } from './Icons/Icons'
 
 const Nav2 = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const { theme, setTheme } = useTheme()
 
-  console.log(theme)
+  const { mode, toggleMode } = useContext(WindmillContext) // dark mode
 
   return (
     <header className="fixed top-0 w-full bg-white dark:text-gray-100 text-black  dark:bg-black z-20">
@@ -65,10 +64,10 @@ const Nav2 = () => {
             <button
               type="button"
               aria-label="dark mode"
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              onClick={toggleMode}
               className="self-center bg-white hover:bg-gray-100 focus:ring focus:ring-gray-500 transition dark:bg-gray-800 dark:hover:bg-gray-900 focus:outline-none rounded-md p-1.5"
             >
-              {theme === 'light' ? <Moon aria-hidden="true" /> : <Sun aria-hidden="true" />}
+              {mode === 'dark' ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}
             </button>
             <div className="-mr-2 flex md:hidden">
               {/* <!-- Mobile menu button --> */}
