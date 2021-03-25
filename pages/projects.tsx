@@ -18,7 +18,7 @@ const About: NextPage = () => {
             <h1 className=" text-4xl font-extrabold leading-9 tracking-tight dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
               Projects
             </h1>
-            <p className=" tracking-tight sm:w-9/12 md:w-10/12 lg:w-9/12 text-base md:text-lg font-normal ">
+            <p className="font-normal tracking-tight sm:w-9/12 md:w-10/12 lg:w-9/12 text-base md:text-lg ">
               My personal projects are a way for me to chronicle my growth as a developer.
             </p>
           </div>
@@ -43,7 +43,7 @@ const About: NextPage = () => {
                       Lift is a resistance training app that allows users to create, track, and update their daily
                       workout routines.
                     </p>
-                    <ul className="flex text-xs mt-3 font-semibold lg:mt-4">
+                    <ul className="flex text-xs md:text-sm mt-3 font-semibold lg:mt-4">
                       <li className=" mr-3">
                         <i>Next.js</i>
                       </li>
@@ -75,11 +75,11 @@ const About: NextPage = () => {
             <div className="mt-6 lg:mt-10 flex w-full md:mx-auto lg:mr-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 focus:border-gray-400 md:h-96 h-60 rounded-lg shadow-2xl relative">
               <a href="https://covid19ca.netlify.app/" target="_blank" rel="noopener noreferrer">
                 <img
-                  className="absolute inset-0 h-full w-full object-cover md:object-contain rounded-lg"
+                  className="absolute inset-0 h-full w-full object-contain rounded-lg"
                   src="/covid19.jpg"
                   alt="covid-19 tracker"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-75 rounded-lg bg-gradient-to-r from-black  " />
+                <div className="absolute inset-0 bg-white bg-opacity-50 bg-gradient-to-r from-gray-300    dark:bg-black dark:bg-opacity-75 rounded-lg dark:bg-gradient-to-r dark:from-black  " />
               </a>
               <div className=" px-6 py-3 relative  md:w-8/12  my-auto rounded-lg ">
                 <a href="https://covid19ca.netlify.app/" target="_blank" rel="noopener noreferrer">
@@ -91,7 +91,7 @@ const About: NextPage = () => {
                       This dashboard provides up-to-date information about the COVID-19 outbreak and the vaccination
                       efforts in Canada.
                     </p>
-                    <ul className="lg:mt-4 flex text-xs mt-3 font-semibold">
+                    <ul className="lg:mt-4 flex text-xs md:text-sm  mt-3 font-semibold">
                       <li className=" mr-3">
                         <i>React</i>
                       </li>
@@ -139,7 +139,7 @@ const About: NextPage = () => {
                       A Netflix clone that lets users browse through 600,000 movies and find details and watch trailers
                       of their favorite ones.
                     </p>
-                    <ul className="flex text-xs mt-3 font-semibold lg:mt-4">
+                    <ul className="flex text-xs md:text-sm mt-3 font-semibold lg:mt-4">
                       <li className=" mr-3">
                         <i>React</i>
                       </li>
@@ -187,7 +187,7 @@ const About: NextPage = () => {
                       A responsive Google Keep clone that allows users to create, delete and save their notes. Dark mode
                       enabled!
                     </p>
-                    <ul className="lg:mt-4 flex text-xs mt-3 font-semibold">
+                    <ul className="lg:mt-4 flex text-xs md:text-sm mt-3 font-semibold">
                       <li className=" mr-3">
                         <i>Next.js</i>
                       </li>

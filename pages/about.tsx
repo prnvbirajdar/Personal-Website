@@ -23,13 +23,13 @@ const About: NextPage = () => {
           <div className="items-start space-y-2 lg:grid lg:grid-cols-3 lg:space-y-0 lg:pt-4">
             <div className="flex flex-col items-center pt-6 xl:pt-5">
               <img src="/profile1.jpg" alt="avatar" className="w-48 h-48 rounded-xl" />
-              <h3 className="pt-4 text-2xl text-gray-900 md:text-3xl font-bold leading-8 tracking-tight">
+              <h3 className="pt-4 text-2xl text-gray-900 dark:text-gray-200 md:text-3xl font-bold leading-8 tracking-tight">
                 Pranav Birajdar
               </h3>
               <div className="md:text-lg text-gray-800 dark:text-gray-400 mb-2 md:mt-1">Software Developer</div>
               <Icons />
             </div>
-            <div className="lg:pt-4 pb-8 lg:col-span-2 text-base font-normal sm:w-9/12 md:w-10/12 mx-auto  lg:mx-0">
+            <div className="font-normal lg:pt-4 pb-8 lg:col-span-2 text-base sm:w-9/12 md:w-10/12 mx-auto  lg:mx-0">
               <p className="mb-4">
                 Hello! I&apos;m Pranav, a software developer and personal trainer based in Ottawa, CA🍁.
               </p>
