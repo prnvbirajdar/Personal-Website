@@ -228,7 +228,7 @@ const Covid = () => {
 
 const ScrollUp = () => {
   return (
-    <div className="rounded text-gray-100">
+    <div className="rounded text-gray-900 dark:text-gray-100">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"

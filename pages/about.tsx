@@ -23,7 +23,9 @@ const About: NextPage = () => {
           <div className="items-start space-y-2 lg:grid lg:grid-cols-3 lg:space-y-0 lg:pt-4">
             <div className="flex flex-col items-center pt-6 xl:pt-5">
               <img src="/profile1.jpg" alt="avatar" className="w-48 h-48 rounded-xl" />
-              <h3 className="pt-4 text-2xl text-gray-900 md:text-3xl font-bold leading-8 tracking-tight">Pranav Birajdar</h3>
+              <h3 className="pt-4 text-2xl text-gray-900 md:text-3xl font-bold leading-8 tracking-tight">
+                Pranav Birajdar
+              </h3>
               <div className="md:text-lg text-gray-800 dark:text-gray-400 mb-2 md:mt-1">Software Developer</div>
               <Icons />
             </div>
