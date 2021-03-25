@@ -65,12 +65,20 @@ const Nav2 = () => {
               type="button"
               aria-label="dark mode"
               onClick={toggleMode}
-              className="self-center bg-white hover:bg-gray-100 focus:ring focus:ring-gray-500 transition dark:bg-gray-800 dark:hover:bg-gray-900 focus:outline-none rounded-md p-1.5"
+              className=" hidden md:block self-center bg-white hover:bg-gray-100 focus:ring focus:ring-gray-500 transition dark:bg-black dark:hover:bg-gray-900 focus:outline-none rounded-md p-1.5"
             >
               {mode === 'dark' ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}
             </button>
-            <div className="-mr-2 flex md:hidden">
+            <div className="-mr-2 flex md:hidden space-x-4">
               {/* <!-- Mobile menu button --> */}
+              <button
+                type="button"
+                aria-label="dark mode"
+                onClick={toggleMode}
+                className=" block md:hidden self-center bg-white hover:bg-gray-100 focus:ring focus:ring-gray-500 transition dark:bg-black dark:hover:bg-gray-900 focus:outline-none rounded-md p-1.5"
+              >
+                {mode === 'dark' ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}
+              </button>
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"

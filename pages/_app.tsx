@@ -41,7 +41,6 @@ const App = ({ Component, pageProps }: AppProps) => {
           <Footer />
         </section>
       </Windmill>
-      ,
     </>
   )
 }
