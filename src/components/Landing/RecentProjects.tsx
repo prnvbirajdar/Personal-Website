@@ -10,7 +10,12 @@ const RecentProjects = () => {
         <h2 className="text-3xl md:text-4xl font-bold mb-5">Recent Projects</h2>
       </div>
       <div className="mb-5 flex flex-col border border-gray-600 hover:border-gray-400 transition rounded-lg md:mt-5">
-        <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer" className=" p-4 flex">
+        <a
+          href="https://lift-next.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="focus:bg-gray-900 p-4 flex"
+        >
           <div>
             <h3 className="mb-2 text-xl font-semibold tracking-normal text-gray-100 ">Lift Workout App</h3>
             <p className="text-sm md:text-base font-normal text-gray-300">
@@ -32,7 +37,12 @@ const RecentProjects = () => {
         </a>
       </div>
       <div className="flex flex-col border border-gray-600 hover:border-gray-400 transition rounded-lg md:mt-5">
-        <a href="https://covid19ca.netlify.app/" target="_blank" rel="noopener noreferrer" className=" p-4 flex">
+        <a
+          href="https://covid19ca.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="focus:bg-gray-900 p-4 flex"
+        >
           <div>
             <h3 className="mb-2 text-xl font-semibold tracking-normal text-gray-100">COVID-19 Dashboard for Canada</h3>
             <p className="text-sm md:text-base font-normal text-gray-300">
@@ -55,7 +65,7 @@ const RecentProjects = () => {
         </a>
       </div>
       <Link href="/projects">
-        <a className=" flex justify-center p-3 text-gray-300">
+        <a className=" flex justify-center p-3 text-gray-300 focus:text-white">
           <div className="text-center text-sm   md:text-base cursor-pointer">More Projects</div>
           <ClickArrow />
         </a>

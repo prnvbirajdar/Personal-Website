@@ -4,6 +4,7 @@ import Head from 'next/head'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import { GoogleFonts } from 'next-google-fonts'
+import { ThemeProvider } from 'next-themes'
 import * as gtag from '../lib/gtag'
 import Nav from '../src/components/Nav'
 import ScrollToTop from '../src/containers/scrollToTop'
@@ -31,13 +32,15 @@ const App = ({ Component, pageProps }: AppProps) => {
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="Logo Icon" type="image/png" href="/fav.png" />
       </Head>
-      <Nav />
-      <Component {...pageProps} />
-      <section className="w-full mt-8 bg-gradient-to-b from-black to-gray-900">
-        <CallToAction />
-        <ScrollToTop />
-        <Footer />
-      </section>
+      <ThemeProvider attribute="class">
+        <Nav />
+        <Component {...pageProps} />
+        <section className="w-full mt-8 bg-gradient-to-b from-black to-gray-900">
+          <CallToAction />
+          <ScrollToTop />
+          <Footer />
+        </section>
+      </ThemeProvider>
     </>
   )
 }
