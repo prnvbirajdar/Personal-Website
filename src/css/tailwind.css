@@ -5,8 +5,8 @@
 html,
 body {
   min-height: 100vh;
-  @apply bg-gray-50;
-  @apply text-gray-900;
+  @apply bg-white;
+  @apply text-black;
   @apply dark:bg-black;
   @apply dark:text-gray-100;
 }
