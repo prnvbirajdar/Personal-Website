@@ -87,7 +87,7 @@ const BlogPage: NextPage<AllBlogProps> = ({
             {hopeBlog.body_html}
           </div> */}
           <div
-            className=" px-4 sm:px-0 transition duration-500 dark:text-gray-300 w-full mx-auto prose  md:prose 2xl:prose-lg  md:w-3/4 lg:w-1/2"
+            className=" px-4 sm:px-0 transition duration-500  w-full mx-auto prose dark:prose-dark  md:prose 2xl:prose-lg  md:w-3/4 lg:w-1/2"
             dangerouslySetInnerHTML={{ __html: hopeBlog.body_html }}
           />
         </article>

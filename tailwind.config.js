@@ -26,10 +26,6 @@ module.exports = windmill({
             code: {
               color: theme('colors.pink.600'),
             },
-            // pre: {
-            //   color: theme('colors.indigo.200'),
-            //   backgroundColor: theme('colors.gray.200'),
-            // },
           },
         },
 
@@ -49,49 +45,20 @@ module.exports = windmill({
               color: theme('colors.gray.300'),
             },
             a: {
-              color: theme('colors.blue.600'),
+              color: theme('colors.blue.700'),
               textDecoration: 'none',
 
               '&:hover': {
-                color: theme('colors.blue.500'),
+                color: theme('colors.blue.600'),
                 textDecoration: 'underline',
               },
             },
             code: {
-              color: theme('colors.pink.300'),
+              color: theme('colors.pink.600'),
             },
           },
         },
       }),
-      // typography: {
-      //   DEFAULT: {
-      //     css: {
-      //       color: 'rgba(209, 213, 219)',
-      //       a: {
-      //         color: 'rgba(59, 130, 246)',
-      //         textDecoration: 'none',
-      //         '&:hover': {
-      //           textDecoration: 'underline',
-      //         },
-      //       },
-      //       strong: {
-      //         color: 'rgba(209, 213, 219)',
-      //       },
-      //       h3: {
-      //         color: 'rgba(209, 213, 219)',
-      //       },
-      //       h4: {
-      //         color: 'rgba(209, 213, 219)',
-      //       },
-      //       h5: {
-      //         color: 'rgba(209, 213, 219)',
-      //       },
-      //       code: {
-      //         color: theme('colors.pink.800'),
-      //       },
-      //     },
-      //   },
-      // },
     },
   },
   variants: { typography: ['dark'] },
