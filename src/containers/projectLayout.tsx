@@ -53,7 +53,7 @@ const LeftProjectLayoutLarge = ({ project }) => {
       <div className="w-3/5 ml-6 xl:ml-12 h-96 rounded-lg shadow-2xl overflow-hidden relative">
         <a href={project.site} target="_blank" rel="noopener noreferrer">
           <img
-            className="absolute inset-0 h-full w-full object-cover xl:object-fill rounded-lg"
+            className="absolute inset-0 h-full w-full object-cover xl:object-top rounded-lg"
             src={project.imageDark}
             alt={project.title}
           />
@@ -67,8 +67,8 @@ const LeftProjectLayoutLarge = ({ project }) => {
             {project.title}
           </h1>
         </a>
-        <div className=" w-full  text-lg ">
-          <p className="text-right  leading-snug text-base transition duration-500 bg-gray-100 dark:bg-gray-900 p-4 rounded-lg">
+        <div className=" w-full  ">
+          <p className="text-right leading-snug transition duration-500 bg-gray-100 dark:bg-gray-900 p-4 rounded-lg">
             {project.description}
           </p>
           <ul className="flex text-sm font-semibold mt-4 justify-end">
@@ -106,8 +106,8 @@ const RightProjectLayoutLarge = ({ project }) => {
             {project.title}
           </h1>
         </a>
-        <div className=" w-full  text-lg ">
-          <p className="  leading-snug text-base transition duration-500 bg-gray-100 dark:bg-gray-900 p-4 rounded-lg">
+        <div className=" w-full   ">
+          <p className="  leading-snug transition duration-500 bg-gray-100 dark:bg-gray-900 p-4 rounded-lg">
             {project.description}
           </p>
           <ul className="flex text-sm font-semibold mt-4 justify-start">
@@ -135,7 +135,7 @@ const RightProjectLayoutLarge = ({ project }) => {
       <div className="w-3/5 -ml-12 xl:-ml-24 h-96 rounded-lg shadow-2xl overflow-hidden relative">
         <a href={project.site} target="_blank" rel="noopener noreferrer">
           <img
-            className="absolute inset-0 h-full w-full object-cover xl:object-fill rounded-lg"
+            className="absolute inset-0 h-full w-full object-cover xl:object-top rounded-lg"
             src={project.imageDark}
             alt={project.title}
           />
