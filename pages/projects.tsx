@@ -85,19 +85,19 @@ const About: NextPage = () => {
               </p>
             </div>
 
-            <div className="flex w-full ">
-              <div className="w-3/5 ml-12 h-96 rounded-lg shadow-2xl overflow-hidden relative">
+            <div className="hidden lg:flex w-full ">
+              <div className="w-3/5 lg:ml-6 xl:ml-12 h-96 rounded-lg shadow-2xl overflow-hidden relative">
                 <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer">
                   <img
                     className="absolute inset-0 h-full w-full object-contain rounded-lg"
                     src="/lift-app.jpg"
                     alt="lift workout app"
                   />
-                  <div className="absolute border rounded-lg border-gray-700 cursor-pointer inset-0 bg-gray-900 bg-opacity-60 hover:bg-opacity-25 transition duration-300" />
+                  <div className="absolute border rounded-lg border-gray-400 hover:border-gray-600 dark:border-gray-600 dark:hover:border-gray-400 cursor-pointer inset-0 bg-gray-900 bg-opacity-60 hover:bg-opacity-25 transition duration-300" />
                 </a>
               </div>
 
-              <div className="w-2/5 z-10  py-3  my-auto rounded-lg -ml-24  ">
+              <div className="w-2/5 z-10  py-3  my-auto rounded-lg lg:-ml-12 xl:-ml-24  ">
                 <a
                   href="https://lift-next.vercel.app/"
                   target="_blank"
@@ -107,24 +107,25 @@ const About: NextPage = () => {
                   <h1 className="transition duration-500 dark:text-gray-100 mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight  sm:leading-10 md:leading-14">
                     Lift Workout App
                   </h1>
-                  <div className="sm:w-9/12  md:w-full text-sm md:text-lg ">
-                    <p className="text-sm leading-snug md:text-base bg-gray-900 p-4 rounded-lg">
-                      Lift is a resistance training app that allows users to create, track, and update their daily
-                      workout routines.
-                    </p>
-                    <ul className="flex text-xs md:text-sm mt-3 font-semibold lg:mt-4 justify-end">
-                      <li className=" mr-3">
-                        <i>Next.js</i>
-                      </li>
-                      <li className=" mr-3">
-                        <i>Firebase</i>
-                      </li>
-                      <li className=" mr-3">
-                        <i>Tailwind CSS</i>
-                      </li>
-                    </ul>
-                  </div>
                 </a>
+                <div className="sm:w-9/12  md:w-full text-sm md:text-lg ">
+                  <p className="text-right text-sm leading-snug md:text-base transition duration-500 bg-gray-100 dark:bg-gray-900 p-4 rounded-lg">
+                    Lift is a resistance training app that allows users to create, track, and update their daily workout
+                    routines.
+                  </p>
+                  <ul className="flex text-xs md:text-sm mt-3 font-semibold lg:mt-4 justify-end">
+                    <li className=" mr-3">
+                      <i>Next.js</i>
+                    </li>
+                    <li className=" mr-3">
+                      <i>Firebase</i>
+                    </li>
+                    <li>
+                      <i>Tailwind CSS</i>
+                    </li>
+                  </ul>
+                </div>
+
                 <div className="pt-2 mt-1 md:mt-1.5 flex justify-end">
                   <a
                     className="mr-5"
