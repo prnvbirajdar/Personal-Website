@@ -23,7 +23,7 @@ const About: NextPage = () => {
             </p>
           </div>
           <div className="space-y-6 ">
-            <div className="mt-6 lg:mt-10 flex w-full md:mx-auto lg:ml-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 focus:border-gray-400 md:h-96 h-60 rounded-lg shadow-2xl relative">
+            <div className="mt-6 lg:mt-10 flex w-full md:mx-auto lg:ml-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 focus:border-gray-400 md:h-96 h-64 md:72 rounded-lg shadow-2xl relative">
               <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer">
                 <img
                   className=" absolute inset-0 h-full w-full object-cover md:object-contain  rounded-lg"
@@ -38,7 +38,7 @@ const About: NextPage = () => {
                   <h1 className="transition duration-500 dark:text-gray-100 mt-2  lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight  sm:leading-10 md:leading-14">
                     Lift Workout App
                   </h1>
-                  <div className="  sm:w-9/12 md:w-full text-sm md:text-lg ">
+                  <div className="  sm:w-9/12  md:w-full text-sm md:text-lg ">
                     <p className="text-sm mt-2 leading-snug md:text-base">
                       Lift is a resistance training app that allows users to create, track, and update their daily
                       workout routines.
@@ -56,7 +56,7 @@ const About: NextPage = () => {
                     </ul>
                   </div>
                 </a>
-                <div className="pt-2 mt-1 lg:mt-2 flex">
+                <div className="pt-2 mt-1 md:mt-1.5 flex">
                   <a
                     className="mr-5"
                     href="https://github.com/prnvbirajdar/NEXT-Workout-App"
@@ -72,7 +72,125 @@ const About: NextPage = () => {
               </div>
             </div>
 
-            <div className="mt-6 lg:mt-10 flex w-full md:mx-auto lg:mr-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 focus:border-gray-400 md:h-96 h-60 rounded-lg shadow-2xl relative">
+            <div className="text-black px-5">
+              <p className="px-5 rounded py-1 bg-gray-300 block sm:hidden">Mobile</p>
+              <p className="px-5 rounded py-1 bg-red-300  hidden sm:block md:hidden">Sm</p>
+              <p className="px-5 rounded py-1 bg-green-300 hidden  sm:hidden md:block  lg:hidden">Md</p>
+              <p className="px-5 rounded py-1 bg-blue-300 hidden sm:hidden md:hidden lg:block xl:hidden">Lg</p>
+              <p className="px-5 rounded py-1 bg-yellow-300 hidden sm:hidden md:hidden lg:hidden xl:block 2xl:hidden">
+                xl
+              </p>
+              <p className="px-5 rounded py-1 bg-purple-300 hidden sm:hidden md:hidden lg:hidden xl:hidden 2xl:block">
+                2xl
+              </p>
+            </div>
+
+            <div className="flex w-full ">
+              <div className="w-3/5 ml-12 h-96 rounded-lg shadow-2xl overflow-hidden relative">
+                <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  <img
+                    className="absolute inset-0 h-full w-full object-contain rounded-lg"
+                    src="/lift-app.jpg"
+                    alt="lift workout app"
+                  />
+                  <div className="absolute border rounded-lg border-gray-700 cursor-pointer inset-0 bg-gray-900 bg-opacity-60 hover:bg-opacity-25 transition duration-300" />
+                </a>
+              </div>
+
+              <div className="w-2/5 z-10  py-3  my-auto rounded-lg -ml-24  ">
+                <a
+                  href="https://lift-next.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-right"
+                >
+                  <h1 className="transition duration-500 dark:text-gray-100 mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight  sm:leading-10 md:leading-14">
+                    Lift Workout App
+                  </h1>
+                  <div className="sm:w-9/12  md:w-full text-sm md:text-lg ">
+                    <p className="text-sm leading-snug md:text-base bg-gray-900 p-4 rounded-lg">
+                      Lift is a resistance training app that allows users to create, track, and update their daily
+                      workout routines.
+                    </p>
+                    <ul className="flex text-xs md:text-sm mt-3 font-semibold lg:mt-4 justify-end">
+                      <li className=" mr-3">
+                        <i>Next.js</i>
+                      </li>
+                      <li className=" mr-3">
+                        <i>Firebase</i>
+                      </li>
+                      <li className=" mr-3">
+                        <i>Tailwind CSS</i>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+                <div className="pt-2 mt-1 md:mt-1.5 flex justify-end">
+                  <a
+                    className="mr-5"
+                    href="https://github.com/prnvbirajdar/NEXT-Workout-App"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github />
+                  </a>
+                  <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    <OpenLink2 />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* <div className="mt-6 lg:mt-10 flex w-full md:mx-auto lg:ml-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 focus:border-gray-400 md:h-96 h-64 md:72 rounded-lg shadow-2xl relative">
+              <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <img
+                  className=" absolute inset-0 h-full w-full object-cover md:object-contain  rounded-lg"
+                  src="/lift-app.jpg"
+                  alt="lift workout app"
+                />
+                <div className=" absolute inset-0 bg-black bg-opacity-40 rounded-lg md:bg-opacity-50 bg-gradient-to-r from-black  " />
+              </a>
+
+              <div className="flex flex-col justify-center px-6 py-3 relative h-full  md:w-8/12 my-auto rounded-lg  ">
+                <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  <h1 className="mb-3 transition duration-500 dark:text-gray-100  lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight  sm:leading-10 md:leading-14">
+                    Lift Workout App
+                  </h1>
+                  <div className="  sm:w-9/12  md:w-full text-sm md:text-lg ">
+                    <p className="text-sm mt-2 leading-snug md:text-base">
+                      Lift is a resistance training app that allows users to create, track, and update their daily
+                      workout routines.
+                    </p>
+                    <ul className="flex text-xs md:text-sm mt-3 font-semibold lg:mt-4">
+                      <li className=" mr-3">
+                        <i>Next.js</i>
+                      </li>
+                      <li className=" mr-3">
+                        <i>Firebase</i>
+                      </li>
+                      <li className=" mr-3">
+                        <i>Tailwind CSS</i>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+                <div className="pt-2 mt-1 md:mt-1.5 lg:mt-2 flex">
+                  <a
+                    className="mr-5"
+                    href="https://github.com/prnvbirajdar/NEXT-Workout-App"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github />
+                  </a>
+                  <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    <OpenLink2 />
+                  </a>
+                </div>
+              </div>
+            </div> */}
+
+            <div className="mt-6 lg:mt-10 flex w-full md:mx-auto lg:mr-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 focus:border-gray-400 md:h-96 h-64 md:72 rounded-lg shadow-2xl relative">
               <a href="https://covid19ca.netlify.app/" target="_blank" rel="noopener noreferrer">
                 <img
                   className="absolute inset-0 h-full w-full object-contain rounded-lg"
@@ -104,7 +222,7 @@ const About: NextPage = () => {
                     </ul>
                   </div>
                 </a>
-                <div className="pt-2 mt-1 flex lg:mt-2">
+                <div className="pt-2 mt-1 md:mt-1.5 flex lg:mt-2">
                   <a
                     className="mr-5"
                     href="https://github.com/prnvbirajdar/covid19canada"
@@ -120,7 +238,7 @@ const About: NextPage = () => {
               </div>
             </div>
 
-            <div className=" flex w-full md:mx-auto lg:ml-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 focus:border-gray-400 md:h-96 h-60 rounded-lg shadow-2xl relative">
+            <div className=" flex w-full md:mx-auto lg:ml-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 focus:border-gray-400 md:h-96 h-64 md:72 rounded-lg shadow-2xl relative">
               <a href="https://reels.netlify.app/" target="_blank" rel="noopener noreferrer">
                 <img
                   className="absolute inset-0 h-full w-full object-cover md:object-contain rounded-lg"
@@ -152,7 +270,7 @@ const About: NextPage = () => {
                     </ul>
                   </div>
                 </a>
-                <div className="pt-2 mt-1 flex lg:mt-2">
+                <div className="pt-2 mt-1 md:mt-1.5 flex lg:mt-2">
                   <a
                     className="mr-5"
                     href="https://github.com/prnvbirajdar/Movie-Database"
@@ -168,7 +286,7 @@ const About: NextPage = () => {
               </div>
             </div>
 
-            <div className=" flex w-full md:mx-auto lg:mr-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 focus:border-gray-400 md:h-96 h-60 rounded-lg shadow-2xl relative">
+            <div className=" flex w-full md:mx-auto lg:mr-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 focus:border-gray-400 md:h-96 h-64 md:72 rounded-lg shadow-2xl relative">
               <a href="https://google-keep-next.vercel.app/" target="_blank" rel="noopener noreferrer">
                 <img
                   className="absolute inset-0 h-full w-full object-cover md:object-contain rounded-lg"
@@ -200,7 +318,7 @@ const About: NextPage = () => {
                     </ul>
                   </div>
                 </a>
-                <div className="pt-2 mt-1 flex lg:mt-2">
+                <div className="pt-2 mt-1 md:mt-1.5 flex lg:mt-2">
                   <a
                     className="mr-5"
                     href="https://github.com/prnvbirajdar/NEXT-Google-Keep"
