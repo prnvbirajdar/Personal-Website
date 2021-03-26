@@ -3,7 +3,7 @@ const lift = {
   description:
     'Lift is a resistance training app that allows users to create, track, and update their daily workout routines.',
   stack: {
-    fist: 'Next.js',
+    first: 'Next.js',
     second: 'Firebase',
     third: 'Tailwind CSS',
   },
@@ -18,7 +18,7 @@ const covid19 = {
   description:
     'This dashboard provides up-to-date information about the COVID-19 outbreak and the vaccination efforts in Canada.',
   stack: {
-    fist: 'React',
+    first: 'React',
     second: 'Chart.js',
     third: 'COVID-19 API',
   },
@@ -27,12 +27,12 @@ const covid19 = {
   gitHub: 'https://github.com/prnvbirajdar/covid19canada',
   site: 'https://covid19ca.netlify.app/',
 }
-const reelDb = {
+const reelsDb = {
   title: 'Reels Movie Db',
   description:
     'A Netflix clone that lets users browse through 600,000 movies and find details and watch trailers of their favorite ones.',
   stack: {
-    fist: 'React',
+    first: 'React',
     second: 'SCSS',
     third: 'TMDb API',
   },
@@ -46,7 +46,7 @@ const keepClone = {
   description:
     'A responsive Google Keep clone that allows users to create, delete and save their notes. Dark mode enabled!',
   stack: {
-    fist: 'Next.js',
+    first: 'Next.js',
     second: 'Firebase',
     third: 'Tailwind CSS',
   },
@@ -56,4 +56,4 @@ const keepClone = {
   site: 'https://github.com/prnvbirajdar/NEXT-Google-Keep',
 }
 
-export { covid19, keepClone, reelDb, lift }
+export { covid19, keepClone, reelsDb, lift }
