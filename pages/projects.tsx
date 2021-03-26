@@ -23,10 +23,10 @@ const About: NextPage = () => {
             </p>
           </div>
           <div className="space-y-6 ">
-            <div className="mt-6 lg:mt-10 flex w-full md:mx-auto lg:ml-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 focus:border-gray-400 md:h-96 h-64 md:72 rounded-lg shadow-2xl relative">
+            <div className="lg:hidden mt-6  flex w-full border border-gray-600 hover:border-gray-400 focus:border-gray-400 md:h-96 h-64 rounded-lg shadow-2xl relative">
               <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer">
                 <img
-                  className=" absolute inset-0 h-full w-full object-cover md:object-contain  rounded-lg"
+                  className=" absolute inset-0 h-full w-full object-cover sm:object-contain  rounded-lg"
                   src="/lift-app.jpg"
                   alt="lift workout app"
                 />
@@ -35,7 +35,7 @@ const About: NextPage = () => {
 
               <div className=" px-6 py-3 relative  md:w-8/12 my-auto rounded-lg  ">
                 <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer">
-                  <h1 className="transition duration-500 dark:text-gray-100 mt-2  lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight  sm:leading-10 md:leading-14">
+                  <h1 className="transition duration-500 dark:text-gray-100 mt-2   text-xl sm:text-2xl md:text-3xl  font-extrabold leading-snug tracking-tight  sm:leading-10 md:leading-14">
                     Lift Workout App
                   </h1>
                   <div className="  sm:w-9/12  md:w-full text-sm md:text-lg ">
@@ -43,7 +43,7 @@ const About: NextPage = () => {
                       Lift is a resistance training app that allows users to create, track, and update their daily
                       workout routines.
                     </p>
-                    <ul className="flex text-xs md:text-sm mt-3 font-semibold lg:mt-4">
+                    <ul className="flex text-xs md:text-sm mt-3 font-semibold ">
                       <li className=" mr-3">
                         <i>Next.js</i>
                       </li>
@@ -86,14 +86,14 @@ const About: NextPage = () => {
             </div>
 
             <div className="hidden lg:flex w-full ">
-              <div className="w-3/5 lg:ml-6 xl:ml-12 h-96 rounded-lg shadow-2xl overflow-hidden relative">
+              <div className="w-3/5 ml-6 xl:ml-12 h-96 rounded-lg shadow-2xl overflow-hidden relative">
                 <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer">
                   <img
-                    className="absolute inset-0 h-full w-full object-contain rounded-lg"
+                    className="absolute inset-0 h-full w-full object-cover xl:object-contain rounded-lg"
                     src="/lift-app.jpg"
                     alt="lift workout app"
                   />
-                  <div className="absolute border rounded-lg border-gray-400 hover:border-gray-600 dark:border-gray-600 dark:hover:border-gray-400 cursor-pointer inset-0 bg-gray-900 bg-opacity-60 hover:bg-opacity-25 transition duration-300" />
+                  <div className="absolute border rounded-lg border-gray-400 hover:border-gray-600 dark:border-gray-600 dark:hover:border-gray-400 cursor-pointer inset-0 bg-gray-900 bg-opacity-40 hover:bg-opacity-25 transition duration-300" />
                 </a>
               </div>
 
@@ -104,16 +104,16 @@ const About: NextPage = () => {
                   rel="noopener noreferrer"
                   className="text-right"
                 >
-                  <h1 className="transition duration-500 dark:text-gray-100 mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight  sm:leading-10 md:leading-14">
+                  <h1 className="transition duration-500 dark:text-gray-100 mt-2 lg:mb-5 text-xl lg:text-4xl font-extrabold leading-snug tracking-tight lg:leading-14">
                     Lift Workout App
                   </h1>
                 </a>
-                <div className="sm:w-9/12  md:w-full text-sm md:text-lg ">
-                  <p className="text-right text-sm leading-snug md:text-base transition duration-500 bg-gray-100 dark:bg-gray-900 p-4 rounded-lg">
+                <div className=" w-full  text-lg ">
+                  <p className="text-right  leading-snug text-base transition duration-500 bg-gray-100 dark:bg-gray-900 p-4 rounded-lg">
                     Lift is a resistance training app that allows users to create, track, and update their daily workout
                     routines.
                   </p>
-                  <ul className="flex text-xs md:text-sm mt-3 font-semibold lg:mt-4 justify-end">
+                  <ul className="flex text-sm font-semibold mt-4 justify-end">
                     <li className=" mr-3">
                       <i>Next.js</i>
                     </li>
@@ -126,7 +126,7 @@ const About: NextPage = () => {
                   </ul>
                 </div>
 
-                <div className="pt-2 mt-1 md:mt-1.5 flex justify-end">
+                <div className="pt-2 mt-1.5 flex justify-end">
                   <a
                     className="mr-5"
                     href="https://github.com/prnvbirajdar/NEXT-Workout-App"
@@ -141,55 +141,6 @@ const About: NextPage = () => {
                 </div>
               </div>
             </div>
-
-            {/* <div className="mt-6 lg:mt-10 flex w-full md:mx-auto lg:ml-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 focus:border-gray-400 md:h-96 h-64 md:72 rounded-lg shadow-2xl relative">
-              <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer">
-                <img
-                  className=" absolute inset-0 h-full w-full object-cover md:object-contain  rounded-lg"
-                  src="/lift-app.jpg"
-                  alt="lift workout app"
-                />
-                <div className=" absolute inset-0 bg-black bg-opacity-40 rounded-lg md:bg-opacity-50 bg-gradient-to-r from-black  " />
-              </a>
-
-              <div className="flex flex-col justify-center px-6 py-3 relative h-full  md:w-8/12 my-auto rounded-lg  ">
-                <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer">
-                  <h1 className="mb-3 transition duration-500 dark:text-gray-100  lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight  sm:leading-10 md:leading-14">
-                    Lift Workout App
-                  </h1>
-                  <div className="  sm:w-9/12  md:w-full text-sm md:text-lg ">
-                    <p className="text-sm mt-2 leading-snug md:text-base">
-                      Lift is a resistance training app that allows users to create, track, and update their daily
-                      workout routines.
-                    </p>
-                    <ul className="flex text-xs md:text-sm mt-3 font-semibold lg:mt-4">
-                      <li className=" mr-3">
-                        <i>Next.js</i>
-                      </li>
-                      <li className=" mr-3">
-                        <i>Firebase</i>
-                      </li>
-                      <li className=" mr-3">
-                        <i>Tailwind CSS</i>
-                      </li>
-                    </ul>
-                  </div>
-                </a>
-                <div className="pt-2 mt-1 md:mt-1.5 lg:mt-2 flex">
-                  <a
-                    className="mr-5"
-                    href="https://github.com/prnvbirajdar/NEXT-Workout-App"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Github />
-                  </a>
-                  <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer">
-                    <OpenLink2 />
-                  </a>
-                </div>
-              </div>
-            </div> */}
 
             <div className="mt-6 lg:mt-10 flex w-full md:mx-auto lg:mr-0 lg:w-9/12 border border-gray-600 hover:border-gray-400 focus:border-gray-400 md:h-96 h-64 md:72 rounded-lg shadow-2xl relative">
               <a href="https://covid19ca.netlify.app/" target="_blank" rel="noopener noreferrer">
