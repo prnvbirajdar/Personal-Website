@@ -265,7 +265,7 @@ const About: NextPage = () => {
                         <i>Firebase</i>
                       </li>
                       <li className=" mr-3">
-                        <i>Tailwind</i>
+                        <i>Tailwind CSS</i>
                       </li>
                     </ul>
                   </div>
