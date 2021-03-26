@@ -35,7 +35,9 @@ const App = ({ Component, pageProps }: AppProps) => {
       <Windmill usePreferences>
         <Nav />
         <Component {...pageProps} />
-        <section className="w-full mt-8 bg-gradient-to-b dark:from-black dark:to-gray-900  from-white to-gray-300">
+        <section className="w-full mt-8 transition duration-500   ">
+          {/* bg-gradient-to-b dark:from-black dark:to-gray-900  from-white to-gray-300 */}
+
           <CallToAction />
           <ScrollToTop />
           <Footer />

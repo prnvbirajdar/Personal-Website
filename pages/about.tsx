@@ -13,20 +13,22 @@ const About: NextPage = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="Description" content="Put your description here." />
       </Head>
-      <section className="w-11/12 px-4 md:px-0 pt-24 md:pt-28 lg:pt-32 mx-auto md:w-3/4 lg:w-10/12 dark:text-gray-300">
+      <section className="w-11/12 px-4 md:px-0 pt-24 md:pt-28 lg:pt-32 mx-auto md:w-3/4 lg:w-10/12  transition duration-300 dark:text-gray-300">
         <div className="divide-y divide-gray-800">
           <div className=" space-y-2 md:space-y-5">
-            <h1 className="pb-3 lg:pb-1 lg:mb-5 text-3xl font-extrabold leading-9 tracking-tight dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+            <h1 className="pb-3 lg:pb-1 lg:mb-5 text-3xl font-extrabold leading-9 tracking-tight  transition duration-300 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
               About Me
             </h1>
           </div>
           <div className="items-start space-y-2 lg:grid lg:grid-cols-3 lg:space-y-0 lg:pt-4">
             <div className="flex flex-col items-center pt-6 xl:pt-5">
               <img src="/profile1.jpg" alt="avatar" className="w-48 h-48 rounded-xl" />
-              <h3 className="pt-4 text-2xl text-gray-900 dark:text-gray-200 md:text-3xl font-bold leading-8 tracking-tight">
+              <h3 className="pt-4 text-2xl text-gray-900  transition duration-300 dark:text-gray-200 md:text-3xl font-bold leading-8 tracking-tight">
                 Pranav Birajdar
               </h3>
-              <div className="md:text-lg text-gray-800 dark:text-gray-400 mb-2 md:mt-1">Software Developer</div>
+              <div className="md:text-lg text-gray-800  transition duration-300 dark:text-gray-400 mb-2 md:mt-1">
+                Software Developer
+              </div>
               <Icons />
             </div>
             <div className="font-normal lg:pt-4 pb-8 lg:col-span-2 text-base sm:w-9/12 md:w-10/12 mx-auto  lg:mx-0">

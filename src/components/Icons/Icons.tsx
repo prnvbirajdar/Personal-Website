@@ -7,7 +7,7 @@ const Icons = () => {
       <a
         aria-label="Mail"
         href="mailto:prnvbirajdar@gmail.com"
-        className="p-1.5 rounded text-gray-700 hover:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 dark:text-gray-300 dark:hover:text-gray-100 dark:hover:bg-gray-800 dark:focus:bg-gray-800  "
+        className="p-1.5 rounded transition duration-500 text-gray-700 hover:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 dark:text-gray-300 dark:hover:text-gray-100 dark:hover:bg-gray-800 dark:focus:bg-gray-800  "
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +25,7 @@ const Icons = () => {
         href="https://github.com/prnvbirajdar"
         target="_blank"
         rel="noopener noreferrer"
-        className="p-1.5 rounded text-gray-700 hover:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 dark:text-gray-300 dark:hover:text-gray-100 dark:hover:bg-gray-800 dark:focus:bg-gray-800   "
+        className="p-1.5 rounded transition duration-500 text-gray-700 hover:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 dark:text-gray-300 dark:hover:text-gray-100 dark:hover:bg-gray-800 dark:focus:bg-gray-800   "
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@ const Icons = () => {
         href="https://twitter.com/prnvbirajdar"
         target="_blank"
         rel="noopener noreferrer"
-        className="p-1.5 rounded text-gray-700 hover:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 dark:text-gray-300 dark:hover:text-gray-100 dark:hover:bg-gray-800 dark:focus:bg-gray-800  "
+        className="p-1.5 rounded transition duration-500 text-gray-700 hover:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 dark:text-gray-300 dark:hover:text-gray-100 dark:hover:bg-gray-800 dark:focus:bg-gray-800  "
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@ const Icons = () => {
         href="https://www.linkedin.com/in/prnvbirajdar/"
         target="_blank"
         rel="noopener noreferrer"
-        className="p-1.5 rounded text-gray-700 hover:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 dark:text-gray-300 dark:hover:text-gray-100 dark:hover:bg-gray-800 dark:focus:bg-gray-800  "
+        className="p-1.5 rounded transition duration-500 text-gray-700 hover:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 dark:text-gray-300 dark:hover:text-gray-100 dark:hover:bg-gray-800 dark:focus:bg-gray-800  "
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -228,7 +228,7 @@ const Covid = () => {
 
 const ScrollUp = () => {
   return (
-    <div className="rounded text-gray-900 dark:text-gray-100">
+    <div className="rounded text-gray-900 dark:text-gray-100 transition duration-500">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"

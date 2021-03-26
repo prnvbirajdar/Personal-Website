@@ -12,10 +12,10 @@ const About: NextPage = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="Description" content="Put your description here." />
       </Head>
-      <section className="w-11/12 px-4 md:px-0 pt-24 md:pt-28 lg:pt-32 mx-auto md:w-3/4 lg:w-10/12 dark:text-gray-300">
+      <section className="w-11/12 px-4 md:px-0 pt-24 md:pt-28 lg:pt-32 mx-auto md:w-3/4 lg:w-10/12 transition duration-500 dark:text-gray-300">
         <div className="divide-y divide-gray-800">
           <div className=" pb-6 space-y-2 md:space-y-5 ">
-            <h1 className=" text-4xl font-extrabold leading-9 tracking-tight dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+            <h1 className=" text-4xl font-extrabold leading-9 tracking-tight transition duration-500 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
               Projects
             </h1>
             <p className="font-normal tracking-tight sm:w-9/12 md:w-10/12 lg:w-9/12 text-base md:text-lg ">
@@ -35,7 +35,7 @@ const About: NextPage = () => {
 
               <div className=" px-6 py-3 relative  md:w-8/12 my-auto rounded-lg  ">
                 <a href="https://lift-next.vercel.app/" target="_blank" rel="noopener noreferrer">
-                  <h1 className="dark:text-gray-100 mt-2  lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight  sm:leading-10 md:leading-14">
+                  <h1 className="transition duration-500 dark:text-gray-100 mt-2  lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight  sm:leading-10 md:leading-14">
                     Lift Workout App
                   </h1>
                   <div className="  sm:w-9/12 md:w-full text-sm md:text-lg ">
@@ -79,11 +79,11 @@ const About: NextPage = () => {
                   src="/covid19.jpg"
                   alt="covid-19 tracker"
                 />
-                <div className="absolute inset-0 bg-white bg-opacity-50 bg-gradient-to-r from-gray-300    dark:bg-black dark:bg-opacity-75 rounded-lg dark:bg-gradient-to-r dark:from-black  " />
+                <div className="absolute inset-0 bg-white bg-opacity-25  bg-gradient-to-r from-gray-300  dark:bg-black dark:bg-opacity-25 rounded-lg dark:bg-gradient-to-r dark:from-black  " />
               </a>
               <div className=" px-6 py-3 relative  md:w-8/12  my-auto rounded-lg ">
                 <a href="https://covid19ca.netlify.app/" target="_blank" rel="noopener noreferrer">
-                  <h1 className="dark:text-gray-100 mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight sm:leading-10 md:leading-14">
+                  <h1 className="transition duration-500 dark:text-gray-100 mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight sm:leading-10 md:leading-14">
                     COVID-19 Tracker
                   </h1>
                   <div className=" sm:w-9/12 md:w-full text-sm md:text-lg ">
@@ -131,7 +131,7 @@ const About: NextPage = () => {
               </a>
               <div className=" px-6 py-3 relative  md:w-8/12  my-auto rounded-lg ">
                 <a href="https://reels.netlify.app/" target="_blank" rel="noopener noreferrer">
-                  <h1 className="dark:text-gray-100 mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight  sm:leading-10 md:leading-14">
+                  <h1 className="transition duration-500 dark:text-gray-100 mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight  sm:leading-10 md:leading-14">
                     Reels Movie Db
                   </h1>
                   <div className=" sm:w-9/12 md:w-full text-sm md:text-lg ">
@@ -179,7 +179,7 @@ const About: NextPage = () => {
               </a>
               <div className=" px-6 py-3 relative  md:w-8/12  my-auto rounded-lg ">
                 <a href="https://google-keep-next.vercel.app/" target="_blank" rel="noopener noreferrer">
-                  <h1 className="dark:text-gray-100 mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight sm:leading-10 md:leading-14">
+                  <h1 className="transition duration-500 dark:text-gray-100 mt-2 lg:mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight sm:leading-10 md:leading-14">
                     Keep Clone
                   </h1>
                   <div className=" sm:w-9/12 md:w-full text-sm md:text-lg ">
