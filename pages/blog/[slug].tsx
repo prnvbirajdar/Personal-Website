@@ -37,7 +37,7 @@ const BlogPage: NextPage<AllBlogProps> = ({
       </Head>
       {hopeBlog && (
         <article
-          className="text-gray-300 sm:px-4 py-16 mx-auto max-w-7xl pt-20 md:pt-28"
+          className="transition duration-500 dark:text-gray-300 sm:px-4 py-16 mx-auto max-w-7xl pt-20 md:pt-28"
           itemID="#"
           itemScope
           itemType="http://schema.org/BlogPosting"
@@ -49,7 +49,7 @@ const BlogPage: NextPage<AllBlogProps> = ({
               alt="Blog Cover"
             />
             <h1
-              className="px-4 sm:px-0 mt-6 mb-6 text-3xl font-bold leading-tight text-white md:text-4xl"
+              className="px-4 sm:px-0 mt-6 mb-6 text-3xl font-bold leading-tight transition duration-500 dark:text-white md:text-4xl"
               itemProp="headline"
               title={hopeBlog.title}
             >
@@ -67,11 +67,13 @@ const BlogPage: NextPage<AllBlogProps> = ({
                 </div>
                 <div className="ml-2">
                   <p className=" font-semibold "> {hopeBlog.user.name}</p>
-                  <p className="text-sm text-gray-400">{format(parseISO(hopeBlog.published_at), 'MMMM dd, yyyy')}</p>
+                  <p className="text-sm transition duration-500 dark:text-gray-400">
+                    {format(parseISO(hopeBlog.published_at), 'MMMM dd, yyyy')}
+                  </p>
                 </div>
               </div>
               <div className="self-center">
-                <p className="text-sm flex justify-end text-gray-400">
+                <p className="text-sm flex justify-end transition duration-500 dark:text-gray-400">
                   {hopeBlog.public_reactions_count}&nbsp;
                   <span role="img" aria-label="Heart">
                     💖
@@ -85,7 +87,7 @@ const BlogPage: NextPage<AllBlogProps> = ({
             {hopeBlog.body_html}
           </div> */}
           <div
-            className=" px-4 sm:px-0 text-gray-300 w-full mx-auto prose  md:prose 2xl:prose-lg  md:w-3/4 lg:w-1/2"
+            className=" px-4 sm:px-0 transition duration-500 dark:text-gray-300 w-full mx-auto prose  md:prose 2xl:prose-lg  md:w-3/4 lg:w-1/2"
             dangerouslySetInnerHTML={{ __html: hopeBlog.body_html }}
           />
         </article>
