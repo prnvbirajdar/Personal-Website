@@ -11,7 +11,7 @@ const ProjectLayoutMed = ({ project }) => {
           src={project.imageDark}
           alt={project.title}
         />
-        <div className=" absolute inset-0 bg-black bg-opacity-90 rounded-lg md:bg-opacity-50 bg-gradient-to-r from-black  " />
+        <div className=" absolute inset-0 bg-black bg-opacity-40 rounded-lg md:bg-opacity-50 bg-gradient-to-r from-black  " />
       </a>
 
       <div className=" md:mx-3 px-6 py-3 relative  md:w-8/12 my-auto rounded-lg transition duration-500 md:bg-gray-100 md:dark:bg-gray-900 md:bg-opacity-80 ">
