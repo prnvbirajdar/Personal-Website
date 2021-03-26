@@ -11,10 +11,10 @@ const ProjectLayoutMed = ({ project }) => {
           src={project.imageDark}
           alt={project.title}
         />
-        <div className=" absolute inset-0 bg-black bg-opacity-40 rounded-lg md:bg-opacity-50 bg-gradient-to-r from-black  " />
+        <div className=" absolute inset-0 bg-black bg-opacity-90 rounded-lg md:bg-opacity-50 bg-gradient-to-r from-black  " />
       </a>
 
-      <div className=" px-6 py-3 relative  md:w-8/12 my-auto rounded-lg  ">
+      <div className=" md:mx-3 px-6 py-3 relative  md:w-8/12 my-auto rounded-lg transition duration-500 md:bg-gray-100 md:dark:bg-gray-900 md:bg-opacity-80 ">
         <a href={project.site} target="_blank" rel="noopener noreferrer">
           <h1 className="transition duration-500 dark:text-gray-100 mt-2   text-xl sm:text-2xl md:text-3xl  font-extrabold leading-snug tracking-tight  sm:leading-10 md:leading-14">
             {project.title}

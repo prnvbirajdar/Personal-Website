@@ -10,46 +10,59 @@ module.exports = windmill({
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
       },
-      // typography: (theme) => ({
-      //   DEFAULT: {
-      //     css: {
-      //       color: theme('colors.gray.900'),
-      //       a: {
-      //         color: theme('colors.blue.800'),
-      //         textDecoration: 'none',
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.gray.900'),
+            a: {
+              color: theme('colors.blue.800'),
+              textDecoration: 'none',
 
-      //         '&:hover': {
-      //           color: theme('colors.blue.700'),
-      //           textDecoration: 'underline',
-      //         },
-      //       },
-      //       code: {
-      //         color: theme('colors.pink.800'),
-      //       },
-      //       pre: {
-      //         color: theme('colors.indigo.200'),
-      //         backgroundColor: theme('colors.gray.200'),
-      //       },
-      //       // thead: {
-      //       //   color: theme('colors.gray.100'),
-      //       //   borderBottomColor: theme('colors.gray.700'),
-      //       // },
-      //       // 'tbody tr': { borderBottomColor: theme('colors.gray.800') },
-      //     },
-      //   },
+              '&:hover': {
+                color: theme('colors.blue.700'),
+                textDecoration: 'underline',
+              },
+            },
+            code: {
+              color: theme('colors.pink.600'),
+            },
+            // pre: {
+            //   color: theme('colors.indigo.200'),
+            //   backgroundColor: theme('colors.gray.200'),
+            // },
+          },
+        },
 
-      //   dark: {
-      //     css: {
-      //       color: '#7982a9',
-      //       a: {
-      //         color: '#9ECE6A',
-      //         '&:hover': {
-      //           color: '#9ECE6A',
-      //         },
-      //       },
-      //     },
-      //   },
-      // }),
+        dark: {
+          css: {
+            color: theme('colors.gray.300'),
+            strong: {
+              color: theme('colors.gray.300'),
+            },
+            h3: {
+              color: theme('colors.gray.300'),
+            },
+            h4: {
+              color: theme('colors.gray.300'),
+            },
+            h5: {
+              color: theme('colors.gray.300'),
+            },
+            a: {
+              color: theme('colors.blue.600'),
+              textDecoration: 'none',
+
+              '&:hover': {
+                color: theme('colors.blue.500'),
+                textDecoration: 'underline',
+              },
+            },
+            code: {
+              color: theme('colors.pink.300'),
+            },
+          },
+        },
+      }),
       // typography: {
       //   DEFAULT: {
       //     css: {
