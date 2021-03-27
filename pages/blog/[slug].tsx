@@ -1,3 +1,4 @@
+/* eslint-disable react/no-children-prop */
 /* eslint-disable react/no-danger */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
@@ -6,21 +7,18 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { parseISO, format } from 'date-fns'
 
-// import remark from 'remark'
-// import html from 'remark-html'
-// import prism from 'remark-prism'
+import remark from 'remark'
+import html from 'remark-html'
+import prism from 'remark-prism'
 
 import { BlogPost } from '../../src/containers/Interfaces/Interface'
 
 export interface AllBlogProps {
   hopeBlog: BlogPost
-  // remarkContent: string
+  remarkContent: string
 }
 
-const BlogPage: NextPage<AllBlogProps> = ({
-  // remarkContent,
-  hopeBlog,
-}) => {
+const BlogPage: NextPage<AllBlogProps> = ({ remarkContent, hopeBlog }) => {
   const router = useRouter()
 
   // If the page is not yet generated, this will be displayed
@@ -28,6 +26,9 @@ const BlogPage: NextPage<AllBlogProps> = ({
   if (router.isFallback) {
     return <div>Loading...</div>
   }
+
+  console.log(remarkContent)
+
   return (
     <>
       <Head>
@@ -84,11 +85,12 @@ const BlogPage: NextPage<AllBlogProps> = ({
             </div>
           </div>
           {/* <div className=" prose md:prose 2xl:prose-lg px-4 sm:px-0 text-gray-300 w-full mx-auto  md:w-3/4 lg:w-1/2">
-            {hopeBlog.body_html}
+            {remarkContent}
           </div> */}
+
           <div
             className=" px-4 sm:px-0 transition duration-500  w-full mx-auto prose dark:prose-dark  md:prose 2xl:prose-lg  md:w-3/4 lg:w-1/2"
-            dangerouslySetInnerHTML={{ __html: hopeBlog.body_html }}
+            dangerouslySetInnerHTML={{ __html: remarkContent }}
           />
         </article>
       )}
@@ -111,10 +113,10 @@ const getAllBlogs = async () => {
   // return r.json()
 }
 
-// const markdownToHtml = async (markdown: string) => {
-//   const result = await remark().use(html).use(prism).process(markdown)
-//   return result.toString()
-// }
+const markdownToHtml = async (markdown: string) => {
+  const result = await remark().use(html).use(prism).process(markdown)
+  return result.toString()
+}
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const devData: BlogPost[] = await getAllBlogs()
@@ -139,7 +141,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const res = await fetch(`https://dev.to/api/articles/${selectedBlog[0]?.id}`)
   const blogObj = await res.json()
 
-  // const remarkContent = await markdownToHtml(blogObj.body_markdown)
+  const remarkContent = await markdownToHtml(blogObj.body_markdown)
 
   if (!devData) {
     return {
@@ -149,7 +151,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: {
-      // remarkContent,
+      remarkContent,
       hopeBlog: blogObj,
     }, // will be passed to the page component as props
     revalidate: 1,
