@@ -13,10 +13,10 @@ const About: NextPage = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="Description" content="Put your description here." />
       </Head>
-      <section className="w-11/12 px-4 md:px-0 pt-24 md:pt-28 lg:pt-32 mx-auto md:w-3/4 lg:w-10/12 transition duration-500 dark:text-gray-300">
+      <section className="w-11/12 px-4 md:px-0 pt-24 md:pt-28 lg:pt-32 mx-auto md:w-3/4 lg:w-10/12 transition dark:text-gray-300">
         <div className="divide-y divide-gray-800">
           <div className=" pb-6 space-y-2 md:space-y-5 ">
-            <h1 className=" text-4xl font-extrabold leading-9 tracking-tight transition duration-500 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+            <h1 className=" text-4xl font-extrabold leading-9 tracking-tight transition dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
               Projects
             </h1>
             <p className="font-normal tracking-tight sm:w-9/12 md:w-10/12 lg:w-9/12 text-base md:text-lg ">

@@ -23,13 +23,13 @@ const Blog: NextPage<Props> = (props) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="Description" content="Put your description here." />
       </Head>
-      <section className="w-11/12 px-4 md:px-0 pt-24 md:pt-28 lg:pt-32 mx-auto md:w-3/4 lg:w-10/12 duration-500 transition dark:text-gray-300">
+      <section className="w-11/12 px-4 md:px-0 pt-24 md:pt-28 lg:pt-32 mx-auto md:w-3/4 lg:w-10/12  transition dark:text-gray-300">
         <div>
           <div className=" space-y-2 md:space-y-5">
-            <h1 className="mb-3 lg:mb-5 text-4xl font-extrabold leading-9 tracking-tight duration-500 transition dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+            <h1 className="mb-3 lg:mb-5 text-4xl font-extrabold leading-9 tracking-tight  transition dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
               Blog
             </h1>
-            <p className=" sm:w-9/12 md:w-10/12 lg:w-9/12 text-base duration-500 transition dark:text-gray-300 text-gray-900 tracking-tight md:text-lg font-normal ">
+            <p className=" sm:w-9/12 md:w-10/12 lg:w-9/12 text-base  transition dark:text-gray-300 text-gray-900 tracking-tight md:text-lg font-normal ">
               I love building new things. This blog is a way for me to write down and share new ideas and lessons with
               everyone.
             </p>
@@ -42,7 +42,7 @@ const Blog: NextPage<Props> = (props) => {
                   type="text"
                   onChange={(e) => setSearchValue(e.target.value)}
                   placeholder="Search articles"
-                  className="block w-full px-4 py-2 border text-gray-900 rounded-md border-gray-400 dark:border-gray-900  bg-gray-50 dark:bg-gray-800 duration-500 transition dark:text-gray-100"
+                  className="block w-full px-4 py-2 border text-gray-900 rounded-md border-gray-400 dark:border-gray-900  bg-gray-50 dark:bg-gray-800  transition dark:text-gray-100"
                 />
                 <svg
                   className="absolute w-5 h-5 right-3 top-3"
@@ -59,7 +59,7 @@ const Blog: NextPage<Props> = (props) => {
                   />
                 </svg>
               </div>
-            </div>
+            </div>{' '}
             <ul>
               {!filteredBlogPosts.length && 'No posts found.'}
               {filteredBlogPosts.map((data) => {
@@ -69,20 +69,20 @@ const Blog: NextPage<Props> = (props) => {
                     <article className=" space-y-2 xl:grid xl:grid-cols-5 xl:space-y-0 xl:items-baseline">
                       <dl>
                         <dt className="sr-only">Published on</dt>
-                        <dd className="text-gray-700 duration-500 transition dark:text-gray-400 text-sm md:text-base font-medium leading-6 ">
+                        <dd className="text-gray-700  transition dark:text-gray-400 text-sm md:text-base font-medium leading-6 ">
                           <time>{format(parseISO(published_at), 'MMMM dd, yyyy')} </time>
                         </dd>
                       </dl>
                       <div className="space-y-3 xl:col-span-4 xl:pr-20">
                         <div>
-                          <h3 className="text-2xl font-bold leading-8 duration-500 transition dark:text-gray-100 tracking-tight">
+                          <h3 className="text-2xl font-bold leading-8  transition dark:text-gray-100 tracking-tight">
                             <Link href={`/blog/${slug}`}>{title}</Link>
                           </h3>
                         </div>
-                        <div className="text-sm md:text-base  text-gray-900 duration-500 transition dark:text-gray-400">
+                        <div className="text-sm md:text-base  text-gray-900  transition dark:text-gray-400">
                           {description}
                           <Link href={`/blog/${slug}`}>
-                            <a className="cursor-pointer ml-2 text-blue-700 hover:text-blue-900 duration-500 transition dark:text-blue-500 dark:hover:text-blue-700 inline-flex items-center">
+                            <a className="cursor-pointer ml-2 text-blue-700 hover:text-blue-900  transition dark:text-blue-500 dark:hover:text-blue-700 inline-flex items-center">
                               Learn More
                               <svg
                                 className="w-4 h-4 ml-2"

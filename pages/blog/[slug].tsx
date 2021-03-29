@@ -85,7 +85,7 @@ const BlogPage: NextPage<AllBlogProps> = ({ remarkContent, hopeBlog }) => {
             </div>
           </div>
           {/* <div className=" prose md:prose 2xl:prose-lg px-4 sm:px-0 text-gray-300 w-full mx-auto  md:w-3/4 lg:w-1/2">
-            {remarkContent}
+            {remarkContent | safe}
           </div> */}
 
           <div
