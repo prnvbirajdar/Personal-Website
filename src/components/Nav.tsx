@@ -65,7 +65,7 @@ const Nav2 = () => {
               type="button"
               aria-label="dark mode"
               onClick={toggleMode}
-              className=" hidden md:block self-center bg-white hover:bg-gray-100 focus:ring focus:ring-gray-500 transition dark:bg-black dark:hover:bg-gray-900 focus:outline-none rounded-md p-1.5"
+              className="shadow hidden md:block self-center bg-white hover:bg-gray-100 focus:ring focus:ring-gray-500 transition dark:bg-black dark:hover:bg-gray-900 focus:outline-none rounded-md p-1.5"
             >
               {mode === 'dark' ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}
             </button>
@@ -75,7 +75,7 @@ const Nav2 = () => {
                 type="button"
                 aria-label="dark mode"
                 onClick={toggleMode}
-                className=" block md:hidden self-center bg-white hover:bg-gray-100 focus:ring focus:ring-gray-500 transition dark:bg-black dark:hover:bg-gray-900 focus:outline-none rounded-md p-1.5"
+                className="shadow block md:hidden self-center bg-white hover:bg-gray-100 focus:ring focus:ring-gray-500 transition dark:bg-black dark:hover:bg-gray-900 focus:outline-none rounded-md p-1.5"
               >
                 {mode === 'dark' ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}
               </button>

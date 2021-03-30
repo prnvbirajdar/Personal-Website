@@ -57,7 +57,7 @@ const LeftProjectLayoutLarge = ({ project }) => {
             src={project.imageDark}
             alt={project.title}
           />
-          <div className="absolute border rounded-lg border-gray-400 hover:border-gray-600 dark:border-gray-600 dark:hover:border-gray-400 cursor-pointer inset-0 bg-gray-900 bg-opacity-40 hover:bg-opacity-25 transition duration-300" />
+          <div className="absolute border rounded-lg border-gray-400 hover:border-gray-600 dark:border-gray-600 dark:hover:border-gray-400 cursor-pointer inset-0 bg-gray-900 bg-opacity-40 hover:bg-opacity-25 transition" />
         </a>
       </div>
 

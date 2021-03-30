@@ -14,15 +14,7 @@ module.exports = windmill({
         DEFAULT: {
           css: {
             color: theme('colors.gray.900'),
-            a: {
-              color: theme('colors.blue.800'),
-              textDecoration: 'none',
 
-              '&:hover': {
-                color: theme('colors.blue.700'),
-                textDecoration: 'underline',
-              },
-            },
             code: {
               color: theme('colors.pink.600'),
             },
@@ -44,15 +36,7 @@ module.exports = windmill({
             h5: {
               color: theme('colors.gray.300'),
             },
-            a: {
-              color: theme('colors.blue.700'),
-              textDecoration: 'none',
 
-              '&:hover': {
-                color: theme('colors.blue.600'),
-                textDecoration: 'underline',
-              },
-            },
             code: {
               color: theme('colors.pink.600'),
             },

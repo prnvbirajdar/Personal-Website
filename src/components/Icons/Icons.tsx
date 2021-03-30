@@ -7,7 +7,7 @@ const Icons = () => {
       <a
         aria-label="Mail"
         href="mailto:prnvbirajdar@gmail.com"
-        className="p-1.5 rounded transition text-gray-700 hover:text-gray-900 hover:bg-gray-300 focus:bg-gray-300 dark:text-gray-300 dark:hover:text-gray-100 dark:hover:bg-gray-800 dark:focus:bg-gray-800  "
+        className="p-1.5 rounded transition shadow text-gray-700 hover:text-gray-900 hover:bg-indigo-400 focus:bg-indigo-400 dark:text-gray-300 dark:hover:text-gray-100 dark:hover:bg-indigo-900 dark:focus:bg-indigo-900  "
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +25,7 @@ const Icons = () => {
         href="https://github.com/prnvbirajdar"
         target="_blank"
         rel="noopener noreferrer"
-        className="p-1.5 rounded transition text-gray-700 hover:text-gray-900 hover:bg-gray-300 focus:bg-gray-300 dark:text-gray-300 dark:hover:text-gray-100 dark:hover:bg-gray-800 dark:focus:bg-gray-800   "
+        className="p-1.5 rounded transition shadow text-gray-700 hover:text-gray-900 hover:bg-indigo-400 focus:bg-indigo-400  dark:text-gray-300 dark:hover:text-gray-100 dark:hover:bg-indigo-900 dark:focus:bg-indigo-900   "
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@ const Icons = () => {
         href="https://twitter.com/prnvbirajdar"
         target="_blank"
         rel="noopener noreferrer"
-        className="p-1.5 rounded transition text-gray-700 hover:text-gray-900 hover:bg-gray-300 focus:bg-gray-300 dark:text-gray-300 dark:hover:text-gray-100 dark:hover:bg-gray-800 dark:focus:bg-gray-800  "
+        className="p-1.5 rounded transition shadow text-gray-700 hover:text-gray-900 hover:bg-indigo-400 focus:bg-indigo-400 dark:text-gray-300 dark:hover:text-gray-100 dark:hover:bg-indigo-900 dark:focus:bg-indigo-900  "
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@ const Icons = () => {
         href="https://www.linkedin.com/in/prnvbirajdar/"
         target="_blank"
         rel="noopener noreferrer"
-        className="p-1.5 rounded transition text-gray-700 hover:text-gray-900 hover:bg-gray-300 focus:bg-gray-300 dark:text-gray-300 dark:hover:text-gray-100 dark:hover:bg-gray-800 dark:focus:bg-gray-800  "
+        className="p-1.5 rounded transition shadow text-gray-700 hover:text-gray-900 hover:bg-indigo-400 focus:bg-indigo-400 dark:text-gray-300 dark:hover:text-gray-100 dark:hover:bg-indigo-900 dark:focus:bg-indigo-900  "
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

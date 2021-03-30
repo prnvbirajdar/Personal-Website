@@ -23,7 +23,7 @@ const Blog: NextPage<Props> = (props) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="Description" content="Put your description here." />
       </Head>
-      <section className="w-11/12 px-4 md:px-0 pt-24 md:pt-28 lg:pt-32 mx-auto md:w-3/4 lg:w-10/12  transition dark:text-gray-300">
+      <section className=" transition w-11/12 px-4 md:px-0 pt-24 md:pt-28 lg:pt-32 mx-auto md:w-3/4 lg:w-10/12   dark:text-gray-300">
         <div>
           <div className=" space-y-2 md:space-y-5">
             <h1 className="mb-3 lg:mb-5 text-4xl font-extrabold leading-9 tracking-tight  transition dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
@@ -82,7 +82,7 @@ const Blog: NextPage<Props> = (props) => {
                         <div className="text-sm md:text-base  text-gray-900  transition dark:text-gray-400">
                           {description}
                           <Link href={`/blog/${slug}`}>
-                            <a className="cursor-pointer ml-2 text-blue-700 hover:text-blue-900  transition dark:text-blue-500 dark:hover:text-blue-700 inline-flex items-center">
+                            <a className="cursor-pointer ml-2 text-indigo-600 hover:text-indigo-900 focus:text-indigo-900  transition dark:text-indigo-500 dark:hover:text-indigo-700 dark:focus:text-indigo-700 inline-flex items-center">
                               Learn More
                               <svg
                                 className="w-4 h-4 ml-2"
