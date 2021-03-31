@@ -11,20 +11,11 @@ import remark from 'remark'
 // eslint-disable-next-line import/no-duplicates
 import html from 'remark-html'
 import prism from 'remark-prism'
-
-// import unified from 'unified'
-// import parse from 'remark-parse'
-// // eslint-disable-next-line import/no-duplicates
-// import remarkHtml from 'remark-html'
-// import * as highlight from 'remark-highlight.js'
-// import gfm from 'remark-gfm'
-
 import { BlogPost } from '../../src/containers/Interfaces/Interface'
 
 export interface AllBlogProps {
   hopeBlog: BlogPost
   articleContent: string
-  // cont: string
 }
 
 const BlogPage: NextPage<AllBlogProps> = ({ articleContent, hopeBlog }) => {
@@ -131,12 +122,6 @@ const markdownToHtml = async (markdown: string) => {
   return result.toString()
 }
 
-// const convertMarkdownToHtml = async (markdown: string) => {
-//   const convertedHtml = unified().use(parse).use(gfm).use(highlight).use(remarkHtml).processSync(markdown).contents
-
-//   return String(convertedHtml)
-// }
-
 export const getStaticPaths: GetStaticPaths = async () => {
   const devData: BlogPost[] = await getAllBlogs()
 
@@ -161,8 +146,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const blogObj = await res.json()
 
   const remarkContent = await markdownToHtml(blogObj.body_markdown)
-
-  // const cont = await convertMarkdownToHtml(blogObj.body_markdown)
 
   if (!devData) {
     return {
