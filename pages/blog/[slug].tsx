@@ -29,6 +29,8 @@ const BlogPage: NextPage<AllBlogProps> = ({ remarkContent, hopeBlog }) => {
 
   console.log(remarkContent)
 
+  console.log(hopeBlog.body_html)
+
   return (
     <>
       <Head>
@@ -117,6 +119,15 @@ const markdownToHtml = async (markdown: string) => {
   const result = await remark().use(html).use(prism).process(markdown)
   return result.toString()
 }
+
+// export const convertMarkdownToHtml = (markdown: string): string => {
+//   const { content } = matter(markdown)
+
+//   const html = unified().use(parse).use(gfm).use(highlight).use(remarkHtml).processSync(stripHtmlComments(content))
+//     .contents
+
+//   return String(html)
+// }
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const devData: BlogPost[] = await getAllBlogs()
