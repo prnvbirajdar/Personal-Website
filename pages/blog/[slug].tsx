@@ -8,17 +8,16 @@ import { useRouter } from 'next/router'
 import { parseISO, format } from 'date-fns'
 
 import remark from 'remark'
-// eslint-disable-next-line import/no-duplicates
 import html from 'remark-html'
 import prism from 'remark-prism'
 import { BlogPost } from '../../src/containers/Interfaces/Interface'
 
 export interface AllBlogProps {
-  hopeBlog: BlogPost
+  blogDetails: BlogPost
   articleContent: string
 }
 
-const BlogPage: NextPage<AllBlogProps> = ({ articleContent, hopeBlog }) => {
+const BlogPage: NextPage<AllBlogProps> = ({ articleContent, blogDetails }) => {
   const router = useRouter()
 
   // If the page is not yet generated, this will be displayed
@@ -27,12 +26,6 @@ const BlogPage: NextPage<AllBlogProps> = ({ articleContent, hopeBlog }) => {
     return <div>Loading...</div>
   }
 
-  console.log(articleContent)
-
-  console.log(hopeBlog)
-
-  console.log(hopeBlog.body_markdown)
-
   return (
     <>
       <Head>
@@ -40,7 +33,7 @@ const BlogPage: NextPage<AllBlogProps> = ({ articleContent, hopeBlog }) => {
         <meta name="Description" content="Put your description here." />
         <link href="https://unpkg.com/prismjs@0.0.1/themes/prism-okaidia.css" rel="stylesheet" />
       </Head>
-      {hopeBlog && (
+      {blogDetails && (
         <article
           className=" dark:text-gray-300 sm:px-4 py-16 mx-auto max-w-7xl pt-20 md:pt-28"
           itemID="#"
@@ -49,16 +42,16 @@ const BlogPage: NextPage<AllBlogProps> = ({ articleContent, hopeBlog }) => {
         >
           <div className="w-full mx-auto mb-8 text-left sm:w-11/12 md:w-3/4 lg:w-1/2">
             <img
-              src={hopeBlog.cover_image}
+              src={blogDetails.cover_image}
               className="object-fit  h-auto md:object-cover w-full md:max-h-64 bg-center rounded-lg"
               alt="Blog Cover"
             />
             <h1
               className="px-4 sm:px-0 mt-6 mb-6 text-3xl font-bold leading-tight  dark:text-white md:text-4xl"
               itemProp="headline"
-              title={hopeBlog.title}
+              title={blogDetails.title}
             >
-              {hopeBlog.title}
+              {blogDetails.title}
             </h1>
 
             <div className="flex justify-between px-4 sm:px-0">
@@ -66,25 +59,25 @@ const BlogPage: NextPage<AllBlogProps> = ({ articleContent, hopeBlog }) => {
                 <div className="avatar ">
                   <img
                     className="rounded-full w-14 h-14"
-                    src={hopeBlog.user.profile_image_90}
-                    alt={hopeBlog.user.name}
+                    src={blogDetails.user.profile_image_90}
+                    alt={blogDetails.user.name}
                   />
                 </div>
                 <div className="ml-2">
-                  <p className=" font-semibold "> {hopeBlog.user.name}</p>
+                  <p className=" font-semibold "> {blogDetails.user.name}</p>
                   <p className="text-sm  dark:text-gray-400">
-                    {format(parseISO(hopeBlog.published_at), 'MMMM dd, yyyy')}
+                    {format(parseISO(blogDetails.published_at), 'MMMM dd, yyyy')}
                   </p>
                 </div>
               </div>
               <div className="self-center">
                 <p className="text-sm flex justify-end  dark:text-gray-400">
-                  {hopeBlog.public_reactions_count}&nbsp;
+                  {blogDetails.public_reactions_count}&nbsp;
                   <span role="img" aria-label="Heart">
                     💖
                   </span>
                 </p>
-                {/* <p className="text-gray-400 flex justify-end text-sm">{hopeBlog.page_views_count} views</p> */}
+                {/* <p className="text-gray-400 flex justify-end text-sm">{blogDetails.page_views_count} views</p> */}
               </div>
             </div>
           </div>
@@ -104,17 +97,16 @@ const BlogPage: NextPage<AllBlogProps> = ({ articleContent, hopeBlog }) => {
 
 const getAllBlogs = async () => {
   const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
-  const data = await res.json()
-  return data
 
-  // const r = await fetch('https://dev.to/api/articles/me/published', {
+  // const res = await fetch('https://dev.to/api/articles/me/published', {
   //   headers: { 'api-key': '' || '' },
   // })
 
-  // if (r.status < 200 || r.status >= 300) {
-  //   throw new Error(`Error fetching... Status code: ${r.status}, ${r.statusText}`)
-  // }
-  // return r.json()
+  if (res.status < 200 || res.status >= 300) {
+    throw new Error(`Error fetching... Status code: ${res.status}, ${res.statusText}`)
+  }
+  const data = await res.json()
+  return data
 }
 
 const markdownToHtml = async (markdown: string) => {
@@ -156,7 +148,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       articleContent: remarkContent,
-      hopeBlog: blogObj,
+      blogDetails: blogObj,
     }, // will be passed to the page component as props
     revalidate: 1,
   }

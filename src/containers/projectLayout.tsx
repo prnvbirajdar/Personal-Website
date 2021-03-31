@@ -4,14 +4,14 @@ import React from 'react'
 
 const ProjectLayoutMed = ({ project }) => {
   return (
-    <section className="lg:hidden mt-6  flex w-full border border-gray-600 hover:border-gray-400 focus:border-gray-400 md:h-96 h-64 rounded-lg shadow-lg relative">
+    <section className="lg:hidden mt-6  flex w-full border hover:shadow-lg focus:shadow-lg border-gray-600 hover:border-gray-900 focus:border-gray-900 dark:hover:border-gray-400 dark:focus:border-gray-400 md:h-96 h-64 rounded-lg relative">
       <a href={project.site} target="_blank" rel="noopener noreferrer" className="dark:hidden">
         <img
           className=" absolute inset-0 h-full w-full object-cover sm:object-contain  rounded-lg"
           src={project.imageDark}
           alt={project.title}
         />
-        <div className="absolute inset-0 bg-gray-100 bg-opacity-80  rounded-lg md:bg-opacity-50  md:hover:bg-opacity-0" />
+        <div className="absolute inset-0 bg-gray-100 bg-opacity-90  rounded-lg md:bg-opacity-50  md:hover:bg-opacity-0" />
       </a>
 
       <a href={project.site} target="_blank" rel="noopener noreferrer" className="hidden dark:block">
@@ -59,7 +59,7 @@ const ProjectLayoutMed = ({ project }) => {
 const LeftProjectLayoutLarge = ({ project }) => {
   return (
     <section className="hidden lg:flex w-full ">
-      <div className="w-3/5 ml-6 xl:ml-12 h-96 rounded-lg shadow-lg overflow-hidden relative">
+      <div className="w-3/5 ml-6 xl:ml-12 h-96 rounded-lg hover:shadow-lg focus:shadow-lg  overflow-hidden relative">
         <a href={project.site} target="_blank" rel="noopener noreferrer">
           <img
             className="absolute inset-0 h-full w-full object-cover xl:object-top rounded-lg"
@@ -137,7 +137,7 @@ const RightProjectLayoutLarge = ({ project }) => {
           </a>
         </div>
       </div>
-      <div className="w-3/5 -ml-12 xl:-ml-24 h-96 rounded-lg shadow-lg overflow-hidden relative">
+      <div className="w-3/5 -ml-12 xl:-ml-24 h-96 rounded-lg hover:shadow-lg focus:shadow-lg  overflow-hidden relative">
         <a href={project.site} target="_blank" rel="noopener noreferrer">
           <img
             className="absolute inset-0 h-full w-full object-cover xl:object-top rounded-lg"

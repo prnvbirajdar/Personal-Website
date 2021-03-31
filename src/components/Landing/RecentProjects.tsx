@@ -9,7 +9,7 @@ const RecentProjects = () => {
       <div className="text-left mt-16">
         <h2 className="text-3xl md:text-4xl font-bold mb-5   dark:text-white text-black">Recent Projects</h2>
       </div>
-      <div className="mb-5 flex flex-col border border-gray-400 hover:border-gray-600  dark:border-gray-600 dark:hover:border-gray-400  rounded-lg md:mt-5">
+      <div className="hover:shadow-lg focus:shadow-lg  mb-5 flex flex-col border border-gray-400 hover:border-gray-600  dark:border-gray-600 dark:hover:border-gray-400  rounded-lg md:mt-5">
         <a
           href="https://lift-next.vercel.app/"
           target="_blank"
@@ -36,7 +36,7 @@ const RecentProjects = () => {
           </div>
         </a>
       </div>
-      <div className="flex flex-col border border-gray-400 hover:border-gray-600 dark:border-gray-600 dark:hover:border-gray-400  rounded-lg md:mt-5">
+      <div className="hover:shadow-lg focus:shadow-lg  flex flex-col border border-gray-400 hover:border-gray-600 dark:border-gray-600 dark:hover:border-gray-400  rounded-lg md:mt-5">
         <a
           href="https://covid19ca.netlify.app/"
           target="_blank"

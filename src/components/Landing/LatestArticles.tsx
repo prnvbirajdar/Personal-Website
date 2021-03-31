@@ -33,7 +33,7 @@ const LatestArticles: React.FC<Props> = (props) => {
         {devData &&
           mostLikedData.map(({ description, title, slug, positive_reactions_count, published_at }) => (
             <Link key={slug} href={`/blog/${slug}`}>
-              <a className="p-4 cursor-pointer border border-gray-400 hover:border-gray-600 focus:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-400 dark:focus:bg-gray-900  rounded-lg mt-5">
+              <a className="hover:shadow-lg focus:shadow-lg p-4 cursor-pointer border border-gray-400 hover:border-gray-600 focus:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-400 dark:focus:bg-gray-900  rounded-lg mt-5">
                 <div className="flex justify-between">
                   <h3 className=" mb-1 text-xl  font-semibold tracking-normal">{title}</h3>
                 </div>
