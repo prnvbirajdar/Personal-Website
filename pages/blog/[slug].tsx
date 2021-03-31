@@ -23,11 +23,11 @@ import { BlogPost } from '../../src/containers/Interfaces/Interface'
 
 export interface AllBlogProps {
   hopeBlog: BlogPost
-  remarkContent: string
+  articleContent: string
   // cont: string
 }
 
-const BlogPage: NextPage<AllBlogProps> = ({ remarkContent, hopeBlog }) => {
+const BlogPage: NextPage<AllBlogProps> = ({ articleContent, hopeBlog }) => {
   const router = useRouter()
 
   // If the page is not yet generated, this will be displayed
@@ -36,7 +36,7 @@ const BlogPage: NextPage<AllBlogProps> = ({ remarkContent, hopeBlog }) => {
     return <div>Loading...</div>
   }
 
-  console.log(remarkContent)
+  console.log(articleContent)
 
   console.log(hopeBlog)
 
@@ -98,12 +98,12 @@ const BlogPage: NextPage<AllBlogProps> = ({ remarkContent, hopeBlog }) => {
             </div>
           </div>
           {/* <div className=" prose md:prose 2xl:prose-lg px-4 sm:px-0 text-gray-300 w-full mx-auto  md:w-3/4 lg:w-1/2">
-            {remarkContent}
+            {articleContent}
           </div> */}
 
           <div
             className=" px-4 sm:px-0  w-full mx-auto prose dark:prose-dark prose-indigo 2xl:prose-lg  md:w-3/4 lg:w-1/2"
-            dangerouslySetInnerHTML={{ __html: remarkContent }}
+            dangerouslySetInnerHTML={{ __html: articleContent }}
           />
         </article>
       )}
@@ -172,7 +172,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: {
-      remarkContent,
+      articleContent: remarkContent,
       hopeBlog: blogObj,
     }, // will be passed to the page component as props
     revalidate: 1,
