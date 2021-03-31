@@ -8,14 +8,23 @@ import { useRouter } from 'next/router'
 import { parseISO, format } from 'date-fns'
 
 import remark from 'remark'
+// eslint-disable-next-line import/no-duplicates
 import html from 'remark-html'
 import prism from 'remark-prism'
+
+// import unified from 'unified'
+// import parse from 'remark-parse'
+// // eslint-disable-next-line import/no-duplicates
+// import remarkHtml from 'remark-html'
+// import * as highlight from 'remark-highlight.js'
+// import gfm from 'remark-gfm'
 
 import { BlogPost } from '../../src/containers/Interfaces/Interface'
 
 export interface AllBlogProps {
   hopeBlog: BlogPost
   remarkContent: string
+  // cont: string
 }
 
 const BlogPage: NextPage<AllBlogProps> = ({ remarkContent, hopeBlog }) => {
@@ -27,9 +36,9 @@ const BlogPage: NextPage<AllBlogProps> = ({ remarkContent, hopeBlog }) => {
     return <div>Loading...</div>
   }
 
-  console.log(remarkContent)
+  // console.log(remarkContent)
 
-  console.log(hopeBlog.body_html)
+  // console.log(hopeBlog.body_html)
 
   return (
     <>
@@ -101,18 +110,18 @@ const BlogPage: NextPage<AllBlogProps> = ({ remarkContent, hopeBlog }) => {
 }
 
 const getAllBlogs = async () => {
-  const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
-  const data = await res.json()
-  return data
+  // const res = await fetch('https://dev.to/api/articles?username=prnvbirajdar')
+  // const data = await res.json()
+  // return data
 
-  // const r = await fetch('https://dev.to/api/articles/me/published', {
-  //   headers: { 'api-key': '' || '' },
-  // })
+  const r = await fetch('https://dev.to/api/articles/me/published', {
+    headers: { 'api-key': 'V6hjA3vsSvG35jSLCEozABo7' || '' },
+  })
 
-  // if (r.status < 200 || r.status >= 300) {
-  //   throw new Error(`Error fetching... Status code: ${r.status}, ${r.statusText}`)
-  // }
-  // return r.json()
+  if (r.status < 200 || r.status >= 300) {
+    throw new Error(`Error fetching... Status code: ${r.status}, ${r.statusText}`)
+  }
+  return r.json()
 }
 
 const markdownToHtml = async (markdown: string) => {
@@ -120,13 +129,10 @@ const markdownToHtml = async (markdown: string) => {
   return result.toString()
 }
 
-// export const convertMarkdownToHtml = (markdown: string): string => {
-//   const { content } = matter(markdown)
+// const convertMarkdownToHtml = async (markdown: string) => {
+//   const convertedHtml = unified().use(parse).use(gfm).use(highlight).use(remarkHtml).processSync(markdown).contents
 
-//   const html = unified().use(parse).use(gfm).use(highlight).use(remarkHtml).processSync(stripHtmlComments(content))
-//     .contents
-
-//   return String(html)
+//   return String(convertedHtml)
 // }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -147,12 +153,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const selectedBlog = devData.filter((data) => data?.slug === params?.slug)
 
-  // const blogObj = selectedBlog[0]
+  const blogObj = selectedBlog[0]
 
-  const res = await fetch(`https://dev.to/api/articles/${selectedBlog[0]?.id}`)
-  const blogObj = await res.json()
+  // const res = await fetch(`https://dev.to/api/articles/${selectedBlog[0]?.id}`)
+  // const blogObj = await res.json()
 
   const remarkContent = await markdownToHtml(blogObj.body_markdown)
+
+  // const cont = await convertMarkdownToHtml(blogObj.body_markdown)
 
   if (!devData) {
     return {
@@ -162,6 +170,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: {
+      // cont,
       remarkContent,
       hopeBlog: blogObj,
     }, // will be passed to the page component as props
