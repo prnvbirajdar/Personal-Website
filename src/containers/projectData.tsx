@@ -53,7 +53,7 @@ const keepClone = {
     second: 'Firebase',
     third: 'Tailwind CSS',
   },
-  imageDark: '/keep2.png',
+  imageDark: '/keep-dark.png',
   imageLight: '/keep-light.png',
   techStack: ['Next.js', 'Firebase', 'Tailwind CSS'],
   gitHub: 'https://github.com/prnvbirajdar/NEXT-Google-Keep',
