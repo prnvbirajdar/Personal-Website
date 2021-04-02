@@ -34,7 +34,7 @@ export default function ScrollToTop() {
         <div
           aria-hidden="true"
           onClick={scrollToTop}
-          className="fixed bottom-3 right-3 lg:bottom-5 lg:right-5  hover:bg-indigo-400 focus:bg-indigo-400 dark:hover:bg-indigo-900 dark:focus:bg-indigo-900 dark:bg-gray-700 shadow p-2 rounded cursor-pointer"
+          className="bg-white fixed bottom-3 right-3 lg:bottom-5 lg:right-5  hover:bg-indigo-400 focus:bg-indigo-400 dark:hover:bg-indigo-900 dark:focus:bg-indigo-900 dark:bg-gray-700 shadow p-2 rounded cursor-pointer"
         >
           <ScrollUp />
         </div>

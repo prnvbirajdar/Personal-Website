@@ -7,23 +7,23 @@ const ProjectLayoutMed = ({ project }) => {
     <section className="lg:hidden mt-6  flex w-full border hover:shadow-lg focus:shadow-lg border-gray-600 hover:border-gray-900 focus:border-gray-900 dark:hover:border-gray-400 dark:focus:border-gray-400 md:h-96 h-64 rounded-lg relative">
       <a href={project.site} target="_blank" rel="noopener noreferrer" className="dark:hidden">
         <img
-          className=" absolute inset-0 h-full w-full object-cover sm:object-contain  rounded-lg"
-          src={project.imageDark}
+          className="dark:hidden block  absolute inset-0 h-full w-full object-cover sm:object-contain md:object-fill rounded-lg"
+          src={project.imageLight}
           alt={project.title}
         />
-        <div className="absolute inset-0 bg-gray-100 bg-opacity-90  rounded-lg md:bg-opacity-50  md:hover:bg-opacity-0" />
+        <div className="absolute inset-0 bg-gray-100 bg-opacity-90  rounded-lg md:bg-opacity-30  md:hover:bg-opacity-0" />
       </a>
 
       <a href={project.site} target="_blank" rel="noopener noreferrer" className="hidden dark:block">
         <img
-          className=" absolute inset-0 h-full w-full object-cover sm:object-contain  rounded-lg"
+          className="dark:block hidden  absolute inset-0 h-full w-full object-cover sm:object-contain md:object-fill  rounded-lg"
           src={project.imageDark}
           alt={project.title}
         />
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-90  rounded-lg md:bg-opacity-50  md:hover:bg-opacity-0" />
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-90  rounded-lg md:bg-opacity-30  md:hover:bg-opacity-0" />
       </a>
 
-      <div className=" md:mx-3 px-6 py-3 relative  md:w-8/12 my-auto rounded-lg  md:bg-gray-100 md:dark:bg-gray-900 md:bg-opacity-80 ">
+      <div className=" md:mx-3 px-6 py-3 relative  md:w-8/12 my-auto rounded-lg  md:bg-gray-100 md:dark:bg-gray-900  md:shadow-md">
         <a href={project.site} target="_blank" rel="noopener noreferrer">
           <h1 className=" dark:text-gray-100 mt-2   text-xl sm:text-2xl md:text-3xl  font-extrabold leading-snug tracking-tight  sm:leading-10 md:leading-14">
             {project.title}
