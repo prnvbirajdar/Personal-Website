@@ -85,7 +85,7 @@ const Blog: NextPage<Props> = (props) => {
                             <a className="cursor-pointer ml-2 text-indigo-600 hover:text-indigo-900 focus:text-indigo-900   dark:text-indigo-500 dark:hover:text-indigo-700 dark:focus:text-indigo-700 inline-flex items-center">
                               Learn More
                               <svg
-                                className="w-4 h-4 ml-2"
+                                className="w-4 h-4 ml-1"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
                                 strokeWidth="2"
