@@ -34,7 +34,7 @@ const Blog: NextPage<Props> = (props) => {
               everyone.
             </p>
           </div>
-          <div className="divide-y divide-gray-800">
+          <div className="divide-y dark:divide-gray-800 divide-gray-200 ">
             <div className="pt-6 pb-8 space-y-2 md:space-y-5">
               <div className="relative max-w-lg">
                 <input
@@ -59,17 +59,17 @@ const Blog: NextPage<Props> = (props) => {
                   />
                 </svg>
               </div>
-            </div>{' '}
+            </div>
             <ul>
               {!filteredBlogPosts.length && 'No posts found.'}
               {filteredBlogPosts.map((data) => {
                 const { description, title, slug, published_at } = data
                 return (
-                  <li key={slug} className="py-4 xl:py-6  ">
+                  <li key={slug} className="pt-4 xl:py-5  ">
                     <article className=" space-y-2 xl:grid xl:grid-cols-5 xl:space-y-0 xl:items-baseline">
                       <dl>
                         <dt className="sr-only">Published on</dt>
-                        <dd className="text-gray-700   dark:text-gray-400 text-sm md:text-base font-medium leading-6 ">
+                        <dd className="text-gray-700 dark:text-gray-400 text-sm md:text-base font-medium leading-6 ">
                           <time>{format(parseISO(published_at), 'MMMM dd, yyyy')} </time>
                         </dd>
                       </dl>
