@@ -30,7 +30,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="Logo Icon" type="image/png" href="/fav2.png" />
+        <link rel="Logo Icon" type="image/png" href="/fav.png" />
       </Head>
       <Windmill usePreferences>
         <Nav />
