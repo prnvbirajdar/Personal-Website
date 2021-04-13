@@ -57,7 +57,7 @@ const keepClone = {
   imageLight: '/keep-light.png',
   techStack: ['Next.js', 'Firebase', 'Tailwind CSS'],
   gitHub: 'https://github.com/prnvbirajdar/NEXT-Google-Keep',
-  site: 'https://github.com/prnvbirajdar/NEXT-Google-Keep',
+  site: 'https://google-keep-next.vercel.app/',
 }
 
 export { covid19, keepClone, reelsDb, lift }
