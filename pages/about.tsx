@@ -40,9 +40,14 @@ const About: NextPage = () => {
                 web applications.
               </p>
               <p className="mb-4">
-                I aspire toward a career that will allow me to build beautiful applications through carefully crafted
-                code and user-centric design that result in engaging experiences.
+                I aspire toward a career that will allow me to build inclusive and accessible applications through
+                carefully crafted code and user-centric design that result in engaging experiences.
               </p>
+              {/* <p className="mb-4">
+                I always like learning new things. I often write about my findings on my blog, and post helpful
+                tech-related tidbits on Twitter.
+              </p> */}
+
               <p className="mb-4">
                 When I’m not in front of a computer screen, I am probably working out, riding my bike, or trying out a
                 new recipe in the kitchen.

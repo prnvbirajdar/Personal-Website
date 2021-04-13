@@ -13,8 +13,8 @@ const Main = () => {
           I&apos;m Pranav👋
         </h1>
         <p className="mt-3 mb-6 md:mb-8 sm:w-9/12  text-gray-900 dark:text-gray-300 md:w-10/12 lg:w-full text-base md:text-lg font-medium ">
-          I&apos;m a software developer building beautiful interfaces and accessible applications. Welcome to my corner
-          of the internet. I&apos;m glad you&apos;re here!
+          I&apos;m a software developer building beautiful interfaces and accessible applications. Welcome to my
+          personal slice of the internet. I&apos;m glad you&apos;re here!
         </p>
 
         {/* <button
