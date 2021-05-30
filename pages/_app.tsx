@@ -31,6 +31,15 @@ const App = ({ Component, pageProps }: AppProps) => {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="Logo Icon" type="image/png" href="/fav.png" />
+        <meta name="Description" content="This is a home page of my portfolio website!" />
+        <meta name="title" property="og:title" content="Portfolio Website" />
+        <meta property="og:type" content="Website" />
+        <meta
+          name="image"
+          property="og:image"
+          content="https://live.staticflickr.com/65535/51212041376_2c88715c8b_k.jpg"
+        />
+        <meta name="description" property="og:description" content="Portfolio Website" />
       </Head>
       <Windmill usePreferences>
         <Nav />
