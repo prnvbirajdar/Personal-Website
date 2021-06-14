@@ -14,7 +14,7 @@ const RecentProjects = () => {
           href="https://lift-next.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
-          className="focus:bg-gray-100 dark:focus:bg-gray-900 p-4 flex"
+          className="focus:bg-gray-100 dark:focus:bg-gray-900 p-4 flex "
         >
           <div>
             <h3 className="mb-2 text-xl font-semibold tracking-normal  dark:text-gray-100 ">Lift Workout App</h3>

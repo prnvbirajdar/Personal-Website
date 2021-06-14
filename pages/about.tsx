@@ -13,7 +13,7 @@ const About: NextPage = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="Description" content="Put your description here." />
       </Head>
-      <section className="max-w-5xl w-11/12 px-4 md:px-0 pt-24 md:pt-28 lg:pt-32 mx-auto md:w-3/4 lg:w-10/12 dark:text-gray-300">
+      <section className=" max-w-5xl w-11/12 px-4 md:px-0 pt-24 md:pt-28 lg:pt-32 mx-auto md:w-3/4 lg:w-10/12 dark:text-gray-300">
         <div className="divide-y divide-gray-800">
           <div className=" space-y-2 md:space-y-5">
             <h1 className="pb-3 lg:pb-1 lg:mb-5 text-3xl font-extrabold leading-9 tracking-tight  dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
@@ -30,23 +30,15 @@ const About: NextPage = () => {
               <Icons />
             </div>
             <div className="font-normal lg:pt-4 pb-8 lg:col-span-2 text-base sm:w-9/12 md:w-10/12 mx-auto  lg:mx-0">
+              <p className="mb-4">Hello! I&apos;m Pranav, a software developer based in Ottawa, CA🍁.</p>
               <p className="mb-4">
-                Hello! I&apos;m Pranav, a software developer and personal trainer based in Ottawa, CA🍁.
-              </p>
-              <p className="mb-4">
-                I’m a self-taught developer working on all things front-end.{' '}
-                {/* first year student at Algonquin College studying Computer Engineering Technology.  */} I have
-                experience designing and developing applications for the web, from simple landing pages to progressive
-                web applications.
+                I’m a self-taught developer working on all things front-end. I have experience designing and developing
+                applications for the web, from simple landing pages to progressive web applications.
               </p>
               <p className="mb-4">
                 I aspire toward a career that will allow me to build inclusive and accessible applications through
                 carefully crafted code and user-centric design that result in engaging experiences.
               </p>
-              {/* <p className="mb-4">
-                I always like learning new things. I often write about my findings on my blog, and post helpful
-                tech-related tidbits on Twitter.
-              </p> */}
 
               <p className="mb-4">
                 When I’m not in front of a computer screen, I am probably working out, riding my bike, or trying out a
@@ -56,12 +48,14 @@ const About: NextPage = () => {
               <ul className="md:flex ">
                 <div>
                   <li className="mb-0.25">▸ React</li>
+                  <li className="mb-0.25">▸ Vue</li>
                   <li className="mb-0.25">▸ TypeScript</li>
                   <li className="mb-0.25">▸ JavaScript</li>
                 </div>
 
                 <div className="md:ml-20">
                   <li className="mb-0.25">▸ Firebase</li>
+                  <li className="mb-0.25">▸ GraphQL</li>
                   <li className="mb-0.25">▸ Semantic HTML</li>
                   <li className="mb-0.25">▸ (S)CSS</li>
                 </div>
