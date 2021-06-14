@@ -12,7 +12,7 @@ const Main = () => {
         <h1 className="text-4xl md:mb-5  md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight dark:text-gray-100  sm:leading-10   md:leading-14">
           I&apos;m Pranav👋
         </h1>
-        <p className="mt-3 mb-6 md:mb-8 sm:w-9/12  text-gray-900 dark:text-gray-300 md:w-10/12 lg:w-full text-base md:text-lg font-medium ">
+        <p className="mt-3 mb-6 md:mb-8 sm:w-9/12  text-gray-900 dark:text-gray-300 md:w-10/12 lg:w-full max-w-2xl text-base md:text-lg font-medium ">
           I&apos;m a software developer building beautiful interfaces and accessible applications. Welcome to my
           personal slice of the internet. I&apos;m glad you&apos;re here!
         </p>
