@@ -23,7 +23,7 @@ const About: NextPage = () => {
               My personal projects are a way for me to chronicle my growth as a developer.
             </p>
           </div>
-          <div className="space-y-6 ">
+          <div className="space-y-6 xl:space-y-10 ">
             <ProjectLayoutMed project={lift} />
             <ProjectLayoutMed project={covid19} />
             <ProjectLayoutMed project={reelsDb} />
