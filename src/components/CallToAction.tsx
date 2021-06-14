@@ -3,11 +3,11 @@ import React from 'react'
 
 const CallToAction = () => {
   return (
-    <div className="max-w-6xl w-11/12 px-4 py-20 mx-auto text-center md:w-3/4 lg:w-2/4  ">
+    <section className="max-w-6xl w-11/12 px-4 py-20 mx-auto text-center md:w-3/4 lg:w-2/4  ">
       <h2 className="mb-2 text-3xl md:text-4xl font-extrabold tracking-tight  md:mb-6 md:leading-tight">
         Get In Touch!
       </h2>
-      <p className="mb-7 text-gray-900 dark:text-gray-300 text-center md:font-medium ">
+      <p className="mb-7 text-gray-900 dark:text-gray-300  text-center ">
         Whether you have an idea for a project or just want to say hi, <br /> feel free to shoot me an email!
       </p>
       <div className="mb-0 space-x-0 md:space-x-2">
@@ -18,7 +18,7 @@ const CallToAction = () => {
           Say Hello!
         </a>
       </div>
-    </div>
+    </section>
   )
 }
 

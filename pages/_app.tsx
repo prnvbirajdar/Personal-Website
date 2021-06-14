@@ -43,14 +43,17 @@ const App = ({ Component, pageProps }: AppProps) => {
       </Head>
       <Windmill usePreferences>
         <Nav />
-        <Component {...pageProps} />
-        <section className="w-full mt-8 ">
-          {/* bg-gradient-to-b dark:from-black dark:to-gray-900  from-white to-gray-300 */}
+        <div className="relative min-h-screen">
+          <Component {...pageProps} />
 
-          <CallToAction />
-          <ScrollToTop />
-          <Footer />
-        </section>
+          <section className="w-full pb-20 md:pb-8">
+            <CallToAction />
+            <ScrollToTop />
+            <div className="absolute bottom-0 w-full ">
+              <Footer />
+            </div>
+          </section>
+        </div>
       </Windmill>
     </>
   )
