@@ -65,8 +65,8 @@ const Blog: NextPage<Props> = (props) => {
               {filteredBlogPosts.map((data) => {
                 const { description, title, slug, published_at } = data
                 return (
-                  <li key={slug} className="pt-4 xl:py-5  ">
-                    <article className=" space-y-2 xl:grid xl:grid-cols-5 xl:space-y-0 xl:items-baseline">
+                  <li key={slug} className="pt-4 py-5  ">
+                    <article className=" space-y-2 xl:grid xl:grid-cols-5 xl:items-baseline">
                       <dl>
                         <dt className="sr-only">Published on</dt>
                         <dd className="text-gray-700 dark:text-gray-400 text-sm md:text-base font-medium leading-6 ">
