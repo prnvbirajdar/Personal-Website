@@ -9,5 +9,4 @@ body {
   @apply text-black;
   @apply dark:bg-black;
   @apply dark:text-gray-100;
- 
 }
