@@ -5,6 +5,7 @@ import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import { GoogleFonts } from 'next-google-fonts'
 import { Windmill } from '@windmill/react-ui'
+import { motion } from 'framer-motion'
 import * as gtag from '../lib/gtag'
 import Nav from '../src/components/Nav'
 import ScrollToTop from '../src/containers/scrollToTop'
@@ -42,18 +43,32 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta name="description" property="og:description" content="Pranav Birajdar" />
       </Head>
       <Windmill usePreferences>
-        <Nav />
-        <div className="relative min-h-screen">
-          <Component {...pageProps} />
+        <motion.div
+          key={router.route}
+          initial="pageInitial"
+          animate="pageAnimate"
+          variants={{
+            pageInitial: {
+              opacity: 0,
+            },
+            pageAnimate: {
+              opacity: 1,
+            },
+          }}
+        >
+          <Nav />
+          <div className="relative min-h-screen">
+            <Component {...pageProps} />
 
-          <section className="w-full pb-20 md:pb-8">
-            <CallToAction />
-            <ScrollToTop />
-            <div className="absolute bottom-0 w-full ">
-              <Footer />
-            </div>
-          </section>
-        </div>
+            <section className="w-full pb-20 md:pb-8">
+              <CallToAction />
+              <ScrollToTop />
+              <div className="absolute bottom-0 w-full ">
+                <Footer />
+              </div>
+            </section>
+          </div>
+        </motion.div>
       </Windmill>
     </>
   )

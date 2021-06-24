@@ -22,6 +22,7 @@
     "@windmill/react-ui": "^0.5.1",
     "date-fns": "^2.19.0",
     "dotenv": "^8.2.0",
+    "framer-motion": "^4.1.17",
     "next": "^10.0.7",
     "next-google-fonts": "^2.1.0",
     "prismjs": "^1.23.0",

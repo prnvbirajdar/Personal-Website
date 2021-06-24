@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const Main = () => {
   return (
@@ -9,9 +10,27 @@ const Main = () => {
         <p className="mt-3 sm:w-9/12 mb-2  text-indigo-800 dark:text-indigo-400 md:w-10/12 lg:w-full text-base md:text-lg font-bold ">
           HEY THERE,
         </p>
-        <h1 className="text-4xl md:mb-5 2xl:text-7xl  md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight dark:text-gray-100  sm:leading-10   md:leading-14">
-          I&apos;m Pranav 👋
-        </h1>
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {
+              scale: 0.8,
+              opacity: 0,
+            },
+            visible: {
+              scale: 1,
+              opacity: 1,
+              transition: {
+                delay: 0.4,
+              },
+            },
+          }}
+        >
+          <h1 className="text-4xl md:mb-5 2xl:text-7xl  md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight dark:text-gray-100  sm:leading-10   md:leading-14">
+            I&apos;m Pranav 👋
+          </h1>
+        </motion.div>
         <p className="mt-3 mb-6 md:mb-8 sm:w-9/12  text-gray-900 dark:text-gray-300 md:w-10/12 lg:w-full max-w-2xl text-base md:text-lg font-medium ">
           I&apos;m a software developer building beautiful interfaces and accessible applications. Welcome to my
           personal slice of the internet. I&apos;m glad you&apos;re here!
