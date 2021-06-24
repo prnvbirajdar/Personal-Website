@@ -43,7 +43,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       </Head>
       <Windmill usePreferences>
         <Nav />
-        <div className="relative min-h-screen">
+        <div className="relative min-h-screen dark:bg-black dark:text-gray-100">
           <Component {...pageProps} />
 
           <section className="w-full pb-20 md:pb-8">
