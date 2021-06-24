@@ -10,8 +10,10 @@ const CallToAction = () => {
       <p className="mb-7 text-gray-900 dark:text-gray-300  text-center ">
         Whether you have an idea for a project or just want to say hi, <br /> feel free to shoot me an email!
       </p>
-      <div className="mb-0 space-x-0 md:space-x-2">
+      <div className="z-50 mb-0 space-x-0 md:space-x-2">
         <a
+          target="_blank"
+          rel="noreferrer"
           href="mailto:prnvbirajdar@gmail.com"
           className="bg-indigo-800 bg-opacity-90 hover:bg-indigo-900 focus:bg-indigo-900 text-indigo-100  mt-6 text-sm font-bold lg:text-base tracking-normal my-5 md:my-7 p-3 px-4 md:px-5 rounded ring-2 ring-gray-400 ring-opacity-50 shadow "
         >

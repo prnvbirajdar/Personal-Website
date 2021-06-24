@@ -36,8 +36,18 @@ const About: NextPage = () => {
                 applications for the web, from simple landing pages to progressive web applications.
               </p>
               <p className="mb-4">
-                I aspire toward a career that will allow me to build inclusive and accessible applications through
-                carefully crafted code and user-centric design that result in engaging experiences.
+                Currently, I&apos;m a software engineer at{' '}
+                <a
+                  className="text-indigo-600 hover:text-indigo-800 focus:text-indigo-800 dark:text-indigo-500 dark:hover:text-indigo-700 dark:focus:text-indigo-700"
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://www.gowalnut.com/"
+                >
+                  Walnut Insurance
+                </a>{' '}
+                focused on bringing affordable life insurance to millenials. I aspire toward a career that will allow me
+                to build inclusive and accessible applications through carefully crafted code and user-centric design
+                that result in engaging experiences.
               </p>
 
               <p className="mb-4">

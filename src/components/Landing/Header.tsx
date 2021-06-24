@@ -25,6 +25,8 @@ const Main = () => {
         </button> */}
 
         <a
+          target="_blank"
+          rel="noreferrer"
           href="mailto:prnvbirajdar@gmail.com"
           className=" bg-indigo-800 bg-opacity-90 hover:bg-indigo-900 focus:bg-indigo-900 text-indigo-100 mt-6 text-sm font-bold lg:text-base tracking-normal my-5 md:my-7 p-3 px-4 md:px-5 rounded ring-2 ring-gray-400 ring-opacity-50 shadow "
         >
