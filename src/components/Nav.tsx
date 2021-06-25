@@ -10,6 +10,15 @@ const Nav2 = () => {
 
   const { mode, toggleMode } = useContext(WindmillContext) // dark mode
 
+  // const navList = ['home', 'blog', 'projects', 'about']
+
+  const navList = [
+    { name: 'Home', route: '/' },
+    { name: 'Blog', route: '/blog' },
+    { name: 'Projects', route: '/projects' },
+    { name: 'About', route: '/about' },
+  ]
+
   return (
     <header className="fixed top-0 w-full bg-white dark:text-gray-100 text-black  dark:bg-black z-20">
       <nav
@@ -40,26 +49,13 @@ const Nav2 = () => {
               </div>
               <div className=" hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
-                  <Link href="/">
-                    <a className=" hover:bg-gray-100 focus:bg-gray-100 dark:hover:bg-gray-900  dark:focus:bg-gray-900 px-3 py-2 rounded-md text-sm lg:text-base font-medium">
-                      Home
-                    </a>
-                  </Link>
-                  <Link href="/blog">
-                    <a className=" hover:bg-gray-100 focus:bg-gray-100 dark:hover:bg-gray-900  dark:focus:bg-gray-900 px-3 py-2 rounded-md text-sm lg:text-base font-medium">
-                      Blog
-                    </a>
-                  </Link>
-                  <Link href="/projects">
-                    <a className=" hover:bg-gray-100 focus:bg-gray-100 dark:hover:bg-gray-900  dark:focus:bg-gray-900 px-3 py-2 rounded-md text-sm lg:text-base font-medium">
-                      Projects
-                    </a>
-                  </Link>
-                  <Link href="/about">
-                    <a className=" hover:bg-gray-100 focus:bg-gray-100 dark:hover:bg-gray-900  dark:focus:bg-gray-900 px-3 py-2 rounded-md text-sm lg:text-base font-medium">
-                      About
-                    </a>
-                  </Link>
+                  {navList.map((item) => (
+                    <Link href={item.route}>
+                      <a className=" hover:bg-gray-100 focus:bg-gray-100 dark:hover:bg-gray-900  dark:focus:bg-gray-900 px-3 py-2 rounded-md text-sm lg:text-base font-medium">
+                        {item.name}
+                      </a>
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
@@ -131,34 +127,15 @@ const Nav2 = () => {
           {(ref) => (
             <div className="border-b dark:border-gray-600 md:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <div onClick={() => setIsOpen(!isOpen)} aria-hidden="true">
-                  <Link href="/">
-                    <a className=" hover:bg-gray-100 focus:bg-gray-100 dark:hover:bg-gray-900  dark:focus:bg-gray-900 block px-3 py-2 rounded-md text-sm md:text-base font-medium">
-                      Home
-                    </a>
-                  </Link>
-                </div>
-                <div onClick={() => setIsOpen(!isOpen)} aria-hidden="true">
-                  <Link href="/blog">
-                    <a className=" hover:bg-gray-100 focus:bg-gray-100 dark:hover:bg-gray-900  dark:focus:bg-gray-900 block px-3 py-2 rounded-md text-sm md:text-base font-medium">
-                      Blog
-                    </a>
-                  </Link>
-                </div>
-                <div onClick={() => setIsOpen(!isOpen)} aria-hidden="true">
-                  <Link href="/projects">
-                    <a className=" hover:bg-gray-100 focus:bg-gray-100 dark:hover:bg-gray-900  dark:focus:bg-gray-900 block px-3 py-2 rounded-md text-sm md:text-base font-medium">
-                      Projects
-                    </a>
-                  </Link>
-                </div>
-                <div onClick={() => setIsOpen(!isOpen)} aria-hidden="true">
-                  <Link href="/about">
-                    <a className=" hover:bg-gray-100 focus:bg-gray-100 dark:hover:bg-gray-900  dark:focus:bg-gray-900 block px-3 py-2 rounded-md text-sm md:text-base font-medium">
-                      About
-                    </a>
-                  </Link>
-                </div>
+                {navList.map((item) => (
+                  <div onClick={() => setIsOpen(!isOpen)} aria-hidden="true">
+                    <Link href={item.route}>
+                      <a className=" hover:bg-gray-100 focus:bg-gray-100 dark:hover:bg-gray-900  dark:focus:bg-gray-900 block px-3 py-2 rounded-md text-sm md:text-base font-medium">
+                        {item.name}
+                      </a>
+                    </Link>{' '}
+                  </div>
+                ))}
               </div>
             </div>
           )}

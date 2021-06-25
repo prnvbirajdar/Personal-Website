@@ -15,16 +15,19 @@ const Main = () => {
           animate="visible"
           variants={{
             hidden: {
-              scale: 0.8,
+              y: 30,
               opacity: 0,
             },
             visible: {
-              scale: 1,
+              y: 0,
               opacity: 1,
-              transition: {
-                delay: 0.4,
-              },
             },
+          }}
+          transition={{
+            delay: 0.4,
+            duration: 0.5,
+            damping: 5,
+            mass: 1,
           }}
         >
           <h1 className="text-4xl md:mb-5 2xl:text-7xl  md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight dark:text-gray-100  sm:leading-10   md:leading-14">

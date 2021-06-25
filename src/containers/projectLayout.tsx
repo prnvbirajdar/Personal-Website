@@ -59,7 +59,7 @@ const ProjectLayoutMed = ({ project }) => {
 const LeftProjectLayoutLarge = ({ project }) => {
   return (
     <section className="hidden lg:flex w-full ">
-      <div className="transition shadow duration-300 transform  hover:scale-105 border border-gray-400 hover:border-gray-600 dark:border-gray-600 dark:hover:border-gray-400 cursor-pointer w-3/5 ml-6 xl:mx-auto h-96 rounded-lg hover:shadow-lg focus:shadow-lg overflow-hidden relative">
+      <div className="transition shadow duration-100 transform  hover:scale-105 border border-gray-400 hover:border-gray-600 dark:border-gray-600 dark:hover:border-gray-400 cursor-pointer w-3/5 ml-6 xl:mx-auto h-96 rounded-lg hover:shadow-lg focus:shadow-lg overflow-hidden relative">
         <a href={project.site} target="_blank" rel="noopener noreferrer">
           <img
             className="dark:hidden block absolute inset-0 h-full w-full object-cover xl:object-top rounded-lg"
@@ -141,7 +141,7 @@ const RightProjectLayoutLarge = ({ project }) => {
           </a>
         </div>
       </div>
-      <div className="transition duration-300 transform shadow  hover:scale-105 border border-gray-400 hover:border-gray-600 dark:border-gray-600 dark:hover:border-gray-400 w-3/5 -ml-12 h-96 rounded-lg hover:shadow-lg focus:shadow-lg  overflow-hidden relative">
+      <div className="transition duration-100 transform shadow  hover:scale-105 border border-gray-400 hover:border-gray-600 dark:border-gray-600 dark:hover:border-gray-400 w-3/5 -ml-12 h-96 rounded-lg hover:shadow-lg focus:shadow-lg  overflow-hidden relative">
         <a href={project.site} target="_blank" rel="noopener noreferrer">
           <img
             className="dark:hidden block absolute inset-0 h-full w-full object-cover xl:object-top rounded-lg"
