@@ -84,7 +84,6 @@ const LeftProjectLayoutLarge = ({ project }) => {
             ease: 'easeInOut',
           },
         }}
-        exit={{ opacity: 0 }}
         className="shadow border border-gray-400 hover:border-gray-600 dark:border-gray-600 dark:hover:border-gray-400 cursor-pointer w-3/5 ml-6 xl:mx-auto h-96 rounded-lg hover:shadow-lg focus:shadow-lg overflow-hidden relative"
       >
         <a href={project.site} target="_blank" rel="noopener noreferrer">
@@ -205,7 +204,6 @@ const RightProjectLayoutLarge = ({ project }) => {
           },
         }}
         initial={{ x: 200, opacity: 0 }}
-        exit={{ opacity: 0 }}
         className=" shadow border border-gray-400 hover:border-gray-600 dark:border-gray-600 dark:hover:border-gray-400 w-3/5 -ml-12 h-96 rounded-lg hover:shadow-lg focus:shadow-lg  overflow-hidden relative"
       >
         <a href={project.site} target="_blank" rel="noopener noreferrer">
