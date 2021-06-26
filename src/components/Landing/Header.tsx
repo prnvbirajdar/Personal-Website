@@ -27,22 +27,14 @@ const Main = () => {
             I&apos;m a software developer building beautiful interfaces and accessible applications. Welcome to my
             personal slice of the internet. I&apos;m glad you&apos;re here!
           </motion.p>
-
-          {/* <button
-          type="button"
-          className="text-sm font-bold lg:text-base tracking-normal my-5 md:my-7 p-2.5 px-4 md:px-5 rounded ring-2 ring-gray-400 ring-opacity-50 bg-gray-900 bg-opacity-50 hover:bg-opacity-100 focus:bg-opacity-100 shadow "
-        >
-          Resume
-        </button> */}
-
           <motion.a
             variants={fadeInUp}
             target="_blank"
             rel="noreferrer"
-            href="mailto:prnvbirajdar@gmail.com"
-            className=" bg-indigo-800 bg-opacity-90 hover:bg-indigo-900 focus:bg-indigo-900 text-indigo-100 mt-6 text-sm font-bold lg:text-base tracking-normal my-5 md:my-7 p-3 px-4 md:px-5 rounded ring-2 ring-gray-400 ring-opacity-50 shadow "
+            href="Pranav's Resume.pdf"
+            className=" bg-indigo-800 bg-opacity-90 hover:bg-indigo-900 focus:bg-indigo-900 text-indigo-100 mt-6 text-sm font-bold lg:text-base my-5 md:my-7 p-3 px-4 md:px-5 rounded ring-2 ring-gray-400 ring-opacity-50 shadow "
           >
-            Say Hello!
+            Resume
           </motion.a>
         </motion.div>
       </motion.div>
