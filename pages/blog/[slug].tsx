@@ -10,6 +10,9 @@ import { parseISO, format } from 'date-fns'
 import remark from 'remark'
 import html from 'remark-html'
 import prism from 'remark-prism'
+
+import { motion } from 'framer-motion'
+import { stagger, fadeInUp } from '@src/containers/framerAnimations'
 import { BlogPost } from '../../src/containers/Interfaces/Interface'
 
 export interface AllBlogProps {
@@ -40,22 +43,29 @@ const BlogPage: NextPage<AllBlogProps> = ({ articleContent, blogDetails }) => {
           itemScope
           itemType="http://schema.org/BlogPosting"
         >
-          <div className="w-full mx-auto mb-8 text-left sm:w-11/12 md:w-3/4 lg:w-1/2">
-            <img
+          <motion.div
+            initial="initial"
+            animate="animate"
+            variants={stagger}
+            className="w-full mx-auto mb-8 text-left sm:w-11/12 md:w-3/4 lg:w-1/2"
+          >
+            <motion.img
+              variants={fadeInUp}
               src={blogDetails.cover_image}
               className="object-fit  h-auto md:object-cover w-full md:max-h-64 bg-center rounded-lg"
               alt="Blog Cover"
             />
-            <h1
+            <motion.h1
+              variants={fadeInUp}
               className="px-4 sm:px-0 mt-6 mb-6 text-3xl font-bold leading-tight  dark:text-white md:text-4xl"
               itemProp="headline"
               title={blogDetails.title}
             >
               {blogDetails.title}
-            </h1>
+            </motion.h1>
 
             <div className="flex justify-between px-4 sm:px-0">
-              <div className="flex items-center ">
+              <motion.div variants={fadeInUp} className="flex items-center ">
                 <div className="avatar ">
                   <img
                     className="rounded-full w-14 h-14"
@@ -69,8 +79,8 @@ const BlogPage: NextPage<AllBlogProps> = ({ articleContent, blogDetails }) => {
                     {format(parseISO(blogDetails.published_at), 'MMMM dd, yyyy')}
                   </p>
                 </div>
-              </div>
-              <div className="self-center">
+              </motion.div>
+              <motion.div variants={fadeInUp} className="self-center">
                 <p className="text-sm flex justify-end  dark:text-gray-400">
                   {blogDetails.public_reactions_count}&nbsp;
                   <span role="img" aria-label="Heart">
@@ -78,14 +88,15 @@ const BlogPage: NextPage<AllBlogProps> = ({ articleContent, blogDetails }) => {
                   </span>
                 </p>
                 {/* <p className="text-gray-400 flex justify-end text-sm">{blogDetails.page_views_count} views</p> */}
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
           {/* <div className=" prose md:prose 2xl:prose-lg px-4 sm:px-0 text-gray-300 w-full mx-auto  md:w-3/4 lg:w-1/2">
             {articleContent}
           </div> */}
 
-          <div
+          <motion.div
+            variants={fadeInUp}
             className=" px-4 sm:px-0  w-full mx-auto prose dark:prose-dark prose-indigo 2xl:prose-lg  md:w-3/4 lg:w-1/2"
             dangerouslySetInnerHTML={{ __html: articleContent }}
           />
