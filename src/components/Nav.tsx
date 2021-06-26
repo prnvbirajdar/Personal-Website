@@ -10,8 +10,6 @@ const Nav2 = () => {
 
   const { mode, toggleMode } = useContext(WindmillContext) // dark mode
 
-  // const navList = ['home', 'blog', 'projects', 'about']
-
   const navList = [
     { name: 'Home', route: '/' },
     { name: 'Blog', route: '/blog' },
@@ -50,7 +48,7 @@ const Nav2 = () => {
               <div className=" hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
                   {navList.map((item) => (
-                    <Link href={item.route}>
+                    <Link href={item.route} key={item.name}>
                       <a className=" hover:bg-gray-100 focus:bg-gray-100 dark:hover:bg-gray-900  dark:focus:bg-gray-900 px-3 py-2 rounded-md text-sm lg:text-base font-medium">
                         {item.name}
                       </a>
@@ -128,7 +126,7 @@ const Nav2 = () => {
             <div className="border-b dark:border-gray-600 md:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 {navList.map((item) => (
-                  <div onClick={() => setIsOpen(!isOpen)} aria-hidden="true">
+                  <div key={item.name} onClick={() => setIsOpen(!isOpen)} aria-hidden="true">
                     <Link href={item.route}>
                       <a className=" hover:bg-gray-100 focus:bg-gray-100 dark:hover:bg-gray-900  dark:focus:bg-gray-900 block px-3 py-2 rounded-md text-sm md:text-base font-medium">
                         {item.name}
