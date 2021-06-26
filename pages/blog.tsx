@@ -81,7 +81,7 @@ const Blog: NextPage<Props> = (props) => {
                           opacity: 1,
                           y: 0,
                           transition: {
-                            delay: i * 0.5,
+                            delay: i * 0.1,
                           },
                         }),
                       }}
