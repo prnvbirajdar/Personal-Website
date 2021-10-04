@@ -57,7 +57,7 @@ const App = ({ Component, pageProps }: AppProps) => {
               },
             }}
             transition={{
-              duration: 0.25,
+              duration: 0.4,
               damping: 300,
               mass: 1,
             }}
