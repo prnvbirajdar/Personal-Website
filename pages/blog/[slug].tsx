@@ -13,7 +13,7 @@ import prism from 'remark-prism'
 
 import { motion } from 'framer-motion'
 import { stagger, fadeInUp } from '@src/containers/framerAnimations'
-import { BlogPost } from '../../src/containers/Interfaces/Interface'
+import { BlogPost } from '@src/containers/Interfaces/Interface'
 
 export interface AllBlogProps {
   blogDetails: BlogPost
