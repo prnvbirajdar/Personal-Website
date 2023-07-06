@@ -4,7 +4,7 @@ import React from 'react'
 import { NextPage } from 'next'
 import Head from 'next/head'
 import { LeftProjectLayoutLarge, ProjectLayoutMed, RightProjectLayoutLarge } from '@src/containers/projectLayout'
-import { covid19, keepClone, reelsDb, lift } from '../src/containers/projectData'
+import { keepClone, reelsDb, lift } from '../src/containers/projectData'
 
 const About: NextPage = () => {
   return (
@@ -25,13 +25,11 @@ const About: NextPage = () => {
           </div>
           <div className="space-y-6 xl:space-y-10 ">
             <ProjectLayoutMed project={lift} />
-            <ProjectLayoutMed project={covid19} />
             <ProjectLayoutMed project={reelsDb} />
             <ProjectLayoutMed project={keepClone} />
             <LeftProjectLayoutLarge project={lift} />
-            <RightProjectLayoutLarge project={covid19} />
-            <LeftProjectLayoutLarge project={reelsDb} />
-            <RightProjectLayoutLarge project={keepClone} />
+            <RightProjectLayoutLarge project={reelsDb} />
+            <LeftProjectLayoutLarge project={keepClone} />
           </div>
         </div>
       </section>

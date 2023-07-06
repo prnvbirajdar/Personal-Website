@@ -33,11 +33,10 @@ const About: NextPage = () => {
             <div className="font-normal lg:pt-4 pb-8 lg:col-span-2 text-base sm:w-9/12 md:w-10/12 mx-auto  lg:mx-0">
               <motion.div variants={stagger}>
                 <motion.p variants={fadeInUp} className="mb-4">
-                  Hello! I&apos;m Pranav, a software developer based in Ottawa, CA🍁.
+                  Hello! I&apos;m Pranav, a software developer based in Toronto, CA🍁.
                 </motion.p>
                 <motion.p variants={fadeInUp} className="mb-4">
-                  I’m a self-taught developer working on all things front-end. I have experience designing and
-                  developing applications for the web, from simple landing pages to progressive web applications.
+                  I’m an experienced front-end software developer focused on building user-centric interfaces and accessible applications for the web.
                 </motion.p>
                 <motion.p variants={fadeInUp} className="mb-4">
                   Currently, I&apos;m a software engineer at{' '}
@@ -45,18 +44,17 @@ const About: NextPage = () => {
                     className="text-indigo-600 hover:text-indigo-800 focus:text-indigo-800 dark:text-indigo-500 dark:hover:text-indigo-700 dark:focus:text-indigo-700"
                     target="_blank"
                     rel="noreferrer"
-                    href="https://www.gowalnut.com/"
+                    href="https://isleofcode.com/"
                   >
-                    Walnut Insurance
+                    Isle of Code
                   </a>{' '}
-                  focused on bringing affordable life insurance to millenials. I aspire toward a career that will allow
-                  me to build inclusive and accessible applications through carefully crafted code and user-centric
-                  design that result in engaging experiences.
+                  working on a diverse range of projects for prestigious clients, including Nasdaq, Addepar, and Darcy Partners.
+                  I aspire toward a career that will allow me to build inclusive and accessible applications through carefully 
+                  crafted code and user-centric design that result in engaging experiences.
                 </motion.p>
 
                 <motion.p variants={fadeInUp} className="mb-4">
-                  When I’m not in front of a computer screen, I am probably working out, riding my bike, or trying out a
-                  new recipe in the kitchen.
+                  When I’m not in front of a computer screen, I am either playing volleyball or trying out a new recipe in the kitchen.
                 </motion.p>
                 <motion.p variants={fadeInUp} className="mb-4">
                   Here are a few technologies I&apos;ve been working with recently:
@@ -66,14 +64,14 @@ const About: NextPage = () => {
                     <li className="mb-0.25">▸ React</li>
                     <li className="mb-0.25">▸ Vue</li>
                     <li className="mb-0.25">▸ TypeScript</li>
-                    <li className="mb-0.25">▸ JavaScript</li>
+                    <li className="mb-0.25">▸ Tailwind</li>
                   </div>
 
                   <div className="md:ml-20">
                     <li className="mb-0.25">▸ Firebase</li>
                     <li className="mb-0.25">▸ GraphQL</li>
-                    <li className="mb-0.25">▸ Semantic HTML</li>
-                    <li className="mb-0.25">▸ (S)CSS</li>
+                    <li className="mb-0.25">▸ HTML/CSS</li>
+                    <li className="mb-0.25">▸ JavaScript</li>
                   </div>
                 </motion.ul>
               </motion.div>{' '}
